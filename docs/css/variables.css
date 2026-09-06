@@ -53,6 +53,9 @@
     --media-gallery-columns: 3;
     --media-item-aspect-ratio: 16 / 9;
     --vertical-flex-gap: 20px;
+
+    /* CV */
+    --cv-max-height: 100vh;
 }
 
 @font-face {
