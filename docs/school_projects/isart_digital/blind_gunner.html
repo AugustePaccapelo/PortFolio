@@ -15,7 +15,15 @@
                 <!-- Context -->
                 <div class="text-div">
                     <h1>Contexte</h1>
-                    <p></p>
+                    <p>
+                        <strong>Blind Gunner</strong> est mon premier projet réalisé durant ma
+                        <strong>première année à ISART Digital</strong>.
+                        <br>
+                        J'ai travaillé seul sur le <strong>Game Programming</strong>, le
+                        <strong>Game Design</strong> et le <strong>Game Art</strong>.
+                        <br><br>
+                        La seule contrainte était de créer un <strong>shoot 'em up</strong>.
+                    </p>
                 </div>
 
                 <div class="divider"></div>
@@ -23,7 +31,32 @@
                 <!-- Pitch -->
                 <div class="text-div">
                     <h1>Pitch</h1>
-                    <p></p>
+                    <p>
+                        Le jeu repose sur <strong>3 types d'éléments</strong> :
+                        <br>
+                        les <strong>ennemis</strong>,
+                        <br>
+                        les <strong>collectibles</strong>,
+                        <br>
+                        et les <strong>obstacles</strong>.
+                        <br><br>
+                        Le joueur ne peut voir clairement qu'<strong>une seule catégorie</strong> à la fois.
+                        <br>
+                        Pour tirer sur les ennemis, il doit activer le <strong>filtre des ennemis</strong>.
+                        Pour récupérer les collectibles, il doit passer sur le
+                        <strong>filtre des collectibles</strong>.
+                        Les obstacles, eux, restent toujours dangereux, mais certains peuvent être
+                        <strong>détruits</strong> avec le bon filtre.
+                    </p>
+                </div>
+
+                <div class="divider"></div>
+
+                <div>
+                    <h1>Walkthrough</h1>
+                    <video controls playsinline>
+                        <source data-src="SHMUP_BlindGunner_WalkTrough.mp4" type="video/mp4">
+                    </video>
                 </div>
 
                 <div class="divider"></div>
@@ -31,8 +64,101 @@
                 <div class="my-works">
                     <h1>Mon travail</h1>
 
-                    <div class="text-div">
-                        <p></p>
+                    <div class="preview">
+                        <img data-src="">
+                        <div class="preview-text">
+                            <h3>Le système de filtres</h3>
+                            <p>
+                                L'idée originale était que le joueur ne puisse voir qu'<strong>un seul type
+                                d'élément</strong> à la fois, les autres devenant complètement invisibles.
+                                <br><br>
+                                Même si cette mécanique avait été validée au début du projet, il m'a été
+                                demandé durant la dernière semaine de la modifier. Avec le temps restant,
+                                j'ai ajusté le système pour rendre les éléments non filtrés
+                                <strong>légèrement visibles</strong>.
+                                <br><br>
+                                Le joueur peut alterner entre <strong>3 filtres</strong> :
+                                <br>
+                                un filtre pour voir les <strong>ennemis</strong>,
+                                <br>
+                                un filtre pour voir les <strong>collectibles</strong>,
+                                <br>
+                                et un filtre pour voir les <strong>obstacles</strong>.
+                                <br><br>
+                                Ne pas voir un élément ne signifie pas qu'il disparaît : avec le filtre des
+                                collectibles, les ennemis et les obstacles peuvent toujours infliger des
+                                <strong>dégâts</strong>, mais le joueur ne peut pas les toucher avec ses tirs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="preview">
+                        <img data-src="">
+                        <div class="preview-text">
+                            <h3>Les ennemis au corps à corps</h3>
+                            <p>
+                                Le premier type d'ennemi attaque au <strong>corps à corps</strong>.
+                                <br>
+                                Il se déplace vers le joueur en <strong>oscillant</strong>, puis est détruit
+                                lorsqu'il touche le joueur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="preview">
+                        <img data-src="">
+                        <div class="preview-text">
+                            <h3>Les ennemis à distance</h3>
+                            <p>
+                                Il existe aussi <strong>2 types d'ennemis à distance</strong>.
+                                <br>
+                                Le premier reste sur place et <strong>tire droit devant lui</strong>.
+                                <br>
+                                Le second reste à droite de l'écran et continue d'attaquer jusqu'à ce que
+                                le joueur le <strong>détruise</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="preview">
+                        <img data-src="">
+                        <div class="preview-text">
+                            <h3>Les collectibles</h3>
+                            <p>
+                                Il existe <strong>3 collectibles</strong> différents :
+                                <br>
+                                un collectible qui redonne de la <strong>vie</strong>,
+                                <br>
+                                un collectible qui <strong>améliore</strong> le personnage,
+                                <br>
+                                et un collectible qui donne une <strong>bombe</strong> au joueur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="preview">
+                        <img data-src="">
+                        <div class="preview-text">
+                            <h3>Le boss</h3>
+                            <p>
+                                À la fin du niveau, le joueur affronte un <strong>boss</strong>.
+                                <br>
+                                La contrainte était qu'il ne possède pas de véritables
+                                <strong>points de vie</strong>.
+                                <br>
+                                Le combat devait durer entre <strong>30 secondes</strong> et
+                                <strong>1 minute</strong>, tout en donnant l'illusion que les tirs du joueur
+                                avaient un impact.
+                            </p>
+                        </div>
                     </div>
 
                     <div class="divider"></div>
@@ -41,8 +167,9 @@
                     <div class="text-div">
                         <h1>Lien pour le télécharger</h1>
                         <p>
+                            Vous pouvez télécharger une build via mon
                             <a href="https://github.com/AugustePaccapelo/BlindGunner/releases"
-                            target="_blank" rel="noopener noreferrer">git</a>.
+                            target="_blank" rel="noopener noreferrer">GitHub</a>.
                         </p>
                     </div>
                 </div>
