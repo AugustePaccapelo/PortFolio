@@ -86,5 +86,16 @@
         "assets_path": "assets/projects/school/isart_digital/first_year/blind_gunner/",
         "thumbnail": "Filters.gif",
         "link": "school_projects/isart_digital/blind_gunner/"
+    },
+    {
+        "id": "musclo_surf",
+        "title": "Musclo Surf",
+        "job": "Game Programmer",
+        "categories": ["unity", "csharp", "group", "jam", "pc"],
+        "date": "09 2025",
+        "duration": "1 semaine",
+        "assets_path": "assets/projects/game_jams/godmofather/musclo_surf/",
+        "thumbnail": "icon.png",
+        "link": "game_jams/godmofather/musclo_surf/"
     }
 ]
