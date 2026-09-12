@@ -97,5 +97,16 @@
         "assets_path": "assets/projects/game_jams/godmofather/musclo_surf/",
         "thumbnail": "icon.png",
         "link": "game_jams/godmofather/musclo_surf/"
+    },
+    {
+        "id": "horse_gamble",
+        "title": "Horse Gamble Ultimate Race",
+        "job": "Game Programmer",
+        "categories": ["unity", "csharp", "group", "jam", "pc"],
+        "date": "09 2026",
+        "duration": "1 semaine",
+        "assets_path": "assets/projects/game_jams/godmofather/horse_gamble/",
+        "thumbnail": "Icon.png",
+        "link": "game_jams/godmofather/horse_gamble_ultimate_race/"
     }
 ]

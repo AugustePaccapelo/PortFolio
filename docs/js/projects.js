@@ -49,12 +49,16 @@ function getBestOrderedProjects(projects, projectOrder, category, limit) {
 }
 
 function createProjectPreview(project, categories) {
+    const thumbnailPath = `${root}${project.assets_path}${project.thumbnail}`;
+    const thumbnailExtension = project.thumbnail.split(".").pop().toLowerCase();
+    const isVideoThumbnail = ["mp4", "webm", "ogg"].includes(thumbnailExtension);
+    const thumbnailElement = isVideoThumbnail
+        ? `<video src="${thumbnailPath}" autoplay loop muted playsinline aria-label="${project.title}"></video>`
+        : `<img src="${thumbnailPath}" alt="${project.title}">`;
+
     return `
         <a class="preview project" href="${root}${project.link}">
-            <img 
-                src="${root}${project.assets_path}${project.thumbnail}"
-                alt="${project.title}"
-            >
+            ${thumbnailElement}
             <div class="preview-text">
                 <h2>${project.title}</h2>
                 <p>${project.date} - ${createCategoryLabel(project.categories, categories)} - ${project.duration}</p>
