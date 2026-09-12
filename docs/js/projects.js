@@ -1,5 +1,28 @@
 let projectData;
 
+const PROJECT_DATE_CONFIG = {
+    locale: "fr-FR",
+    monthFormat: { month: "long", year: "numeric" },
+    maxDaysBeforeWeeks: 6,
+    maxWeeksBeforeMonths: 3,
+    daysPerWeek: 7,
+    averageDaysPerMonth: 30.4375,
+    labels: {
+        day: {
+            singular: "jour",
+            plural: "jours"
+        },
+        week: {
+            singular: "semaine",
+            plural: "semaines"
+        },
+        month: {
+            singular: "mois",
+            plural: "mois"
+        }
+    }
+};
+
 async function fetchJson(path) {
     const response = await fetch(root + path);
     return response.json();
@@ -61,7 +84,7 @@ function createProjectPreview(project, categories) {
             ${thumbnailElement}
             <div class="preview-text">
                 <h2>${project.title}</h2>
-                <p>${project.date} - ${createCategoryLabel(project.categories, categories)} - ${project.duration}</p>
+                <p>${createProjectMetadata(project, categories)}</p>
                 <h3>${project.job}</h3>
             </div>
         </a>
@@ -74,6 +97,73 @@ function createCategoryLabel(projectCategories, categories) {
     return projectCategories.map(categoryId => {
         return `${categories[categoryId]}`;
     }).join(" - ");
+}
+
+function createProjectMetadata(project, categories) {
+    return `${createProjectDateLabel(project)} - ${createCategoryLabel(project.categories, categories)} - ${createProjectDurationLabel(project)}`;
+}
+
+function createProjectDateLabel(project) {
+    const startDate = parseProjectDate(project.start_date);
+    const endDate = parseProjectDate(project.end_date);
+
+    if (startDate === undefined || endDate === undefined) {
+        return project.date;
+    }
+
+    const startMonth = startDate.toLocaleDateString(PROJECT_DATE_CONFIG.locale, PROJECT_DATE_CONFIG.monthFormat);
+    const endMonth = endDate.toLocaleDateString(PROJECT_DATE_CONFIG.locale, PROJECT_DATE_CONFIG.monthFormat);
+
+    if (startMonth === endMonth) {
+        return capitalizeFirstLetter(startMonth);
+    }
+
+    return `${capitalizeFirstLetter(startMonth)} - ${capitalizeFirstLetter(endMonth)}`;
+}
+
+function createProjectDurationLabel(project) {
+    const startDate = parseProjectDate(project.start_date);
+    const endDate = parseProjectDate(project.end_date);
+
+    if (startDate === undefined || endDate === undefined) {
+        return project.duration;
+    }
+
+    const durationDays = getInclusiveDurationInDays(startDate, endDate);
+
+    if (durationDays <= PROJECT_DATE_CONFIG.maxDaysBeforeWeeks) {
+        return createDurationUnitLabel(durationDays, PROJECT_DATE_CONFIG.labels.day);
+    }
+
+    const weeks = Math.max(1, Math.round(durationDays / PROJECT_DATE_CONFIG.daysPerWeek));
+    if (weeks <= PROJECT_DATE_CONFIG.maxWeeksBeforeMonths) {
+        return createDurationUnitLabel(weeks, PROJECT_DATE_CONFIG.labels.week);
+    }
+
+    const months = Math.max(1, Math.round(durationDays / PROJECT_DATE_CONFIG.averageDaysPerMonth));
+    return createDurationUnitLabel(months, PROJECT_DATE_CONFIG.labels.month);
+}
+
+function parseProjectDate(date) {
+    if (date === undefined) {
+        return undefined;
+    }
+
+    const parsedDate = new Date(`${date}T00:00:00`);
+    return Number.isNaN(parsedDate.getTime()) ? undefined : parsedDate;
+}
+
+function getInclusiveDurationInDays(startDate, endDate) {
+    const millisecondsPerDay = 24 * 60 * 60 * 1000;
+    return Math.floor((endDate - startDate) / millisecondsPerDay) + 1;
+}
+
+function createDurationUnitLabel(value, unitLabels) {
+    return `${value} ${value === 1 ? unitLabels.singular : unitLabels.plural}`;
+}
+
+function capitalizeFirstLetter(text) {
+    return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 function getProjectAsset(project, fileName) {
@@ -91,7 +181,7 @@ function getFileLabel(fileName) {
 function renderProjectHeader(element, project, categories) {
     element.innerHTML += `
         <h1>${project.title}</h1>
-        <h3>${project.date} - ${createCategoryLabel(project.categories, categories)} - ${project.duration}</h3>
+        <h3>${createProjectMetadata(project, categories)}</h3>
         <h1>${project.job}</h1>
     `;
 }
