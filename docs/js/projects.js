@@ -30,7 +30,7 @@ const PROJECT_SEARCH_CONFIG = {
         { value: "rank", label: "Préférés" },
         { value: "rank_desc", label: "Moins préférés" },
         { value: "date_desc", label: "Récents" },
-        { value: "date_asc", label: "Ancients" }
+        { value: "date_asc", label: "Anciens" }
     ],
     labels: {
         controlsTitle: "Recherche",
