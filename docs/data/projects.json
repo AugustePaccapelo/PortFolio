@@ -108,5 +108,16 @@
         "assets_path": "assets/projects/game_jams/godmofather/horse_gamble/",
         "thumbnail": "Icon.png",
         "link": "game_jams/godmofather/horse_gamble_ultimate_race/"
+    },
+    {
+        "id": "blocky_escape",
+        "title": "Blocky Escape",
+        "job": "Game Programmer",
+        "categories": ["unity", "csharp", "group", "jam", "pc"],
+        "start_date": "2025-10-13",
+        "end_date": "2025-10-17",
+        "assets_path": "assets/projects/game_jams/blocky_escape/",
+        "thumbnail": "Icon.png",
+        "link": "game_jams/blocky_escape/"
     }
 ]
