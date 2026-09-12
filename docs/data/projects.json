@@ -8,7 +8,7 @@
         "duration": "2 mois",
         "assets_path": "assets/projects/personal/2025/tween_core/",
         "thumbnail": "preview.gif",
-        "link": "personal_projects/tween_core.html"
+        "link": "personal_projects/tween_core/"
     },
     {
         "id": "devtober",
@@ -19,7 +19,7 @@
         "duration": "1 mois",
         "assets_path": "assets/projects/personal/2025/devtober/",
         "thumbnail": "prompt_list_2025.png",
-        "link": "personal_projects/devtober.html"
+        "link": "personal_projects/devtober/"
     },
     {
         "id": "color_survivor",
@@ -30,7 +30,7 @@
         "duration": "2 semaines",
         "assets_path": "assets/projects/school/iim/second_year/color_survivor/",
         "thumbnail": "preview.gif",
-        "link": "school_projects/iim/color_survivor.html"
+        "link": "school_projects/iim/color_survivor/"
     },
     {
         "id": "dragons_cadence",
@@ -41,7 +41,7 @@
         "duration": "1 mois",
         "assets_path": "assets/projects/school/iim/second_year/dragons_cadence/",
         "thumbnail": "icon_mobile.png",
-        "link": "school_projects/iim/dragons_cadence.html"
+        "link": "school_projects/iim/dragons_cadence/"
     },
     {
         "id": "sokovolt",
@@ -52,7 +52,7 @@
         "duration": "2 mois",
         "assets_path": "assets/projects/school/isart_digital/first_year/sokovolt/",
         "thumbnail": "logo_sokovolt.png",
-        "link": "school_projects/isart_digital/sokovolt.html"
+        "link": "school_projects/isart_digital/sokovolt/"
     },
     {
         "id": "zero_paws",
@@ -63,7 +63,7 @@
         "duration": "1 mois",
         "assets_path": "assets/projects/school/iim/second_year/zero_paws/",
         "thumbnail": "icon.png",
-        "link": "school_projects/iim/zero_paws.html"
+        "link": "school_projects/iim/zero_paws/"
     },
     {
         "id": "morse_learner",
@@ -74,7 +74,7 @@
         "duration": "2 semaines",
         "assets_path": "assets/projects/school/isart_digital/first_year/morse_learner/",
         "thumbnail": "InputSequence.gif",
-        "link": "school_projects/isart_digital/morse_learner.html"
+        "link": "school_projects/isart_digital/morse_learner/"
     },
     {
         "id": "blind_gunner",
@@ -85,6 +85,6 @@
         "duration": "1 mois",
         "assets_path": "assets/projects/school/isart_digital/first_year/blind_gunner/",
         "thumbnail": "Filters.gif",
-        "link": "school_projects/isart_digital/blind_gunner.html"
+        "link": "school_projects/isart_digital/blind_gunner/"
     }
 ]

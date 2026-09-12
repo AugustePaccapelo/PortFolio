@@ -4,16 +4,20 @@ class SiteHeader extends HTMLElement {
         <header>
             <nav>
                 <ul class="nav-bar">
-                    <h4><a href="${ROOT}index.html">Accueil</a></h4>
+                    <h4><a href="${ROOT}">Accueil</a></h4>
                     <li class="nav-dropdown">
-                        <h4><a href="${ROOT}personal_projects/index.html">Projets personnels</a></h4>
+                        <h4><a href="${ROOT}personal_projects/">Projets personnels</a></h4>
                         <ul class="nav-dropdown-content" data-nav-category="personal"></ul>
                     </li>
                     <li class="nav-dropdown">
-                        <h4><a href="${ROOT}school_projects/index.html">Projets d'école</a></h4>
+                        <h4><a href="${ROOT}school_projects/">Projets d'école</a></h4>
                         <ul class="nav-dropdown-content" data-nav-category="school"></ul>
                     </li>
-                    <h4><a href="${ROOT}contact.html">Contact & CV</a></h4>
+                    <li class="nav-dropdown">
+                        <h4><a href="${ROOT}game_jams/">Game Jams</a></h4>
+                        <ul class="nav-dropdown-content" data-nav-category="jam"></ul>
+                    </li>
+                    <h4><a href="${ROOT}contact/">Contact & CV</a></h4>
                 </ul>
             </nav>
         </header>
