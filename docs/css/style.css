@@ -60,6 +60,7 @@ header nav {
 .nav-dropdown-content li a {
     display: block;
     text-align: left;
+    white-space: nowrap;
 }
 
 .nav-dropdown:hover .nav-dropdown-content {
