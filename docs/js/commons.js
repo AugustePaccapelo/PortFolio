@@ -110,3 +110,81 @@ function normalizePath(path) {
 
     return normalizedPath.replace(/\/+/g, "/");
 }
+
+function createProjectSearchControls(container, categories) {
+    const controls = document.createElement("div");
+    controls.className = "project-search";
+
+    const baseCategory = container.dataset.category;
+    const categoryOptions = Object.entries(categories)
+        .filter(([categoryId]) => categoryId !== baseCategory)
+        .map(([categoryId, categoryLabel]) => `<option value="${categoryId}">${categoryLabel}</option>`)
+        .join("");
+
+    controls.innerHTML = `
+        <h2>${PROJECT_SEARCH_CONFIG.labels.controlsTitle}</h2>
+
+        <div class="project-search-row">
+            <label>
+                ${PROJECT_SEARCH_CONFIG.labels.limit}
+                <input
+                    type="number"
+                    min="1"
+                    step="1"
+                    value="${container.dataset.projectLimit || ""}"
+                    placeholder="Tous"
+                    data-project-limit-control>
+            </label>
+
+            <label>
+                ${PROJECT_SEARCH_CONFIG.labels.sort}
+                <select data-project-sort-control>
+                    ${PROJECT_SEARCH_CONFIG.sortOptions.map(option => `
+                        <option value="${option.value}" ${option.value === PROJECT_SEARCH_CONFIG.defaultSort ? "selected" : ""}>${option.label}</option>
+                    `).join("")}
+                </select>
+            </label>
+        </div>
+
+        <fieldset class="project-search-categories">
+            <legend>${PROJECT_SEARCH_CONFIG.labels.categories}</legend>
+            <div class="project-search-category-row">
+                <select data-project-filter-select>
+                    <option value="">${PROJECT_SEARCH_CONFIG.labels.allCategories}</option>
+                    ${categoryOptions}
+                </select>
+                <button type="button" data-project-add-filter>${PROJECT_SEARCH_CONFIG.labels.addFilter}</button>
+            </div>
+            <div class="project-search-filters" data-project-selected-filters>
+            </div>
+        </fieldset>
+
+        <div class="divider"></div>
+    `;
+
+    container.before(controls);
+    return controls;
+}
+
+function addProjectFilter(controls, categories) {
+    const select = controls.querySelector("[data-project-filter-select]");
+    const selectedFilters = controls.querySelector("[data-project-selected-filters]");
+    const categoryId = select.value;
+
+    if (categoryId === "" || selectedFilters.querySelector(`[data-category="${categoryId}"]`) !== null) {
+        return false;
+    }
+
+    selectedFilters.innerHTML += `
+        <button type="button" class="project-search-filter" data-project-filter data-category="${categoryId}">
+            ${categories[categoryId]}
+        </button>
+    `;
+
+    select.value = "";
+    return true;
+}
+
+function removeProjectFilter(filterButton) {
+    filterButton.remove();
+}

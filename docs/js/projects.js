@@ -23,6 +23,26 @@ const PROJECT_DATE_CONFIG = {
     }
 };
 
+const PROJECT_SEARCH_CONFIG = {
+    defaultSort: "rank",
+    defaultLimit: "all",
+    sortOptions: [
+        { value: "rank", label: "Préférés" },
+        { value: "rank_desc", label: "Moins préférés" },
+        { value: "date_desc", label: "Récents" },
+        { value: "date_asc", label: "Ancients" }
+    ],
+    labels: {
+        controlsTitle: "Recherche",
+        limit: "Nombre de projets",
+        sort: "Trier par",
+        categories: "Catégories",
+        allCategories: "Toutes",
+        addFilter: "Ajouter un filtre",
+        noResult: "Aucun projet ne correspond à ces filtres."
+    }
+};
+
 async function fetchJson(path) {
     const response = await fetch(root + path);
     return response.json();
@@ -48,8 +68,8 @@ function getProjectOrderIndex(project, projectOrder) {
     return index === -1 ? Number.MAX_SAFE_INTEGER : index;
 }
 
-function getOrderedProjects(projects, projectOrder) {
-    return [...projects].sort((a, b) => getProjectOrderIndex(a, projectOrder) - getProjectOrderIndex(b, projectOrder));
+function getOrderedProjects(projects, projectOrder, sortMode = PROJECT_SEARCH_CONFIG.defaultSort) {
+    return [...projects].sort((a, b) => compareProjects(a, b, projectOrder, sortMode));
 }
 
 function getProjectsByCategory(projects, category) {
@@ -69,6 +89,27 @@ function getBestOrderedProjects(projects, projectOrder, category, limit) {
     }
 
     return selectedProjects;
+}
+
+function compareProjects(projectA, projectB, projectOrder, sortMode) {
+    if (sortMode === "rank_desc") {
+        return getProjectOrderIndex(projectB, projectOrder) - getProjectOrderIndex(projectA, projectOrder);
+    }
+
+    if (sortMode === "date_desc") {
+        return getProjectTime(projectB) - getProjectTime(projectA);
+    }
+
+    if (sortMode === "date_asc") {
+        return getProjectTime(projectA) - getProjectTime(projectB);
+    }
+
+    return getProjectOrderIndex(projectA, projectOrder) - getProjectOrderIndex(projectB, projectOrder);
+}
+
+function getProjectTime(project) {
+    const startDate = parseProjectDate(project.start_date);
+    return startDate === undefined ? 0 : startDate.getTime();
 }
 
 function createProjectPreview(project, categories) {
@@ -187,7 +228,42 @@ function renderProjectHeader(element, project, categories) {
 }
 
 function renderProjectPreviews(container, projects, categories) {
+    if (projects.length === 0) {
+        container.innerHTML = `<p class="project-search-empty">${PROJECT_SEARCH_CONFIG.labels.noResult}</p>`;
+        return;
+    }
+
     container.innerHTML = projects.map(project => createProjectPreview(project, categories)).join("");
+}
+
+function getProjectSearchState(controls) {
+    const limitControl = controls.querySelector("[data-project-limit-control]");
+    const sortControl = controls.querySelector("[data-project-sort-control]");
+    const selectedCategories = [...controls.querySelectorAll("[data-project-filter]")]
+        .map(element => element.dataset.category);
+
+    return {
+        limit: limitControl.value.trim(),
+        sortMode: sortControl.value,
+        selectedCategories
+    };
+}
+
+function getSearchedProjects(projects, projectOrder, baseCategory, searchState) {
+    let selectedProjects = getProjectsByCategory(projects, baseCategory);
+
+    selectedProjects = selectedProjects.filter(project => {
+        return searchState.selectedCategories.every(category => project.categories.includes(category));
+    });
+
+    selectedProjects = getOrderedProjects(selectedProjects, projectOrder, searchState.sortMode);
+
+    const projectLimit = Number(searchState.limit);
+    if (Number.isInteger(projectLimit) && projectLimit > 0) {
+        selectedProjects = selectedProjects.slice(0, projectLimit);
+    }
+
+    return selectedProjects;
 }
 
 function loadProjectAssets(project) {
@@ -229,14 +305,37 @@ async function renderProjectsPage() {
     const { projects, categories, projectOrder } = await getProjectData();
 
     if (container !== null) {
-        const projectsToDisplay = getBestOrderedProjects(
-            projects,
-            projectOrder,
-            container.dataset.category,
-            container.dataset.projectLimit
-        );
+        const controls = createProjectSearchControls(container, categories);
 
-        renderProjectPreviews(container, projectsToDisplay, categories);
+        const updateProjectResults = () => {
+            const searchState = getProjectSearchState(controls);
+            const projectsToDisplay = getSearchedProjects(
+                projects,
+                projectOrder,
+                container.dataset.category,
+                searchState
+            );
+
+            renderProjectPreviews(container, projectsToDisplay, categories);
+            applyAlternatingPreviewLayout();
+        };
+
+        controls.addEventListener("change", updateProjectResults);
+        controls.querySelector("[data-project-limit-control]").addEventListener("input", updateProjectResults);
+        controls.querySelector("[data-project-add-filter]").addEventListener("click", () => {
+            if (addProjectFilter(controls, categories)) {
+                updateProjectResults();
+            }
+        });
+        controls.querySelector("[data-project-selected-filters]").addEventListener("click", event => {
+            const filterButton = event.target.closest("[data-project-filter]");
+
+            if (filterButton !== null) {
+                removeProjectFilter(filterButton);
+                updateProjectResults();
+            }
+        });
+        updateProjectResults();
     }
 
     const currentProject = getCurrentProject(projects);
