@@ -32,6 +32,29 @@ header nav {
     width: var(--full-size);
 }
 
+/* Position against the viewport without changing the navigation's layout. */
+.language-select {
+    position: fixed;
+    top: var(--language-select-top-offset);
+    right: var(--language-select-right-offset);
+    box-sizing: border-box;
+    height: var(--language-select-height);
+    padding: var(--language-select-padding-block) var(--language-select-padding-inline);
+    border: var(--language-select-border-width) solid var(--language-select-border-color);
+    border-radius: var(--language-select-border-radius);
+    background-color: var(--language-select-background);
+    color: var(--language-select-text-color);
+    font-family: var(--font-family);
+    font-size: var(--language-select-font-size);
+    cursor: pointer;
+    color-scheme: dark;
+}
+
+.language-select:focus-visible {
+    outline: var(--language-select-focus-width) solid var(--language-select-focus-color);
+    outline-offset: var(--language-select-focus-offset);
+}
+
 .nav-bar {
     display: flex;
     flex-direction: row;

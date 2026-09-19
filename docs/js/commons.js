@@ -19,11 +19,42 @@ class SiteHeader extends HTMLElement {
                     </li>
                     <h4><a href="${ROOT}contact/" data-i18n="shared.navigation.contact_cv">shared.navigation.contact_cv</a></h4>
                 </ul>
+                <select class="language-select" aria-label="Language" disabled></select>
             </nav>
         </header>
         `;
 
         loadProjectNavLinks();
+        initializeLanguageSelector(this.querySelector(".language-select"));
+    }
+}
+
+async function initializeLanguageSelector(select) {
+    try {
+        const { availableLanguages, language } = await window.translationReady;
+        select.replaceChildren(...availableLanguages.map(code => {
+            const option = document.createElement("option");
+            option.value = code;
+            option.lang = code;
+            let name = code;
+            try {
+                name = new Intl.DisplayNames([code], { type: "language" }).of(code) || code;
+            }
+            catch { /* Unknown language codes remain usable as labels. */ }
+            option.textContent = name.charAt(0).toLocaleUpperCase() + name.slice(1);
+            return option;
+        }));
+        select.value = language;
+        select.setAttribute("aria-label", translateText("shared.navigation.language", "Language"));
+        select.disabled = false;
+        select.addEventListener("change", () => {
+            const url = new URL(window.location.href);
+            url.searchParams.set("lang", select.value);
+            window.location.assign(url.href);
+        });
+    }
+    catch (error) {
+        console.error("Unable to initialize the language selector.", error);
     }
 }
 

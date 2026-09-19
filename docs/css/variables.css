@@ -15,6 +15,22 @@
     --header-link-underline-offset: 8px;
     --header-nav-gap: 2.5%;
 
+    /* Header language selector (independent of the navigation links) */
+    --language-select-right-offset: 24px;
+    --language-select-height: 44px;
+    --language-select-top-offset: calc((var(--header-height) - var(--language-select-height)) / 2);
+    --language-select-padding-block: 8px;
+    --language-select-padding-inline: 10px;
+    --language-select-font-size: 1rem;
+    --language-select-border-width: 1px;
+    --language-select-border-radius: 6px;
+    --language-select-background: var(--color-surface-dark);
+    --language-select-text-color: var(--color-text-primary);
+    --language-select-border-color: var(--color-accent);
+    --language-select-focus-width: 2px;
+    --language-select-focus-offset: 3px;
+    --language-select-focus-color: var(--color-accent);
+
     /* Footer */
     --footer-height: 100px;
     --footer-icon-size: 3.75rem;
