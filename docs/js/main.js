@@ -6,7 +6,19 @@ else {
 }
 
 async function onHtmlInitialize() {
+    try {
+        await window.translationReady;
+    }
+    catch (error) {
+        const message = document.createElement("p");
+        message.setAttribute("role", "alert");
+        message.textContent = "Impossible de charger les textes. Veuillez réessayer.";
+        document.body.prepend(message);
+        return;
+    }
+    applyTranslations();
     await renderProjectsPage();
+    applyTranslations();
     applyAlternatingPreviewLayout();
 }
 

@@ -1,7 +1,6 @@
 let projectData;
 
 const PROJECT_DATE_CONFIG = {
-    locale: "fr-FR",
     monthFormat: { month: "long", year: "numeric" },
     maxDaysBeforeWeeks: 6,
     maxWeeksBeforeMonths: 3,
@@ -9,16 +8,16 @@ const PROJECT_DATE_CONFIG = {
     averageDaysPerMonth: 30.4375,
     labels: {
         day: {
-            singular: "jour",
-            plural: "jours"
+            singular: "shared.duration.day.singular",
+            plural: "shared.duration.day.plural"
         },
         week: {
-            singular: "semaine",
-            plural: "semaines"
+            singular: "shared.duration.week.singular",
+            plural: "shared.duration.week.plural"
         },
         month: {
-            singular: "mois",
-            plural: "mois"
+            singular: "shared.duration.month.singular",
+            plural: "shared.duration.month.plural"
         }
     }
 };
@@ -27,19 +26,19 @@ const PROJECT_SEARCH_CONFIG = {
     defaultSort: "rank",
     defaultLimit: "all",
     sortOptions: [
-        { value: "rank", label: "Préférés" },
-        { value: "rank_desc", label: "Moins préférés" },
-        { value: "date_desc", label: "Récents" },
-        { value: "date_asc", label: "Anciens" }
+        { value: "rank", label: "shared.search.sort.rank" },
+        { value: "rank_desc", label: "shared.search.sort.rank_desc" },
+        { value: "date_desc", label: "shared.search.sort.date_desc" },
+        { value: "date_asc", label: "shared.search.sort.date_asc" }
     ],
     labels: {
-        controlsTitle: "Recherche",
-        limit: "Nombre de projets",
-        sort: "Trier par",
-        categories: "Catégories",
-        allCategories: "Toutes",
-        addFilter: "Ajouter un filtre",
-        noResult: "Aucun projet ne correspond à ces filtres."
+        controlsTitle: "shared.search.controlsTitle",
+        limit: "shared.search.limit",
+        sort: "shared.search.sort",
+        categories: "shared.search.categories",
+        allCategories: "shared.search.allCategories",
+        addFilter: "shared.search.addFilter",
+        noResult: "shared.search.noResult"
     }
 };
 
@@ -49,6 +48,7 @@ async function fetchJson(path) {
 }
 
 async function getProjectData() {
+    await window.translationReady;
     if (projectData !== undefined) {
         return projectData;
     }
@@ -59,6 +59,14 @@ async function getProjectData() {
         fetchJson("data/project_order.json")
     ]);
 
+    for (const project of projects) {
+        const prefix = project.link.replace(/\/$/, "").split("/").pop();
+        project.title = translateText(`${prefix}.project.title`, project.title);
+        project.job = translateText(`${prefix}.project.job`, project.job);
+    }
+    for (const categoryId of Object.keys(categories)) {
+        categories[categoryId] = translateText(`shared.categories.${categoryId}`, categories[categoryId]);
+    }
     projectData = { projects, categories, projectOrder };
     return projectData;
 }
@@ -117,16 +125,16 @@ function createProjectPreview(project, categories) {
     const thumbnailExtension = project.thumbnail.split(".").pop().toLowerCase();
     const isVideoThumbnail = ["mp4", "webm", "ogg"].includes(thumbnailExtension);
     const thumbnailElement = isVideoThumbnail
-        ? `<video src="${thumbnailPath}" autoplay loop muted playsinline aria-label="${project.title}"></video>`
-        : `<img src="${thumbnailPath}" alt="${project.title}">`;
+        ? `<video src="${thumbnailPath}" autoplay loop muted playsinline aria-label="${escapeTranslationText(project.title)}"></video>`
+        : `<img src="${thumbnailPath}" alt="${escapeTranslationText(project.title)}">`;
 
     return `
-        <a class="preview project" href="${root}${project.link}">
+        <a class="preview project" href="${escapeTranslationText(translatedPageUrl(root + project.link))}">
             ${thumbnailElement}
             <div class="preview-text">
-                <h2>${project.title}</h2>
-                <p>${createProjectMetadata(project, categories)}</p>
-                <h3>${project.job}</h3>
+                <h2>${escapeTranslationText(project.title)}</h2>
+                <p>${escapeTranslationText(createProjectMetadata(project, categories))}</p>
+                <h3>${escapeTranslationText(project.job)}</h3>
             </div>
         </a>
 
@@ -152,8 +160,9 @@ function createProjectDateLabel(project) {
         return project.date;
     }
 
-    const startMonth = startDate.toLocaleDateString(PROJECT_DATE_CONFIG.locale, PROJECT_DATE_CONFIG.monthFormat);
-    const endMonth = endDate.toLocaleDateString(PROJECT_DATE_CONFIG.locale, PROJECT_DATE_CONFIG.monthFormat);
+    const locale = translationSettings.language;
+    const startMonth = startDate.toLocaleDateString(locale, PROJECT_DATE_CONFIG.monthFormat);
+    const endMonth = endDate.toLocaleDateString(locale, PROJECT_DATE_CONFIG.monthFormat);
 
     if (startMonth === endMonth) {
         return capitalizeFirstLetter(startMonth);
@@ -200,7 +209,7 @@ function getInclusiveDurationInDays(startDate, endDate) {
 }
 
 function createDurationUnitLabel(value, unitLabels) {
-    return `${value} ${value === 1 ? unitLabels.singular : unitLabels.plural}`;
+    return `${value} ${translateText(value === 1 ? unitLabels.singular : unitLabels.plural)}`;
 }
 
 function capitalizeFirstLetter(text) {
@@ -221,15 +230,15 @@ function getFileLabel(fileName) {
 
 function renderProjectHeader(element, project, categories) {
     element.innerHTML += `
-        <h1>${project.title}</h1>
-        <h3>${createProjectMetadata(project, categories)}</h3>
-        <h1>${project.job}</h1>
+        <h1>${escapeTranslationText(project.title)}</h1>
+        <h3>${escapeTranslationText(createProjectMetadata(project, categories))}</h3>
+        <h1>${escapeTranslationText(project.job)}</h1>
     `;
 }
 
 function renderProjectPreviews(container, projects, categories) {
     if (projects.length === 0) {
-        container.innerHTML = `<p class="project-search-empty">${PROJECT_SEARCH_CONFIG.labels.noResult}</p>`;
+        container.innerHTML = `<p class="project-search-empty">${translationHtml(PROJECT_SEARCH_CONFIG.labels.noResult)}</p>`;
         return;
     }
 
@@ -278,9 +287,12 @@ function loadProjectAssets(project) {
         }
 
         const video = element.closest("video");
-        if (video) {
+        if (video && !video.hasAttribute("data-i18n-title")) {
             video.title = fileLabel;
             video.setAttribute("aria-label", fileLabel);
+            video.load();
+        }
+        else if (video) {
             video.load();
         }
     });

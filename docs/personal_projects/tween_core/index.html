@@ -14,15 +14,8 @@
             <div class="main-content">
                 <!-- Contexte -->
                 <div class="text-div">
-                    <h1>Contexte</h1>
-                    <p>
-                        <strong>TweenCore</strong> est un <strong>package</strong> Unity qui permet de faire
-                        des <strong>animations</strong>, principalement en 2D et / ou pour l'UI.
-                        <br><br>
-                        On peut l'utiliser par <strong>code</strong> et via <strong>l'éditeur</strong>,
-                        en fonction de la complexité voulue.
-                        J'ai essayé de faire une structure similaire aux <strong>Tweens</strong> de <strong>Godot</strong>.
-                    </p>
+                    <h1 data-i18n="tween_core.contexte.heading">tween_core.contexte.heading</h1>
+                    <p data-i18n="tween_core.contexte.paragraph_1">tween_core.contexte.paragraph_1</p>
                 </div>
 
                 <div class="divider"></div>
@@ -31,30 +24,25 @@
                 <div>
                     <!-- Text -->
                     <div class="text-div">
-                        <h1>Exemple concret</h1>
-                        <p>
-                            Je l'ai utilisé pour un rendu de cours, on était en groupe de 3 Game Programmers
-                            et nous avions fait le jeu "Président" en 1 semaine.
-                            <br><br>
-                            Ici les animations ont été créées par script.
-                        </p>
+                        <h1 data-i18n="tween_core.exemple_concret.heading">tween_core.exemple_concret.heading</h1>
+                        <p data-i18n="tween_core.exemple_concret.paragraph_1">tween_core.exemple_concret.paragraph_1</p>
                     </div>
 
                     <!-- Image container -->
                     <div class="media-gallery">
                         <div class="media-item">
-                            <img data-src="draw_anim.gif">
-                            <p>Animation des boutons et distribution des cartes</p>
+                            <img data-src="draw_anim.gif" data-i18n-alt="tween_core.media.draw_anim_gif.label" alt="tween_core.media.draw_anim_gif.label">
+                            <p data-i18n="tween_core.exemple_concret.paragraph_2">tween_core.exemple_concret.paragraph_2</p>
                         </div>
 
                         <div class="media-item">
-                            <img data-src="exchange.gif">
-                            <p>Animations d'échange de cartes entre 2 joueurs</p>
+                            <img data-src="exchange.gif" data-i18n-alt="tween_core.media.exchange_gif.label" alt="tween_core.media.exchange_gif.label">
+                            <p data-i18n="tween_core.exemple_concret.paragraph_3">tween_core.exemple_concret.paragraph_3</p>
                         </div>
 
                         <div class="media-item">
-                            <img data-src="play_cards.gif">
-                            <p>Animation lorsque des joueurs jouent une ou plusieurs cartes, avec un peu d'aléatoire</p>
+                            <img data-src="play_cards.gif" data-i18n-alt="tween_core.media.play_cards_gif.label" alt="tween_core.media.play_cards_gif.label">
+                            <p data-i18n="tween_core.exemple_concret.paragraph_4">tween_core.exemple_concret.paragraph_4</p>
                         </div>
                     </div>
                 </div>
@@ -62,21 +50,16 @@
                 <div class="divider"></div>
 
                 <div class="my-works">
-                    <h1>Comment l'utiliser</h1>
+                    <h1 data-i18n="tween_core.comment_l_utiliser.heading">tween_core.comment_l_utiliser.heading</h1>
 
                     <!-- Finished animation -->
                     <div class="preview">
-                        <video controls autoplay loop muted playsinline>
+                        <video controls autoplay loop muted playsinline data-i18n-title="tween_core.media.simple_drop_anim_mp4.label" title="tween_core.media.simple_drop_anim_mp4.label" data-i18n-aria-label="tween_core.media.simple_drop_anim_mp4.label" aria-label="tween_core.media.simple_drop_anim_mp4.label">
                             <source data-src="simple_drop_anim.mp4" type="video/mp4">
                         </video>
                         <div class="preview-text">
-                            <h3>Animation finie</h3>
-                            <p>
-                                On peut faire une animation qui se joue <strong>une seule fois</strong>
-                                ou <strong>un certain nombre de fois</strong>.
-                                <br><br>
-                                Ici par exemple, le cube va descendre d'une certaine hauteur 7 fois d'affilée,
-                                avec un effet de <strong>rebond</strong> à chaque itération.</p>
+                            <h3 data-i18n="tween_core.animation_finie.heading">tween_core.animation_finie.heading</h3>
+                            <p data-i18n="tween_core.animation_finie.paragraph_1">tween_core.animation_finie.paragraph_1</p>
                         </div>
                     </div>
 
@@ -84,48 +67,32 @@
 
                     <!-- Infinite animation -->
                     <div class="preview">
-                        <video controls autoplay loop muted playsinline>
+                        <video controls autoplay loop muted playsinline data-i18n-title="tween_core.media.infinite_and_link_anim_mp4.label" title="tween_core.media.infinite_and_link_anim_mp4.label" data-i18n-aria-label="tween_core.media.infinite_and_link_anim_mp4.label" aria-label="tween_core.media.infinite_and_link_anim_mp4.label">
                             <source data-src="infinite_and_link_anim.mp4" type="video/mp4">
                         </video>
                         <div class="preview-text">
-                            <h3>Animation infinie & lien entre animations</h3>
-                            <p>
-                                On peut également faire des animations <strong>infinies</strong>,
-                                comme par exemple faire tourner un élément en boucle.
-                                <br><br>
-                                De plus, chaque <strong>TweenComponent</strong> et chaque <strong>property</strong> ont
-                                des <strong>UnityEvents</strong> et des <strong>C# events</strong> à chaque état,
-                                pour faire certaines actions lorsqu'on le souhaite.
-                                <br><br>
-                                Ici le triangle va se mettre à tourner à l'infini une fois que le carré aura fini son animation.
-                        </div>
+                            <h3 data-i18n="tween_core.animation_infinie_lien_entre_animations.heading">tween_core.animation_infinie_lien_entre_animations.heading</h3>
+                            <p data-i18n="tween_core.animation_infinie_lien_entre_animations.paragraph_1">tween_core.animation_infinie_lien_entre_animations.paragraph_1</p></div>
                     </div>
 
                     <div class="divider"></div>
 
                     <!-- Types & Eases -->
                     <div class="preview">
-                        <video controls autoplay loop muted playsinline>
+                        <video controls autoplay loop muted playsinline data-i18n-title="tween_core.media.custom_curves_mp4.label" title="tween_core.media.custom_curves_mp4.label" data-i18n-aria-label="tween_core.media.custom_curves_mp4.label" aria-label="tween_core.media.custom_curves_mp4.label">
                             <source data-src="custom_curves.mp4" type="video/mp4">
                         </video>
                         <div class="preview-text">
-                            <h3>Les Types et Eases</h3>
-                            <p>
-                                Les tweens ont beaucoup de <strong>types</strong> et d'<strong>eases</strong> possibles, dont une bonne partie est déjà <strong>intégrée</strong>.
-                                <br><br>
-                                Cependant, si besoin, on peut également donner une <strong>CustomCurve</strong> que la property va suivre.
-                                <br><br>
-                                Pour des besoins très spécifiques, on peut donner une <strong>fonction</strong> que la property va utiliser par <strong>script</strong>.
-                        </div>
+                            <h3 data-i18n="tween_core.les_types_et_eases.heading">tween_core.les_types_et_eases.heading</h3>
+                            <p data-i18n="tween_core.les_types_et_eases.paragraph_1">tween_core.les_types_et_eases.paragraph_1</p></div>
                     </div>
 
                     <div class="divider"></div>
 
                     <!-- Download -->
                     <div class="text-div">
-                        <h1>Lien pour le télécharger</h1>
-                        <p>Vous pouvez télécharger le package via mon
-                            <a href="https://github.com/AugustePaccapelo/TweenCore/releases" target="_blank" rel="noopener noreferrer">Git</a>.</p>
+                        <h1 data-i18n="tween_core.lien_pour_le_telecharger.heading">tween_core.lien_pour_le_telecharger.heading</h1>
+                        <p data-i18n="tween_core.lien_pour_le_telecharger.paragraph_1">tween_core.lien_pour_le_telecharger.paragraph_1</p>
                     </div>
                 </div>
             </div>

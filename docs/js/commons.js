@@ -4,20 +4,20 @@ class SiteHeader extends HTMLElement {
         <header>
             <nav>
                 <ul class="nav-bar">
-                    <h4><a href="${ROOT}">Accueil</a></h4>
+                    <h4><a href="${ROOT}" data-i18n="shared.navigation.accueil">shared.navigation.accueil</a></h4>
                     <li class="nav-dropdown">
-                        <h4><a href="${ROOT}personal_projects/">Projets personnels</a></h4>
+                        <h4><a href="${ROOT}personal_projects/" data-i18n="shared.navigation.projets_personnels">shared.navigation.projets_personnels</a></h4>
                         <ul class="nav-dropdown-content" data-nav-category="personal"></ul>
                     </li>
                     <li class="nav-dropdown">
-                        <h4><a href="${ROOT}school_projects/">Projets d'école</a></h4>
+                        <h4><a href="${ROOT}school_projects/" data-i18n="shared.navigation.projets_d_ecole">shared.navigation.projets_d_ecole</a></h4>
                         <ul class="nav-dropdown-content" data-nav-category="school"></ul>
                     </li>
                     <li class="nav-dropdown">
-                        <h4><a href="${ROOT}game_jams/">Game Jams</a></h4>
+                        <h4><a href="${ROOT}game_jams/" data-i18n="shared.navigation.game_jams">shared.navigation.game_jams</a></h4>
                         <ul class="nav-dropdown-content" data-nav-category="jam"></ul>
                     </li>
-                    <h4><a href="${ROOT}contact/">Contact & CV</a></h4>
+                    <h4><a href="${ROOT}contact/" data-i18n="shared.navigation.contact_cv">shared.navigation.contact_cv</a></h4>
                 </ul>
             </nav>
         </header>
@@ -32,7 +32,7 @@ class SiteFooter extends HTMLElement {
         this.innerHTML = `
         <footer>
             <div class="footer-txt">
-                <p>Auguste Paccapelo</p>
+                <p data-i18n="shared.footer.auguste_paccapelo">shared.footer.auguste_paccapelo</p>
             </div>
 
             <div class="footer-img-container">
@@ -43,7 +43,7 @@ class SiteFooter extends HTMLElement {
             </div>
 
             <div class="footer-txt">
-                <p>Game programmer</p>
+                <p data-i18n="shared.footer.game_programmer">shared.footer.game_programmer</p>
             </div>
         </footer>
         `;
@@ -67,7 +67,7 @@ async function loadProjectNavLinks() {
             const projectsInCategory = getBestOrderedProjects(projects, projectOrder, list.dataset.navCategory, 4);
 
             list.innerHTML = projectsInCategory.map(project => `
-                <li><h4><a href="${ROOT}${project.link}">${project.title}</a></h4></li>
+                <li><h4><a href="${ROOT}${project.link}">${escapeTranslationText(project.title)}</a></h4></li>
             `).join("");
         });
     }
@@ -75,6 +75,7 @@ async function loadProjectNavLinks() {
         console.error("Unable to load project navigation links.", error);
     }
 
+    applyTranslations();
     setActivePageInNav();
 }
 
@@ -118,42 +119,42 @@ function createProjectSearchControls(container, categories) {
     const baseCategory = container.dataset.category;
     const categoryOptions = Object.entries(categories)
         .filter(([categoryId]) => categoryId !== baseCategory)
-        .map(([categoryId, categoryLabel]) => `<option value="${categoryId}">${categoryLabel}</option>`)
+        .map(([categoryId, categoryLabel]) => `<option value="${categoryId}">${escapeTranslationText(categoryLabel)}</option>`)
         .join("");
 
     controls.innerHTML = `
-        <h2>${PROJECT_SEARCH_CONFIG.labels.controlsTitle}</h2>
+        <h2>${translationHtml(PROJECT_SEARCH_CONFIG.labels.controlsTitle)}</h2>
 
         <div class="project-search-row">
             <label>
-                ${PROJECT_SEARCH_CONFIG.labels.limit}
+                ${translationHtml(PROJECT_SEARCH_CONFIG.labels.limit)}
                 <input
                     type="number"
                     min="1"
                     step="1"
                     value="${container.dataset.projectLimit || ""}"
-                    placeholder="Tous"
+                    placeholder="${translationHtml('shared.search.placeholder')}"
                     data-project-limit-control>
             </label>
 
             <label>
-                ${PROJECT_SEARCH_CONFIG.labels.sort}
+                ${translationHtml(PROJECT_SEARCH_CONFIG.labels.sort)}
                 <select data-project-sort-control>
                     ${PROJECT_SEARCH_CONFIG.sortOptions.map(option => `
-                        <option value="${option.value}" ${option.value === PROJECT_SEARCH_CONFIG.defaultSort ? "selected" : ""}>${option.label}</option>
+                        <option value="${option.value}" ${option.value === PROJECT_SEARCH_CONFIG.defaultSort ? "selected" : ""}>${translationHtml(option.label)}</option>
                     `).join("")}
                 </select>
             </label>
         </div>
 
         <fieldset class="project-search-categories">
-            <legend>${PROJECT_SEARCH_CONFIG.labels.categories}</legend>
+            <legend>${translationHtml(PROJECT_SEARCH_CONFIG.labels.categories)}</legend>
             <div class="project-search-category-row">
                 <select data-project-filter-select>
-                    <option value="">${PROJECT_SEARCH_CONFIG.labels.allCategories}</option>
+                    <option value="">${translationHtml(PROJECT_SEARCH_CONFIG.labels.allCategories)}</option>
                     ${categoryOptions}
                 </select>
-                <button type="button" data-project-add-filter>${PROJECT_SEARCH_CONFIG.labels.addFilter}</button>
+                <button type="button" data-project-add-filter>${translationHtml(PROJECT_SEARCH_CONFIG.labels.addFilter)}</button>
             </div>
             <div class="project-search-filters" data-project-selected-filters>
             </div>
@@ -177,7 +178,7 @@ function addProjectFilter(controls, categories) {
 
     selectedFilters.innerHTML += `
         <button type="button" class="project-search-filter" data-project-filter data-category="${categoryId}">
-            ${categories[categoryId]}
+            ${escapeTranslationText(categories[categoryId])}
         </button>
     `;
 
