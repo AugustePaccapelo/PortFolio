@@ -1,0 +1,553 @@
+﻿"key","fr"
+"contact.contact_cv.heading","Contact & CV"
+"contact.auguste_paccapelo.heading","Auguste Paccapelo"
+"contact.a_propos_de_moi.heading","À propos de moi"
+"contact.a_propos_de_moi.paragraph_1","Je suis Auguste Paccapelo, étudiant en 3ème année à l'IIM Digital School Paris en Game Programming. J'aimerais devenir Tool Programmer.
+
+Ce que je préfère c'est concevoir des outils efficaces et voir ce que d'autres personnes peuvent créer grâce à eux."
+"contact.me_contacter.heading","Me contacter"
+"contact.me_contacter.paragraph_1","Pour me contacter, vous pouvez utiliser :
+
+Mon adresse <email>mail</email>,
+Mon <phone>téléphone</phone>,
+Ou mon <linkedin>LinkedIn</linkedin>."
+"contact.mon_cv.heading","Mon CV"
+"contact.mon_cv.link_1","Ouvrir le PDF"
+"contact.mon_cv.img_alt","CV Auguste Paccapelo"
+"blocky_escape.contexte.heading","Contexte"
+"blocky_escape.contexte.paragraph_1","Ce jeu a été réalisé en groupe de 5 personnes.
+Nous avions 1 semaine de cours pour reprendre en main Git et Fork.
+
+Pour mettre ces outils en pratique, nous devions créer un petit jeu."
+"blocky_escape.pitch.heading","Pitch"
+"blocky_escape.pitch.paragraph_1","Ce jeu se joue en coopération à 2 joueurs.
+Un joueur est bloqué dans un trou, et l'objectif est de l'aider à en sortir.
+
+Le second joueur peut placer des blocs, comme dans Tetris, pour créer un chemin vers la sortie."
+"blocky_escape.walkthrough.heading","Walkthrough"
+"blocky_escape.media.walkthrough_mp4.label","Walkthrough"
+"blocky_escape.mon_travail.heading","Mon travail"
+"blocky_escape.media.controls_gif.label","Controls"
+"blocky_escape.controles_des_blocs.heading","Contrôles des blocs"
+"blocky_escape.controles_des_blocs.paragraph_1","Je me suis occupé des inputs du second joueur.
+Il peut déplacer les blocs à gauche ou à droite, les tourner et accélérer leur descente."
+"blocky_escape.media.playerconnection_gif.label","PlayerConnection"
+"blocky_escape.connexion_des_controleurs.heading","Connexion des contrôleurs"
+"blocky_escape.connexion_des_controleurs.paragraph_1","J'ai également fait le système de connexion des joueurs.
+Le jeu peut être joué avec 1 ou 2 joueurs au clavier, ainsi qu'avec 1 joueur à la manette."
+"blocky_escape.media.wincond_gif.label","WinCond"
+"blocky_escape.conditions_de_victoire_et_de_defaite.heading","Conditions de victoire et de défaite"
+"blocky_escape.conditions_de_victoire_et_de_defaite.paragraph_1","Pour finir, j'ai fait la condition de victoire, déclenchée lorsque le joueur parvient à sortir.
+
+J'ai aussi ajouté certaines conditions de défaite : lorsque le temps est écoulé, ou lorsque les blocs montent trop haut."
+"blocky_escape.lien_pour_le_telecharger.heading","Lien pour le télécharger"
+"blocky_escape.lien_pour_le_telecharger.paragraph_1","Vous pouvez télécharger le jeu via cette page <itch>itch.io</itch>."
+"horse_gamble_ultimate_race.contexte.heading","Contexte"
+"horse_gamble_ultimate_race.contexte.paragraph_1","Ce jeu a été développé en groupe de 6 personnes lors de la Game Jam GodMoFather à l'IIM en 2026.
+
+Le thème de la jam tournait autour du casino.
+Notre sujet était de créer un tiercé parodique."
+"horse_gamble_ultimate_race.pitch.heading","Pitch"
+"horse_gamble_ultimate_race.pitch.paragraph_1","Le principe du jeu est de parier sur les 3 chevaux qui vont terminer sur le podium.
+Il n'y a pas de limite de joueurs.
+
+Une fois les paris enregistrés, tout le monde assiste à une course imprévisible, avec beaucoup de retournements de situation.
+Quand les 3 premiers chevaux ont fini la course, le jeu affiche les gagnants, les meilleurs parieurs et les pires parieurs."
+"horse_gamble_ultimate_race.video_de_gameplay.heading","Vidéo de Gameplay"
+"horse_gamble_ultimate_race.media.walkthrough_mp4.label","Walkthrough"
+"horse_gamble_ultimate_race.mon_travail.heading","Mon travail"
+"horse_gamble_ultimate_race.media.leaderboard_mp4.label","LeaderBoard"
+"horse_gamble_ultimate_race.systeme_de_comptes.heading","Système de comptes"
+"horse_gamble_ultimate_race.systeme_de_comptes.paragraph_1","J'ai mis en place un système de comptes.
+Lorsqu'un pari est créé, si le nom n'existe pas encore, le jeu crée un nouveau compte.
+S'il existe déjà, le jeu récupère le compte avec son score actuel.
+
+Quand le pari est confirmé, le montant est retiré du compte. À la fin de la partie, les gains sont ajoutés au score du joueur."
+"horse_gamble_ultimate_race.media.bets_mp4.label","Bets"
+"horse_gamble_ultimate_race.systeme_de_paris.heading","Système de paris"
+"horse_gamble_ultimate_race.systeme_de_paris.paragraph_1","J'ai fait le système de paris.
+Le joueur entre son nom, le montant qu'il veut parier, puis le podium qu'il prédit pour la course.
+
+À la fin, il gagne plus ou moins de score en fonction du nombre de chevaux arrivés à la position prédite."
+"horse_gamble_ultimate_race.media.leaderboard_mp4.label_2","LeaderBoard"
+"horse_gamble_ultimate_race.sauvegarde_des_comptes.heading","Sauvegarde des comptes"
+"horse_gamble_ultimate_race.sauvegarde_des_comptes.paragraph_1","J'ai créé une sauvegarde automatique de tous les comptes des joueurs avec leurs scores.
+Les données sont sauvegardées après chaque partie, puis chargées automatiquement au lancement du jeu."
+"horse_gamble_ultimate_race.media.sounds_mp4.label","Sounds"
+"horse_gamble_ultimate_race.integration_des_sons.heading","Intégration des sons"
+"horse_gamble_ultimate_race.integration_des_sons.paragraph_1","J'ai fait l'intégration des sons dans le jeu.
+Pour cela, j'ai pu reprendre mon script audio de la jam de l'année précédente, <musclo_surf>Musclo Surf</musclo_surf>.
+
+Je n'ai presque pas eu besoin de le modifier : il m'a surtout fallu remplacer les sons par ceux du nouveau projet."
+"horse_gamble_ultimate_race.lien_pour_le_telecharger.heading","Lien pour le télécharger"
+"horse_gamble_ultimate_race.lien_pour_le_telecharger.paragraph_1","Vous pouvez télécharger le jeu via cette page <itch>itch.io</itch>."
+"musclo_surf.contexte.heading","Contexte"
+"musclo_surf.contexte.paragraph_1","Ce jeu a été développé en groupe de 7 personnes lors de la Game Jam GodMoFather à l'IIM en 2025.
+
+C'est avec ce projet que j'ai utilisé Unity pour la première fois."
+"musclo_surf.pitch.heading","Pitch"
+"musclo_surf.pitch.paragraph_1","Ce jeu se joue en 2 contre 2 avec 2 manettes.
+Chaque joueur utilise une moitié de manette et doit reproduire une série de touches demandée pour gagner des boosts de vitesse.
+
+Les joueurs peuvent débloquer des poses avec les points gagnés durant les manches.
+Les spectateurs peuvent aussi parier sur l'équipe gagnante avant la partie."
+"musclo_surf.video_de_gameplay.heading","Vidéo de Gameplay"
+"musclo_surf.video_de_gameplay.iframe_title","Musclo Surf gameplay"
+"musclo_surf.mon_travail.heading","Mon travail"
+"musclo_surf.media.sounds_mp4.label","Sounds"
+"musclo_surf.integration_des_sons.heading","Intégration des sons"
+"musclo_surf.integration_des_sons.paragraph_1","Je me suis occupé d'intégrer les sons dans le jeu.
+Il y a énormément d'effets sonores différents qui peuvent se lancer en même temps tout au long de la partie.
+
+Pour gérer cela, j'ai essayé de créer pour la première fois un pool system audio, qui a étonnamment fonctionné du premier coup."
+"musclo_surf.media.controllersconnection_gif.label","ControllersConnection"
+"musclo_surf.multi_manettes.heading","Multi-manettes"
+"musclo_surf.multi_manettes.paragraph_1","J'ai fait le système permettant de connecter 2 manettes au jeu et de différencier leurs entrées.
+
+J'ai découvert en même temps le système d'Input Maps d'Unity. C'était un peu difficile au début, mais je m'en suis bien sorti."
+"musclo_surf.media.preview_gif.label","Preview"
+"musclo_surf.split_camera.heading","Split camera"
+"musclo_surf.split_camera.paragraph_1","Pour finir, j'ai fait le système de caméra.
+Lorsque les 2 joueurs sont proches, le jeu utilise une seule caméra centrée.
+S'ils s'éloignent, l'écran se sépare en 2 vues."
+"musclo_surf.lien_pour_le_telecharger.heading","Lien pour le télécharger"
+"musclo_surf.lien_pour_le_telecharger.paragraph_1","Vous pouvez télécharger le jeu via cette page <itch>itch.io</itch>."
+"game_jams.mes_game_jams.heading","Mes Game Jams"
+"game_jams.auguste_paccapelo.heading","Auguste Paccapelo"
+"home.game_programmer.heading","Game programmer"
+"home.unity_unreal_engine_godot.heading","Unity / Unreal Engine / Godot"
+"home.auguste_paccapelo.heading","Auguste Paccapelo"
+"home.mes_projets_favoris.heading","Mes projets favoris"
+"devtober.c_est_quoi.heading","C'est quoi ?"
+"devtober.c_est_quoi.paragraph_1","Vous connaissez peut-être le Inktober : le but est de faire un dessin sur un thème donné chaque jour du mois d'octobre.
+
+Le Devtober c'est la même chose, mais j'ai fait un script / une mécanique par jour sur les mêmes thèmes."
+"devtober.media.prompt_list_2025_png.label","Prompt List 2025"
+"devtober.contexte.heading","Contexte"
+"devtober.contexte.paragraph_1","En octobre 2025, je venais tout juste d'arriver en A2 à l'IIM, et contrairement à mes nouveaux camarades de classe, je ne connaissais pas Unity car j'étais sur Godot toute l'année précédente.
+
+Je me suis donc servi de ce défi pour non seulement faire un script par jour, mais aussi apprendre quelque chose dans Unity chaque jour. C'était plus difficile que ce à quoi je m'attendais, surtout qu'avec les cours la journée, je comptais plus ou moins 2 heures par jour pour ce défi.
+
+Je ne vais pas tout montrer, mais vous pouvez voir chacun des 31 jours avec ce <github>lien</github>."
+"devtober.video_avec_certains_jours.heading","Vidéo avec certains jours"
+"devtober.media.devtober_2025_trailer_mp4.label","Devtober 2025 Trailer"
+"devtober.ce_que_j_ai_prefere.heading","Ce que j'ai préféré"
+"devtober.media.j1_mustache_gif.label","J1 Mustache"
+"devtober.jour_1_mustache.heading","Jour 1 : Mustache"
+"devtober.jour_1_mustache.paragraph_1","Le premier jour, littéralement la 6ème fois que j'ouvre le moteur Unity. J'ai essayé de faire en sorte que l'on puisse ""dessiner"" la moustache que l'on souhaite.
+
+J'ai commencé simplement, en découvrant les inputs souris et la création d'objets dans Unity."
+"devtober.media.j10_sweep_gif.label","J10 Sweep"
+"devtober.jour_10_sweep.heading","Jour 10 : Sweep"
+"devtober.jour_10_sweep.paragraph_1","En bas à droite nous avons un radar, qui affiche où sont les cibles dans le monde.
+À l'aide du radar, on peut deviner où sont les cibles dans le monde et cliquer dessus.
+
+J'ai commencé à apprendre l'UI d'Unity et à faire une mini-map simple avec."
+"devtober.media.j15_ragged_gif.label","J15 Ragged"
+"devtober.jour_15_ragged.heading","Jour 15 : Ragged"
+"devtober.jour_15_ragged.paragraph_1","Pour ce jour, j'ai voulu voir comment fonctionnaient les Shaders dans Unity, je connaissais certaines bases dans Godot. Ce n'est que visuel."
+"devtober.media.j26_puzzling_gif.label","J26 Puzzling"
+"devtober.jour_26_puzzling.heading","Jour 26 : Puzzling"
+"devtober.jour_26_puzzling.paragraph_1","Ici il n'y a pas d'objectif, le trait violet est comme un laser et les rectangles blancs des miroirs.
+
+J'ai utilisé les LineRenderers et les Raycasts."
+"devtober.lien_pour_le_telecharger.heading","Lien pour le télécharger"
+"devtober.lien_pour_le_telecharger.paragraph_1","Vous pouvez télécharger une build via mon <github>Git</github>."
+"personal_projects.mes_projets_personnels.heading","Mes projets personnels"
+"personal_projects.auguste_paccapelo.heading","Auguste Paccapelo"
+"tween_core.contexte.heading","Contexte"
+"tween_core.contexte.paragraph_1","TweenCore est un package Unity qui permet de faire des animations, principalement en 2D et / ou pour l'UI.
+
+On peut l'utiliser par code et via l'éditeur, en fonction de la complexité voulue. J'ai essayé de faire une structure similaire aux Tweens de Godot."
+"tween_core.exemple_concret.heading","Exemple concret"
+"tween_core.exemple_concret.paragraph_1","Je l'ai utilisé pour un rendu de cours, on était en groupe de 3 Game Programmers et nous avions fait le jeu ""Président"" en 1 semaine.
+
+Ici les animations ont été créées par script."
+"tween_core.media.draw_anim_gif.label","Draw Anim"
+"tween_core.exemple_concret.paragraph_2","Animation des boutons et distribution des cartes"
+"tween_core.media.exchange_gif.label","Exchange"
+"tween_core.exemple_concret.paragraph_3","Animations d'échange de cartes entre 2 joueurs"
+"tween_core.media.play_cards_gif.label","Play Cards"
+"tween_core.exemple_concret.paragraph_4","Animation lorsque des joueurs jouent une ou plusieurs cartes, avec un peu d'aléatoire"
+"tween_core.comment_l_utiliser.heading","Comment l'utiliser"
+"tween_core.media.simple_drop_anim_mp4.label","Simple Drop Anim"
+"tween_core.animation_finie.heading","Animation finie"
+"tween_core.animation_finie.paragraph_1","On peut faire une animation qui se joue une seule fois ou un certain nombre de fois.
+
+Ici par exemple, le cube va descendre d'une certaine hauteur 7 fois d'affilée, avec un effet de rebond à chaque itération."
+"tween_core.media.infinite_and_link_anim_mp4.label","Infinite And Link Anim"
+"tween_core.animation_infinie_lien_entre_animations.heading","Animation infinie & lien entre animations"
+"tween_core.animation_infinie_lien_entre_animations.paragraph_1","On peut également faire des animations infinies, comme par exemple faire tourner un élément en boucle.
+
+De plus, chaque TweenComponent et chaque property ont des UnityEvents et des C# events à chaque état, pour faire certaines actions lorsqu'on le souhaite.
+
+Ici le triangle va se mettre à tourner à l'infini une fois que le carré aura fini son animation."
+"tween_core.media.custom_curves_mp4.label","Custom Curves"
+"tween_core.les_types_et_eases.heading","Les Types et Eases"
+"tween_core.les_types_et_eases.paragraph_1","Les tweens ont beaucoup de types et d'eases possibles, dont une bonne partie est déjà intégrée.
+
+Cependant, si besoin, on peut également donner une CustomCurve que la property va suivre.
+
+Pour des besoins très spécifiques, on peut donner une fonction que la property va utiliser par script."
+"tween_core.lien_pour_le_telecharger.heading","Lien pour le télécharger"
+"tween_core.lien_pour_le_telecharger.paragraph_1","Vous pouvez télécharger le package via mon <github>Git</github>."
+"color_survivor.contexte.heading","Contexte"
+"color_survivor.contexte.paragraph_1","Dans le cadre d'un cours à l'IIM Digital School, nous devions faire un jeu de type Arena Shoot 'em Up.
+Ce jeu devait être réalisé en C++ uniquement à l'aide de la bibliothèque SFML et uniquement avec des formes simples.
+
+Nous étions en groupe de 3 Game Programmers."
+"color_survivor.pitch.heading","Pitch"
+"color_survivor.pitch.paragraph_1","Le but est de survivre le plus longtemps possible. Pour détruire les ennemis, il faut être de la même couleur qu'eux."
+"color_survivor.walkthrough.heading","Walkthrough"
+"color_survivor.media.walkthrough_mp4.label","Walkthrough"
+"color_survivor.mon_travail.heading","Mon travail"
+"color_survivor.media.lightnings_gif.label","Lightnings"
+"color_survivor.eclairs.heading","Éclairs"
+"color_survivor.eclairs.paragraph_1","J'ai fait un effet d'éclairs, que j'avais initialement réalisé sous Godot en C# pour mon jeu <sokovolt>SokoVolt</sokovolt>. J'ai donc dû traduire le code et faire l'affichage à la main.
+
+Pour optimiser le jeu, la boîte de collision des éclairs est un seul grand rectangle."
+"color_survivor.media.default_gif.label","Default"
+"color_survivor.pool_system.heading","Pool System"
+"color_survivor.pool_system.paragraph_1","Afin de gagner des performances et éviter d'instancier et de supprimer énormément de balles et d'ennemis très régulièrement, j'ai intégré un système de pooling.
+
+Les éléments qui l'utilisent sont les éclairs, les ennemis et surtout les balles."
+"color_survivor.media.movements_gif.label","Movements"
+"color_survivor.movements.heading","Movements"
+"color_survivor.movements.paragraph_1","Je me suis occupé de faire les mouvements du joueur et des ennemis. Pour avoir un meilleur ressenti, j'ai fait des calculs de friction. Si on change légèrement de direction, on ne sent pas beaucoup de différence, alors que si on fait demi-tour, on ressent le freinage nécessaire avant de repartir."
+"color_survivor.media.default_gif.label_2","Default"
+"color_survivor.architecture.heading","Architecture"
+"color_survivor.architecture.paragraph_1","Au début du projet, je me suis occupé de faire l'architecture des classes, principalement de l'héritage, ce qui a permis pour la plupart des systèmes d'avoir une seule liste du type GameObject au lieu d'une liste par classe."
+"color_survivor.media.behaviors_gif.label","Behaviors"
+"color_survivor.les_ennemis.heading","Les ennemis"
+"color_survivor.les_ennemis.paragraph_1","J'ai fait le comportement de nos 3 types d'ennemis :
+
+Les corps-à-corps, qui suivent le joueur et essaient de le toucher ;
+
+Les tireurs, qui tournent autour du joueur et tirent des balles ;
+
+Et les tourelles, qui ne bougent pas mais tirent de longs éclairs."
+"color_survivor.media.default_gif.label_3","Default"
+"color_survivor.les_collisions.heading","Les collisions"
+"color_survivor.les_collisions.paragraph_1","J'ai participé aux calculs de collision, principalement pour les optimiser. J'ai utilisé 2 techniques :
+
+Un système de layers : chaque objet a un layer pour définir son type, et un masque de collision pour définir avec qui il peut collisionner.
+
+Une circle broad phase : chaque objet possède un cercle qui englobe toute sa boîte de collision. Lorsque l'on veut tester 2 objets, on va d'abord tester si leurs 2 cercles se touchent ou non."
+"color_survivor.lien_pour_le_telecharger.heading","Lien pour le télécharger"
+"color_survivor.lien_pour_le_telecharger.paragraph_1","Vous pouvez télécharger une build via ce <github>lien</github>."
+"dragons_cadence.contexte.heading","Contexte"
+"dragons_cadence.contexte.paragraph_1","Mon premier projet de deuxième année à l'IIM Digital School, réalisé en groupe :
+
+3 Game Programmers
+3 Game Designers
+2 Game Artists"
+"dragons_cadence.pitch.heading","Pitch"
+"dragons_cadence.pitch.paragraph_1","Le joueur doit apporter les notes de musique dans la gueule du ou des dragons. Pour cela, il doit placer des instruments de musique pour guider les notes."
+"dragons_cadence.walkthrough.heading","Walkthrough"
+"dragons_cadence.walkthrough.iframe_title","Dragon's Cadence Walkthrough"
+"dragons_cadence.mon_travail.heading","Mon travail"
+"dragons_cadence.media.gif_mobile_puzzle_placements_compil_gif.label","Gif Mobile Puzzle Placements Compil"
+"dragons_cadence.placement_des_instruments.heading","Placement des instruments"
+"dragons_cadence.placement_des_instruments.paragraph_1","Le joueur a un nombre limité de chaque instrument, il peut les placer où il le souhaite tant que ce n'est pas sur un obstacle ou un autre instrument. Chaque instrument peut également être tourné, librement ou non."
+"dragons_cadence.media.gif_mobile_puzzle_connection_google_play_gif.label","Gif Mobile Puzzle Connection Google Play"
+"dragons_cadence.les_succes.heading","Les succès"
+"dragons_cadence.les_succes.paragraph_1","Je me suis occupé de la connexion aux services de Google Play. On s'en est servi pour mettre des succès dans le jeu."
+"dragons_cadence.media.gif_mobile_puzzle_in_game_locks_gif.label","Gif Mobile Puzzle In Game Locks"
+"dragons_cadence.les_cadenas.heading","Les cadenas"
+"dragons_cadence.les_cadenas.paragraph_1","Il y a certaines zones du niveau bloquées par une chaîne avec un cadenas. Dès qu'une note touche une clé de Fa ou de Sol, le cadenas et sa chaîne correspondante disparaissent pour rendre accessible la zone."
+"dragons_cadence.media.gif_mobile_puzzle_animations_gif.label","Gif Mobile Puzzle Animations"
+"dragons_cadence.animations_du_rythme_des_instruments.heading","Animations du rythme des instruments"
+"dragons_cadence.animations_du_rythme_des_instruments.paragraph_1","Suite à des problèmes durant le développement, le jeu n'a pas autant de juiciness que l'on voulait.
+
+Malgré tout, j'ai pu utiliser mon package <tweencore>TweenCore</tweencore> pour rapidement inclure de simples animations synchronisées sur tous les instruments."
+"dragons_cadence.media.gif_mobile_puzzle_tempo_drum_gif.label","Gif Mobile Puzzle Tempo Drum"
+"dragons_cadence.le_tambour_rythme.heading","Le tambour rythmé"
+"dragons_cadence.le_tambour_rythme.paragraph_1","Le premier instrument que j'ai réalisé est celui ci-contre. La note rebondit dessus seulement sur un certain tempo. Le joueur peut choisir ce tempo avec un bouton lorsque l'instrument est sélectionné."
+"dragons_cadence.media.gif_mobile_puzzle_trumpet_gif.label","Gif Mobile Puzzle Trumpet"
+"dragons_cadence.la_trompette.heading","La trompette"
+"dragons_cadence.la_trompette.paragraph_1","J'ai également réalisé la trompette. Comme le tambour, elle n'est active que pendant un certain temps. Son effet est similaire aux flux de gravité dans Portal 2."
+"dragons_cadence.media.gif_mobile_puzzle_cor_gif.label","Gif Mobile Puzzle Cor"
+"dragons_cadence.le_cor.heading","Le Cor"
+"dragons_cadence.le_cor.paragraph_1","J'ai participé à l'intégration du cor. La mécanique était faite, cependant l'instrument n'était pas utilisable en jeu dans son état."
+"dragons_cadence.media.gif_mobile_puzzle_ids_for_gd_gif.label","Gif Mobile Puzzle Ids For Gd"
+"dragons_cadence.aides_pour_le_ld.heading","Aides pour le LD"
+"dragons_cadence.aides_pour_le_ld.paragraph_1","Pour faciliter la création de niveaux, les éléments qui peuvent avoir des visuels alternatifs avaient une simple variable exposée qui changeait automatiquement les visuels et leurs comportements.
+
+Cela permettait aux Game Designers d'utiliser le même prefab pour chacun des éléments, et de les modifier au besoin facilement."
+"dragons_cadence.media.gif_mobile_puzzle_double_dragons_gif.label","Gif Mobile Puzzle Double Dragons"
+"dragons_cadence.niveaux_avec_plusieurs_types_de_notes.heading","Niveaux avec plusieurs types de notes"
+"dragons_cadence.niveaux_avec_plusieurs_types_de_notes.paragraph_1","Certains niveaux ont 2 bardes, 2 notes et 2 dragons différents. Ici on peut les différencier facilement avec les couleurs.
+
+Avec le système permettant aux prefabs de changer automatiquement de visuel, ça a été très simple d'implémenter ce genre de niveaux."
+"dragons_cadence.media.gif_mobile_puzzle_grey_obstacles_gif.label","Gif Mobile Puzzle Grey Obstacles"
+"dragons_cadence.les_instruments_delabres.heading","Les instruments délabrés"
+"dragons_cadence.les_instruments_delabres.paragraph_1","Chaque instrument a une version délabrée, qui peut être utilisée dans le level design de n'importe quel niveau.
+
+Ils fonctionnent de la même manière que les instruments classiques, sauf que le joueur ne peut pas les modifier ou déplacer."
+"dragons_cadence.lien_pour_le_telecharger.heading","Lien pour le télécharger"
+"dragons_cadence.lien_pour_le_telecharger.paragraph_1","Vous pouvez le chercher sur le Google Play Store, utiliser ce QR code ou alors utiliser ce <google_play>lien</google_play>:"
+"dragons_cadence.media.dragons_cadence_qr_code_png.label","Dragons Cadence Qr Code"
+"zero_paws.contexte.heading","Contexte"
+"zero_paws.contexte.paragraph_1","Zero Paws est mon deuxième et dernier projet de deuxième année à l'IIM.
+Il a été réalisé en groupe de 8 personnes :
+
+3 Game Programmers,
+2 Game Designers,
+2 Game Artists et
+1 Producer.
+
+Une personne de l'équipe devait se désigner pour prendre le rôle de Producer.
+Dans notre équipe, l'un des Game Designers s'est proposé."
+"zero_paws.pitch.heading","Pitch"
+"zero_paws.pitch.paragraph_1","Vous incarnez ZipZap, un chat alien qui infiltre un vaisseau spatial à la recherche d'herbe à chat.
+
+Vous vous déplacez en zéro gravité, tout en évitant les pièges et les ennemis pour atteindre votre objectif."
+"zero_paws.walkthrough.heading","Walkthrough"
+"zero_paws.walkthrough.iframe_title","Zero Paws Walkthrough"
+"zero_paws.mon_travail.heading","Mon travail"
+"zero_paws.media.ai_bt_png.label","AI BT"
+"zero_paws.les_ia.heading","Les IA"
+"zero_paws.les_ia.paragraph_1","Je me suis occupé de développer les IA du jeu.
+Pour cela, j'ai utilisé les Behavior Trees d'Unreal Engine.
+
+Leur comportement est séparé en 5 états principaux."
+"zero_paws.media.gif_fpsunreal_ai_stun_gif.label","Gif FPSUnreal AI Stun"
+"zero_paws.l_etat_etourdi.heading","L'état étourdi"
+"zero_paws.l_etat_etourdi.paragraph_1","Les ennemis peuvent être étourdis lorsqu'on leur lance un savon dessus.
+
+Lorsqu'ils sont étourdis, ils n'entendent rien, ne voient rien et ne bougent plus."
+"zero_paws.media.gif_fpsunreal_ai_sleep_gif.label","Gif FPSUnreal AI Sleep"
+"zero_paws.l_etat_endormi.heading","L'état endormi"
+"zero_paws.l_etat_endormi.paragraph_1","Les ennemis peuvent commencer la partie en étant endormis.
+
+Cet état est similaire à l'état étourdi, mais lorsqu'ils entendent un bruit, ils se réveillent et passent à l'état suivant."
+"zero_paws.media.gif_fpsunreal_ai_patrol_gif.label","Gif FPSUnreal AI Patrol"
+"zero_paws.l_etat_de_patrouille.heading","L'état de patrouille"
+"zero_paws.l_etat_de_patrouille.paragraph_1","Les ennemis suivent un chemin prédéterminé.
+
+Dès qu'ils entendent un bruit, ils passent à l'état d'alerte."
+"zero_paws.media.gif_fpsunreal_ia_alerted_gif.label","Gif FPSUnreal IA Alerted"
+"zero_paws.l_etat_d_alerte.heading","L'état d'alerte"
+"zero_paws.l_etat_d_alerte.paragraph_1","Lorsque les ennemis sont alertés, ils se rendent à la position du bruit entendu pour inspecter les alentours.
+
+Ils retournent ensuite à l'état de patrouille."
+"zero_paws.media.gif_fpsunreal_ai_seeplayer_gif.label","Gif FPSUnreal AI SeePlayer"
+"zero_paws.l_etat_joueur_en_vue.heading","L'état joueur en vue"
+"zero_paws.l_etat_joueur_en_vue.paragraph_1","Le dernier état est déclenché lorsqu'un ennemi voit le joueur.
+Il s'arrête et regarde dans sa direction.
+
+Si le joueur reste trop longtemps dans son champ de vision, la partie est perdue.
+Pour être repéré, une certaine surface du joueur doit être visible."
+"zero_paws.media.soap_gif.label","Soap"
+"zero_paws.l_objet_savon.heading","L'objet savon"
+"zero_paws.l_objet_savon.paragraph_1","J'ai développé le fonctionnement du savon.
+
+Il permet d'étourdir les ennemis pendant un certain temps lorsqu'ils sont touchés."
+"zero_paws.media.raygun_gif.label","Raygun"
+"zero_paws.l_objet_raygun.heading","L'objet raygun"
+"zero_paws.l_objet_raygun.paragraph_1","Le jeu contient également un raygun, qui permet d'éliminer temporairement un ennemi.
+
+Je me suis occupé de son comportement et de son effet de tir."
+"zero_paws.media.alarm_mp4.label","Alarm"
+"zero_paws.les_alarmes.heading","Les alarmes"
+"zero_paws.les_alarmes.paragraph_1","Les alarmes font partie des pièges du jeu.
+Elles sont déclenchées par d'autres pièges, comme les lasers.
+
+Lorsqu'elles sont activées, elles produisent un bruit continu qui alerte les ennemis.
+Les ennemis vont ensuite désactiver l'alarme une fois qu'ils l'ont atteinte."
+"zero_paws.media.tool_prototype_mp4.label","Tool Prototype"
+"zero_paws.prototype_de_tool.heading","Prototype de tool"
+"zero_paws.prototype_de_tool.paragraph_1","Pour finir, j'ai réalisé un prototype d'outil pour créer le squelette des niveaux.
+
+Il permet de générer une salle de n'importe quelle forme et de n'importe quelle taille dans une grille."
+"zero_paws.lien_pour_le_telecharger.heading","Lien pour le télécharger"
+"zero_paws.lien_pour_le_telecharger.paragraph_1","Vous pouvez télécharger une build via ce <itch>lien itch</itch>."
+"school_projects.mes_projets_d_ecole.heading","Mes projets d'école"
+"school_projects.auguste_paccapelo.heading","Auguste Paccapelo"
+"blind_gunner.contexte.heading","Contexte"
+"blind_gunner.contexte.paragraph_1","Blind Gunner est mon premier projet réalisé durant ma première année à ISART Digital.
+J'ai travaillé seul sur le Game Programming, le Game Design et le Game Art.
+
+La seule contrainte était de créer un shoot 'em up."
+"blind_gunner.pitch.heading","Pitch"
+"blind_gunner.pitch.paragraph_1","Le jeu repose sur 3 types d'éléments :
+les ennemis,
+les collectibles,
+et les obstacles.
+
+Le joueur ne peut voir clairement qu'une seule catégorie à la fois.
+Pour tirer sur les ennemis, il doit activer le filtre des ennemis. Pour récupérer les collectibles, il doit passer sur le filtre des collectibles. Les obstacles, eux, restent toujours dangereux, mais certains peuvent être détruits avec le bon filtre."
+"blind_gunner.walkthrough.heading","Walkthrough"
+"blind_gunner.media.shmup_blindgunner_walktrough_mp4.label","SHMUP BlindGunner WalkTrough"
+"blind_gunner.mon_travail.heading","Mon travail"
+"blind_gunner.media.filters_gif.label","Filters"
+"blind_gunner.le_systeme_de_filtres.heading","Le système de filtres"
+"blind_gunner.le_systeme_de_filtres.paragraph_1","L'idée originale était que le joueur ne puisse voir qu'un seul type d'élément à la fois, les autres devenant complètement invisibles.
+
+Même si cette mécanique avait été validée au début du projet, il m'a été demandé durant la dernière semaine de la modifier. Avec le temps restant, j'ai ajusté le système pour rendre les éléments non filtrés légèrement visibles.
+
+Le joueur peut alterner entre 3 filtres :
+un filtre pour voir les ennemis,
+un filtre pour voir les collectibles,
+et un filtre pour voir les obstacles.
+
+Ne pas voir un élément ne signifie pas qu'il disparaît : avec le filtre des collectibles, les ennemis et les obstacles peuvent toujours infliger des dégâts, mais le joueur ne peut pas les toucher avec ses tirs."
+"blind_gunner.media.ennemies_cac_gif.label","Ennemies CAC"
+"blind_gunner.les_ennemis_au_corps_a_corps.heading","Les ennemis au corps à corps"
+"blind_gunner.les_ennemis_au_corps_a_corps.paragraph_1","Le premier type d'ennemi attaque au corps à corps.
+Il se déplace vers le joueur en oscillant, puis est détruit lorsqu'il touche le joueur."
+"blind_gunner.media.ennemies_distance_gif.label","Ennemies Distance"
+"blind_gunner.les_ennemis_a_distance.heading","Les ennemis à distance"
+"blind_gunner.les_ennemis_a_distance.paragraph_1","Il existe aussi 2 types d'ennemis à distance.
+Le premier reste sur place et tire droit devant lui.
+Le second reste à droite de l'écran et continue d'attaquer jusqu'à ce que le joueur le détruise."
+"blind_gunner.media.collectibles_gif.label","Collectibles"
+"blind_gunner.les_collectibles.heading","Les collectibles"
+"blind_gunner.les_collectibles.paragraph_1","Il existe 3 collectibles différents :
+un collectible qui redonne de la vie,
+un collectible qui améliore le personnage,
+et un collectible qui donne une bombe au joueur."
+"blind_gunner.media.boss_mp4.label","Boss"
+"blind_gunner.le_boss.heading","Le boss"
+"blind_gunner.le_boss.paragraph_1","À la fin du niveau, le joueur affronte un boss.
+La contrainte était qu'il ne possède pas de véritables points de vie.
+Le combat devait durer entre 30 secondes et 1 minute, tout en donnant l'illusion que les tirs du joueur avaient un impact.
+Ses attaques devaient aussi être synchronisées avec la musique."
+"blind_gunner.lien_pour_le_telecharger.heading","Lien pour le télécharger"
+"blind_gunner.lien_pour_le_telecharger.paragraph_1","Vous pouvez télécharger une build via mon <github>GitHub</github>."
+"morse_learner.contexte.heading","Contexte"
+"morse_learner.contexte.paragraph_1","Morse Learner est un projet réalisé en solo durant ma première année à ISART Digital.
+Le sujet était de créer un jeu qui soit à la fois un One Button Game et un Serious Game.
+
+J'ai choisi de créer un jeu mobile autour de l'apprentissage du morse, en utilisant uniquement la durée d'appui du joueur pour différencier les entrées."
+"morse_learner.pitch.heading","Pitch"
+"morse_learner.pitch.paragraph_1","Le joueur doit reproduire des lettres en code morse.
+Un appui court crée un point, tandis qu'un appui long crée un tiret.
+
+L'objectif est de mémoriser progressivement l'alphabet morse grâce à un système de feedback visuel, d'animations et de progression par lettres."
+"morse_learner.walkthrough.heading","Walkthrough"
+"morse_learner.media.walkthrough_mp4.label","Walkthrough"
+"morse_learner.mon_travail.heading","Mon travail"
+"morse_learner.media.inputsequence_gif.label","InputSequence"
+"morse_learner.la_verification_du_morse.heading","La vérification du morse"
+"morse_learner.la_verification_du_morse.paragraph_1","J'ai créé un système qui convertit les lettres en code morse, puis compare les entrées du joueur avec la lettre demandée.
+
+À chaque point ou tiret ajouté, le jeu vérifie si la séquence est encore correcte. Si le joueur se trompe, la combinaison est réinitialisée et un feedback d'erreur est lancé."
+"morse_learner.media.newletter_gif.label","NewLetter"
+"morse_learner.la_progression_d_apprentissage.heading","La progression d'apprentissage"
+"morse_learner.la_progression_d_apprentissage.paragraph_1","J'ai mis en place un mode d'apprentissage qui introduit les lettres progressivement.
+Le joueur commence avec peu de lettres, puis en débloque de nouvelles après plusieurs bonnes réponses d'affilée."
+"morse_learner.media.inputsequence_gif.label_2","InputSequence"
+"morse_learner.le_feedback_visuel.heading","Le feedback visuel"
+"morse_learner.le_feedback_visuel.paragraph_1","J'ai travaillé sur les animations et les retours visuels des symboles.
+Les points et les tirets apparaissent avec une animation, changent d'état lorsqu'ils sont corrects, et se cassent lorsque le joueur fait une erreur.
+
+Ces feedbacks permettent au joueur de comprendre rapidement s'il est sur la bonne séquence ou non."
+"morse_learner.lien_pour_le_telecharger.heading","Lien pour le télécharger"
+"morse_learner.lien_pour_le_telecharger.paragraph_1","Vous pouvez télécharger une build via mon <github>GitHub</github>."
+"sokovolt.contexte.heading","Contexte"
+"sokovolt.contexte.paragraph_1","Mon second projet durant ma première année à ISART Digital Paris, réalisé en groupe de 5.
+Nous étions tous dans la même classe en Game Design & Programming."
+"sokovolt.pitch.heading","Pitch"
+"sokovolt.pitch.paragraph_1","C'est un puzzle game du type Sokoban. Le but est de déplacer les bobines tesla pour alimenter les ampoules, en les connectant à un générateur. Une fois toutes les ampoules alimentées, une porte s'ouvre, et le joueur doit la prendre pour valider le niveau."
+"sokovolt.trailer.heading","Trailer"
+"sokovolt.trailer.iframe_title","Sokovolt trailer"
+"sokovolt.mon_travail.heading","Mon travail"
+"sokovolt.media.lightning_example_in_game_mp4.label","Lightning Example In Game"
+"sokovolt.les_eclairs.heading","Les éclairs"
+"sokovolt.les_eclairs.paragraph_1","J'ai fait l'effet d'électricité qui relie les teslas lorsqu'elles sont alimentées.
+
+Ce sont des Line2D qui se dirigent dans une direction en se contraignant à une largeur donnée.
+L'effet est entièrement aléatoire.
+J'ai exposé quasiment toutes les variables afin de pouvoir les modifier comme on le souhaite, et pouvoir les utiliser dans différents cas."
+"sokovolt.les_eclairs.iframe_title","Sokovolt blocking path gameplay"
+"sokovolt.la_condition_de_victoire.heading","La condition de victoire"
+"sokovolt.la_condition_de_victoire.paragraph_1","J'ai également fait la condition de victoire.
+Il y a 2 étapes pour gagner :
+
+Allumer toutes les ampoules. Pour cela, il faut qu'une tesla alimentée soit présente autour de l'ampoule.
+
+Ensuite sortir par la porte, qui peut être un défi car l'électricité entre les teslas peut bloquer le chemin."
+"sokovolt.media.login_mp4.label","Login"
+"sokovolt.comptes_utilisateurs.heading","Comptes utilisateurs"
+"sokovolt.comptes_utilisateurs.paragraph_1","Je me suis occupé de faire l'écran de connexion et le système de connexion.
+Ce sont des comptes uniquement locaux, il n'y a pas de serveurs, mais ça permet d'avoir plusieurs sauvegardes différentes et d'avoir un tableau des scores local.
+Les mots de passe sont donc stockés dans l'ordinateur client sous une forme hashée."
+"sokovolt.media.my_level_mp4.label","My Level"
+"sokovolt.level_design.heading","Level Design"
+"sokovolt.level_design.paragraph_1","Chaque personne du groupe devait réaliser au moins 2 niveaux :
+
+1 normalement, et 1 uniquement avec ChatGPT.
+Pour le niveau avec l'IA, nous ne pouvions pas modifier le niveau, toute modification devait se faire via des prompts, et pour notre jeu l'IA a eu beaucoup de mal à produire des niveaux intéressants ou réalisables."
+"sokovolt.lien_pour_le_telecharger.heading","Lien pour le télécharger"
+"sokovolt.lien_pour_le_telecharger.paragraph_1","Vous pouvez télécharger une build via mon <github>git</github>"
+"tween_core.project.title","Tween Core"
+"tween_core.project.job","Tool Programmer"
+"devtober.project.title","Devtober"
+"devtober.project.job","Game Programmer"
+"color_survivor.project.title","Color Survivor"
+"color_survivor.project.job","Game Programmer"
+"dragons_cadence.project.title","Dragon's Cadence"
+"dragons_cadence.project.job","Game Programmer"
+"sokovolt.project.title","Sokovolt"
+"sokovolt.project.job","Game Programmer"
+"zero_paws.project.title","Zero Paws"
+"zero_paws.project.job","Game Programmer"
+"morse_learner.project.title","Morse Learner"
+"morse_learner.project.job","Game Programmer"
+"blind_gunner.project.title","Blind Gunner"
+"blind_gunner.project.job","Game Programmer"
+"musclo_surf.project.title","Musclo Surf"
+"musclo_surf.project.job","Game Programmer"
+"horse_gamble_ultimate_race.project.title","Horse Gamble Ultimate Race"
+"horse_gamble_ultimate_race.project.job","Game Programmer"
+"blocky_escape.project.title","Blocky Escape"
+"blocky_escape.project.job","Game Programmer"
+"shared.categories.solo","Seul"
+"shared.categories.group","Groupe"
+"shared.categories.unity","Unity"
+"shared.categories.unreal","Unreal"
+"shared.categories.godot","Godot"
+"shared.categories.csharp","C#"
+"shared.categories.cpp","C++"
+"shared.categories.bp","BluePrint"
+"shared.categories.game","Jeu"
+"shared.categories.jam","Game Jam"
+"shared.categories.puzzle","Puzzle Game"
+"shared.categories.fps","FPS"
+"shared.categories.shmup","Shoot Them 'Up"
+"shared.categories.tool","Tool"
+"shared.categories.package","Package"
+"shared.categories.personal","Personnel"
+"shared.categories.school","École"
+"shared.categories.isart","ISART"
+"shared.categories.iim","IIM"
+"shared.categories.pc","PC"
+"shared.categories.mobile","Mobile"
+"shared.categories.console","Console"
+"shared.categories.vr","VR"
+"shared.navigation.accueil","Accueil"
+"shared.navigation.projets_personnels","Projets personnels"
+"shared.navigation.projets_d_ecole","Projets d'école"
+"shared.navigation.game_jams","Game Jams"
+"shared.navigation.contact_cv","Contact & CV"
+"shared.footer.auguste_paccapelo","Auguste Paccapelo"
+"shared.footer.game_programmer","Game programmer"
+"shared.search.placeholder","Tous"
+"shared.duration.day.singular","jour"
+"shared.duration.day.plural","jours"
+"shared.duration.week.singular","semaine"
+"shared.duration.week.plural","semaines"
+"shared.duration.month.singular","mois"
+"shared.duration.month.plural","mois"
+"shared.search.controlsTitle","Recherche"
+"shared.search.limit","Nombre de projets"
+"shared.search.sort","Trier par"
+"shared.search.categories","Catégories"
+"shared.search.allCategories","Toutes"
+"shared.search.addFilter","Ajouter un filtre"
+"shared.search.noResult","Aucun projet ne correspond à ces filtres."
+"shared.search.sort.rank","Préférés"
+"shared.search.sort.rank_desc","Moins préférés"
+"shared.search.sort.date_desc","Récents"
+"shared.search.sort.date_asc","Anciens"

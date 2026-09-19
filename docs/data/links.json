@@ -1,0 +1,119 @@
+{
+  "contact.me_contacter.paragraph_1": {
+    "email": {
+      "href": "mailto:paccapelo.auguste@gmail.com"
+    },
+    "phone": {
+      "href": "tel:+33769942618"
+    },
+    "linkedin": {
+      "href": "https://www.linkedin.com/in/auguste-paccapelo-2b9b23350/"
+    }
+  },
+  "contact.mon_cv.link_1": {
+    "pdf": {
+      "href": "../assets/misc/CV_Auguste_Paccapelo.pdf",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  },
+  "blocky_escape.lien_pour_le_telecharger.paragraph_1": {
+    "itch": {
+      "href": "https://pojuta.itch.io/blocky-escape",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  },
+  "horse_gamble_ultimate_race.integration_des_sons.paragraph_1": {
+    "musclo_surf": {
+      "href": "../musclo_surf/"
+    }
+  },
+  "horse_gamble_ultimate_race.lien_pour_le_telecharger.paragraph_1": {
+    "itch": {
+      "href": "https://adrien-mart.itch.io/equipe-28",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  },
+  "musclo_surf.lien_pour_le_telecharger.paragraph_1": {
+    "itch": {
+      "href": "https://sheevsuke.itch.io/expedition-23-musclosurf",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  },
+  "devtober.contexte.paragraph_1": {
+    "github": {
+      "href": "https://github.com/AugustePaccapelo/Devtober_2025/releases/tag/Build",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  },
+  "devtober.lien_pour_le_telecharger.paragraph_1": {
+    "github": {
+      "href": "https://github.com/AugustePaccapelo/Devtober_2025/releases",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  },
+  "tween_core.lien_pour_le_telecharger.paragraph_1": {
+    "github": {
+      "href": "https://github.com/AugustePaccapelo/TweenCore/releases",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  },
+  "color_survivor.eclairs.paragraph_1": {
+    "sokovolt": {
+      "href": "../../isart_digital/sokovolt/"
+    }
+  },
+  "color_survivor.lien_pour_le_telecharger.paragraph_1": {
+    "github": {
+      "href": "https://github.com/Novaely/SFML-Project/releases",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  },
+  "dragons_cadence.animations_du_rythme_des_instruments.paragraph_1": {
+    "tweencore": {
+      "href": "../../../personal_projects/tween_core/"
+    }
+  },
+  "dragons_cadence.lien_pour_le_telecharger.paragraph_1": {
+    "google_play": {
+      "href": "https://play.google.com/store/apps/details?id=com.IIMaxeJV.DragonsCadence&hl=fr&pli=1",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  },
+  "zero_paws.lien_pour_le_telecharger.paragraph_1": {
+    "itch": {
+      "href": "https://blueprint-trifi.itch.io/zero-paws",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  },
+  "blind_gunner.lien_pour_le_telecharger.paragraph_1": {
+    "github": {
+      "href": "https://github.com/AugustePaccapelo/BlindGunner/releases",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  },
+  "morse_learner.lien_pour_le_telecharger.paragraph_1": {
+    "github": {
+      "href": "https://github.com/AugustePaccapelo/MorseLearner/releases",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  },
+  "sokovolt.lien_pour_le_telecharger.paragraph_1": {
+    "github": {
+      "href": "https://github.com/AugustePaccapelo/Sokovolt/releases",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    }
+  }
+}

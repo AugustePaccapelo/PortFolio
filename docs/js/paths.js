@@ -1,6 +1,7 @@
 const root = new URL("../", document.currentScript.src).href;
 window.ROOT = root;
 
+loadScript("js/translations.js");
 loadScript("js/projects.js");
 loadScript("js/commons.js");
 loadScript("js/main.js");
