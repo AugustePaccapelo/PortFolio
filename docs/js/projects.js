@@ -372,6 +372,7 @@ async function renderProjectsPage() {
     if (currentProject !== undefined) {
         const headPage = document.querySelector(".head-page");
         renderProjectHeader(headPage, currentProject, categories);
+        renderProjectSections(currentProject);
         loadProjectAssets(currentProject);
     }
 }

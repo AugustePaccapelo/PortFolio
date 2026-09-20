@@ -1,17 +1,137 @@
 {
-  "title": "Blind Gunner",
-  "job": "Game Programmer",
-  "categories": [
-    "godot",
-    "csharp",
-    "solo",
-    "school",
-    "isart",
-    "shmup",
-    "pc"
-  ],
-  "start_date": "2024-12-10",
-  "end_date": "2025-01-14",
-  "thumbnail": "Filters.gif",
-  "link": "school_projects/isart_digital/blind_gunner/"
+    "title": "Blind Gunner",
+    "job": "Game Programmer",
+    "categories": [
+        "godot",
+        "csharp",
+        "solo",
+        "school",
+        "isart",
+        "shmup",
+        "pc"
+    ],
+    "start_date": "2024-12-10",
+    "end_date": "2025-01-14",
+    "thumbnail": "Filters.gif",
+    "link": "school_projects/isart_digital/blind_gunner/",
+    "sections": [
+        {
+            "type": "text",
+            "heading": "context.heading",
+            "paragraphs": [
+                "context.paragraph_1"
+            ]
+        },
+        {
+            "type": "text",
+            "heading": "pitch.heading",
+            "paragraphs": [
+                "pitch.paragraph_1"
+            ]
+        },
+        {
+            "type": "media",
+            "heading": "walkthrough.heading",
+            "media": {
+                "type": "video",
+                "src": "SHMUP_BlindGunner_WalkTrough.mp4",
+                "label": "media.walkthrough.label",
+                "playback": {
+                    "controls": true,
+                    "autoplay": false,
+                    "loop": false,
+                    "muted": false,
+                    "plays_inline": true
+                },
+                "mime_type": "video/mp4"
+            },
+            "layout": "plain"
+        },
+        {
+            "type": "group",
+            "heading": "my_work.heading",
+            "sections": [
+                {
+                    "type": "preview",
+                    "heading": "filter_system.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "filter_system.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "Filters.gif",
+                        "label": "media.filters.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "melee_enemies.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "melee_enemies.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "Ennemies_CAC.gif",
+                        "label": "media.melee_enemies.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "ranged_enemies.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "ranged_enemies.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "Ennemies_Distance.gif",
+                        "label": "media.ranged_enemies.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "collectibles.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "collectibles.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "Collectibles.gif",
+                        "label": "media.collectibles.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "boss.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "boss.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "Boss.mp4",
+                        "label": "media.boss.label",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        },
+                        "mime_type": "video/mp4"
+                    }
+                },
+                {
+                    "type": "text",
+                    "heading": "download.heading",
+                    "paragraphs": [
+                        "download.paragraph_1"
+                    ]
+                }
+            ]
+        }
+    ]
 }

@@ -24,7 +24,7 @@ zero_paws/
   ...
 ```
 
-`project.json` contains `title`, `job`, `categories`, `start_date`, `end_date`, `thumbnail`, and `link`.
+`project.json` contains `title`, `job`, `categories`, `start_date`, `end_date`, `thumbnail`, `link`, and `sections`.
 
 - `title` is the original project name and `job` is the English role name. Both stay the same in every language; edit them directly in metadata, not in the CSV.
 - Dates use `YYYY-MM-DD`.
@@ -70,9 +70,82 @@ Relative project links resolve against the project's **page URL** (`link` in `pr
 1. Create its assets folder with media and the three content files above.
 2. Add its ID and folder path to `projects.json`.
 3. Add the ID to `project_order.json` in the desired position.
-4. Create its HTML page, set `data-project-id` to that ID, and use matching translation keys.
+4. Copy a project page shell, set `data-project-id` to that ID, and adjust its `js/paths.js` script path for the page's folder depth. Keep `<div class="main-content" data-project-sections></div>` as the content placeholder. Describe its content in `project.json` using the section types below.
 5. Check both `?lang=fr` and `?lang=en` and run `node --test tests/translations.test.cjs` from the repository root.
 
 The loader fetches project files in parallel and shares in-flight requests between navigation and page rendering. Project metadata and catalogues are currently loaded together on every page. No build step is required; serve `docs/` over HTTP as before.
 
 Only the plural filenames `translations.csv` and `links.json` are loaded. The pre-existing Color Survivor `translation.csv` draft is retained separately and is not used by the site.
+
+## CV language files
+
+The contact page uses `assets/misc/CV_fr.pdf` and `CV_fr.png` for French, and `CV_en.pdf` and `CV_en.png` for English. The English files currently duplicate the French CV. Replace both English files when the translated CV is ready (the PNG is the page preview; the PDF is opened/downloaded).
+
+The contact section's `data-cv-base` controls the path prefix; `data-cv-languages="fr en"` lists available CV versions. A site language without its own CV uses the first listed version. Add another language code and its PDF/PNG pair to support it. The original `CV_Auguste_Paccapelo` files are retained but no longer used by this page.
+
+## Project sections
+
+The `sections` array determines page order. The renderer uses the existing CSS classes, inserts dividers between sections, and retains alternating preview layouts. Reorder array entries to reorder the page. No HTML changes are needed for ordinary sections.
+
+Supported types:
+
+- `text`: `heading` and `paragraphs` (translation keys).
+- `preview`: text plus one `media` object. Headings default to level 3. Use `media_position: "after"` when the media should follow the text in the markup; otherwise it comes first.
+- `gallery`: optional heading and paragraphs, then an `items` array. Each item contains the **same `media` object** used by previews, plus an optional `caption` translation key.
+- `media`: a heading and standalone media, using the existing video layout. Set `layout: "plain"` for the normal full-width section wrapper instead.
+- `group`: a heading and a nested `sections` array, wrapped in the existing `my-works` container.
+- `custom`: a `template` ID referencing an HTML `<template>` in that project page. Use this for unusual layouts, such as Dragon's Cadence's download section. The renderer clones it; translations and `data-src` media paths work as before. Raw HTML is not stored in JSON.
+
+Except for `custom`, text-bearing types accept `heading`, optional `heading_level` (1–6), and `paragraphs`. Headings default to level 1 outside previews. These fields contain local translation keys, not display text.
+
+Example with both a preview and a gallery:
+
+```json
+"sections": [
+  {
+    "type": "text",
+    "heading": "context.heading",
+    "paragraphs": ["context.paragraph_1"]
+  },
+  {
+    "type": "group",
+    "heading": "usage.heading",
+    "sections": [
+      {
+        "type": "preview",
+        "heading": "finite_animation.heading",
+        "paragraphs": ["finite_animation.paragraph_1"],
+        "media": {
+          "type": "video",
+          "src": "simple_drop_anim.mp4",
+          "label": "media.simple_drop_animation.label",
+          "playback": { "controls": true, "autoplay": true, "loop": true, "muted": true }
+        }
+      },
+      {
+        "type": "gallery",
+        "heading": "example.heading",
+        "items": [
+          {
+            "media": { "type": "image", "src": "draw_anim.gif", "label": "media.card_dealing_animation.label" },
+            "caption": "example.paragraph_2"
+          },
+          {
+            "media": { "type": "video", "src": "simple_drop_anim.mp4", "label": "media.simple_drop_animation.label" }
+          }
+        ]
+      }
+    ]
+  }
+]
+```
+
+### Media objects
+
+- `type`: `image`, `video`, or `embed` (an iframe).
+- `src`: a path relative to the project's assets folder for images/videos; an absolute HTTP(S) embed URL for iframes.
+- `label`: a translation key for the image's alternative text or the video/embed's title. Add this for accessibility.
+- Videos optionally accept `mime_type` and `playback` with `controls`, `autoplay`, `loop`, `muted`, and `plays_inline`. Defaults are controls and inline playback enabled; autoplay, loop, and mute disabled. Autoplay videos should be muted.
+- Embeds optionally accept `allow`, for example `"autoplay"`. Embed-specific playback options belong in the embed URL.
+
+Handwritten pages remain supported: omit `data-project-sections` to keep their HTML content. CSS layout settings remain in `variables.css`; this change adds no mobile layout rules.

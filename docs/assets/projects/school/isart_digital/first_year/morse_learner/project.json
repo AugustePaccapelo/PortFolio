@@ -1,17 +1,103 @@
 {
-  "title": "Morse Learner",
-  "job": "Game Programmer",
-  "categories": [
-    "godot",
-    "csharp",
-    "solo",
-    "school",
-    "isart",
-    "game",
-    "mobile"
-  ],
-  "start_date": "2025-04-23",
-  "end_date": "2025-05-19",
-  "thumbnail": "InputSequence.gif",
-  "link": "school_projects/isart_digital/morse_learner/"
+    "title": "Morse Learner",
+    "job": "Game Programmer",
+    "categories": [
+        "godot",
+        "csharp",
+        "solo",
+        "school",
+        "isart",
+        "game",
+        "mobile"
+    ],
+    "start_date": "2025-04-23",
+    "end_date": "2025-05-19",
+    "thumbnail": "InputSequence.gif",
+    "link": "school_projects/isart_digital/morse_learner/",
+    "sections": [
+        {
+            "type": "text",
+            "heading": "context.heading",
+            "paragraphs": [
+                "context.paragraph_1"
+            ]
+        },
+        {
+            "type": "text",
+            "heading": "pitch.heading",
+            "paragraphs": [
+                "pitch.paragraph_1"
+            ]
+        },
+        {
+            "type": "media",
+            "heading": "walkthrough.heading",
+            "media": {
+                "type": "video",
+                "src": "Walkthrough.mp4",
+                "label": "media.walkthrough.label",
+                "playback": {
+                    "controls": true,
+                    "autoplay": true,
+                    "loop": true,
+                    "muted": true,
+                    "plays_inline": true
+                },
+                "mime_type": "video/mp4"
+            },
+            "layout": "plain"
+        },
+        {
+            "type": "group",
+            "heading": "my_work.heading",
+            "sections": [
+                {
+                    "type": "preview",
+                    "heading": "morse_validation.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "morse_validation.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "InputSequence.gif",
+                        "label": "media.input_sequence.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "learning_progression.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "learning_progression.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "NewLetter.gif",
+                        "label": "media.new_letter.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "visual_feedback.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "visual_feedback.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "InputSequence.gif",
+                        "label": "media.input_sequence.label"
+                    }
+                },
+                {
+                    "type": "text",
+                    "heading": "download.heading",
+                    "paragraphs": [
+                        "download.paragraph_1"
+                    ]
+                }
+            ]
+        }
+    ]
 }

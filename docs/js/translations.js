@@ -202,4 +202,12 @@ function applyTranslations(scope = document) {
     scope.querySelectorAll("a[href]").forEach(link => {
         if (!link.getAttribute("href").startsWith("#")) link.href = translatedPageUrl(link.href);
     });
+    scope.querySelectorAll("[data-cv-base]").forEach(section => {
+        const languages = section.dataset.cvLanguages.trim().split(/\s+/);
+        const language = languages.includes(translationSettings.language)
+            ? translationSettings.language : languages[0];
+        const base = new URL(section.dataset.cvBase + language, ROOT).href;
+        section.querySelectorAll("[data-cv-pdf]").forEach(link => { link.href = base + ".pdf"; });
+        section.querySelectorAll("[data-cv-preview]").forEach(image => { image.src = base + ".png"; });
+    });
 }

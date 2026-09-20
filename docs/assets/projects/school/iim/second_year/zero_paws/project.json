@@ -1,17 +1,201 @@
 {
-  "title": "Zero Paws",
-  "job": "Game Programmer",
-  "categories": [
-    "unreal",
-    "bp",
-    "group",
-    "school",
-    "iim",
-    "fps",
-    "pc"
-  ],
-  "start_date": "2026-05-18",
-  "end_date": "2026-06-24",
-  "thumbnail": "icon.png",
-  "link": "school_projects/iim/zero_paws/"
+    "title": "Zero Paws",
+    "job": "Game Programmer",
+    "categories": [
+        "unreal",
+        "bp",
+        "group",
+        "school",
+        "iim",
+        "fps",
+        "pc"
+    ],
+    "start_date": "2026-05-18",
+    "end_date": "2026-06-24",
+    "thumbnail": "icon.png",
+    "link": "school_projects/iim/zero_paws/",
+    "sections": [
+        {
+            "type": "text",
+            "heading": "context.heading",
+            "paragraphs": [
+                "context.paragraph_1"
+            ]
+        },
+        {
+            "type": "text",
+            "heading": "pitch.heading",
+            "paragraphs": [
+                "pitch.paragraph_1"
+            ]
+        },
+        {
+            "type": "media",
+            "heading": "walkthrough.heading",
+            "media": {
+                "type": "embed",
+                "src": "https://www.youtube.com/embed/1EYQUJnzy84",
+                "label": "walkthrough.iframe_title"
+            }
+        },
+        {
+            "type": "group",
+            "heading": "my_work.heading",
+            "sections": [
+                {
+                    "type": "preview",
+                    "heading": "ai.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "ai.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "AI_BT.png",
+                        "label": "media.ai_behavior_tree.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "stunned_state.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "stunned_state.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "Gif_FPSUnreal_AI_Stun.gif",
+                        "label": "media.stunned_enemy.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "sleeping_state.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "sleeping_state.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "Gif_FPSUnreal_AI_Sleep.gif",
+                        "label": "media.sleeping_enemy.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "patrol_state.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "patrol_state.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "Gif_FPSUnreal_AI_Patrol.gif",
+                        "label": "media.enemy_patrol.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "alert_state.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "alert_state.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "Gif_FPSUnreal_IA_Alerted.gif",
+                        "label": "media.alerted_enemy.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "player_in_sight_state.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "player_in_sight_state.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "Gif_FPSUnreal_AI_SeePlayer.gif",
+                        "label": "media.enemy_spotting_player.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "soap.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "soap.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "Soap.gif",
+                        "label": "media.soap.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "raygun.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "raygun.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "Raygun.gif",
+                        "label": "media.raygun.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "alarms.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "alarms.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "Alarm.mp4",
+                        "label": "media.alarm.label",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        },
+                        "mime_type": "video/mp4"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "prototype_tool.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "prototype_tool.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "Tool_Prototype.mp4",
+                        "label": "media.tool_prototype.label",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        },
+                        "mime_type": "video/mp4"
+                    }
+                },
+                {
+                    "type": "text",
+                    "heading": "download.heading",
+                    "paragraphs": [
+                        "download.paragraph_1"
+                    ]
+                }
+            ]
+        }
+    ]
 }

@@ -1,15 +1,100 @@
 {
-  "title": "Blocky Escape",
-  "job": "Game Programmer",
-  "categories": [
-    "unity",
-    "csharp",
-    "group",
-    "jam",
-    "pc"
-  ],
-  "start_date": "2025-10-13",
-  "end_date": "2025-10-17",
-  "thumbnail": "icon.png",
-  "link": "game_jams/blocky_escape/"
+    "title": "Blocky Escape",
+    "job": "Game Programmer",
+    "categories": [
+        "unity",
+        "csharp",
+        "group",
+        "jam",
+        "pc"
+    ],
+    "start_date": "2025-10-13",
+    "end_date": "2025-10-17",
+    "thumbnail": "icon.png",
+    "link": "game_jams/blocky_escape/",
+    "sections": [
+        {
+            "type": "text",
+            "heading": "context.heading",
+            "paragraphs": [
+                "context.paragraph_1"
+            ]
+        },
+        {
+            "type": "text",
+            "heading": "pitch.heading",
+            "paragraphs": [
+                "pitch.paragraph_1"
+            ]
+        },
+        {
+            "type": "media",
+            "heading": "walkthrough.heading",
+            "media": {
+                "type": "video",
+                "src": "Walkthrough.mp4",
+                "label": "media.walkthrough.label",
+                "playback": {
+                    "controls": true,
+                    "autoplay": false,
+                    "loop": false,
+                    "muted": false,
+                    "plays_inline": true
+                },
+                "mime_type": "video/mp4"
+            }
+        },
+        {
+            "type": "group",
+            "heading": "my_work.heading",
+            "sections": [
+                {
+                    "type": "preview",
+                    "heading": "block_controls.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "block_controls.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "Controls.gif",
+                        "label": "media.controls.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "controller_connection.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "controller_connection.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "PlayerConnection.gif",
+                        "label": "media.player_connection.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "win_and_lose_conditions.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "win_and_lose_conditions.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "WinCond.gif",
+                        "label": "media.win_conditions.label"
+                    }
+                },
+                {
+                    "type": "text",
+                    "heading": "download.heading",
+                    "paragraphs": [
+                        "download.paragraph_1"
+                    ]
+                }
+            ]
+        }
+    ]
 }

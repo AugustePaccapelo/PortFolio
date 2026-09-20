@@ -1,17 +1,182 @@
 {
-  "title": "Dragon's Cadence",
-  "job": "Game Programmer",
-  "categories": [
-    "unity",
-    "csharp",
-    "group",
-    "school",
-    "iim",
-    "puzzle",
-    "mobile"
-  ],
-  "start_date": "2026-01-26",
-  "end_date": "2026-02-20",
-  "thumbnail": "icon_mobile.png",
-  "link": "school_projects/iim/dragons_cadence/"
+    "title": "Dragon's Cadence",
+    "job": "Game Programmer",
+    "categories": [
+        "unity",
+        "csharp",
+        "group",
+        "school",
+        "iim",
+        "puzzle",
+        "mobile"
+    ],
+    "start_date": "2026-01-26",
+    "end_date": "2026-02-20",
+    "thumbnail": "icon_mobile.png",
+    "link": "school_projects/iim/dragons_cadence/",
+    "sections": [
+        {
+            "type": "text",
+            "heading": "context.heading",
+            "paragraphs": [
+                "context.paragraph_1"
+            ]
+        },
+        {
+            "type": "text",
+            "heading": "pitch.heading",
+            "paragraphs": [
+                "pitch.paragraph_1"
+            ]
+        },
+        {
+            "type": "media",
+            "heading": "walkthrough.heading",
+            "media": {
+                "type": "embed",
+                "src": "https://www.youtube.com/embed/HHcAUji56Tw",
+                "label": "walkthrough.iframe_title"
+            }
+        },
+        {
+            "type": "group",
+            "heading": "my_work.heading",
+            "sections": [
+                {
+                    "type": "preview",
+                    "heading": "instrument_placement.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "instrument_placement.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "gif_mobile_puzzle_placements_compil.gif",
+                        "label": "media.instrument_placement_examples.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "achievements.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "achievements.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "gif_mobile_puzzle_connection_google_play.gif",
+                        "label": "media.google_play_sign_in.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "padlocks.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "padlocks.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "gif_mobile_puzzle_in_game_locks.gif",
+                        "label": "media.in_game_locks.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "rhythmic_instrument_animations.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "rhythmic_instrument_animations.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "gif_mobile_puzzle_animations.gif",
+                        "label": "media.instrument_animations.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "rhythm_drum.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "rhythm_drum.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "gif_mobile_puzzle_tempo_drum.gif",
+                        "label": "media.rhythm_drum.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "trumpet.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "trumpet.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "gif_mobile_puzzle_trumpet.gif",
+                        "label": "media.trumpet.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "horn.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "horn.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "gif_mobile_puzzle_cor.gif",
+                        "label": "media.horn.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "level_design_tools.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "level_design_tools.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "gif_mobile_puzzle_ids_for_gd.gif",
+                        "label": "media.level_design_variants.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "multiple_note_types.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "multiple_note_types.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "gif_mobile_puzzle_double_dragons.gif",
+                        "label": "media.two_dragons.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "damaged_instruments.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "damaged_instruments.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "gif_mobile_puzzle_grey_obstacles.gif",
+                        "label": "media.damaged_instruments.label"
+                    }
+                },
+                {
+                    "type": "custom",
+                    "template": "project-custom-1"
+                }
+            ]
+        }
+    ]
 }

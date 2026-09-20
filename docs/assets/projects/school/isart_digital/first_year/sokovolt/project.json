@@ -1,17 +1,132 @@
 {
-  "title": "Sokovolt",
-  "job": "Game Programmer",
-  "categories": [
-    "godot",
-    "csharp",
-    "group",
-    "school",
-    "isart",
-    "puzzle",
-    "pc"
-  ],
-  "start_date": "2025-02-13",
-  "end_date": "2025-04-15",
-  "thumbnail": "logo_sokovolt.png",
-  "link": "school_projects/isart_digital/sokovolt/"
+    "title": "Sokovolt",
+    "job": "Game Programmer",
+    "categories": [
+        "godot",
+        "csharp",
+        "group",
+        "school",
+        "isart",
+        "puzzle",
+        "pc"
+    ],
+    "start_date": "2025-02-13",
+    "end_date": "2025-04-15",
+    "thumbnail": "logo_sokovolt.png",
+    "link": "school_projects/isart_digital/sokovolt/",
+    "sections": [
+        {
+            "type": "text",
+            "heading": "context.heading",
+            "paragraphs": [
+                "context.paragraph_1"
+            ]
+        },
+        {
+            "type": "text",
+            "heading": "pitch.heading",
+            "paragraphs": [
+                "pitch.paragraph_1"
+            ]
+        },
+        {
+            "type": "media",
+            "heading": "trailer.heading",
+            "media": {
+                "type": "embed",
+                "src": "https://www.youtube.com/embed/ho0Y0wknCTM",
+                "label": "trailer.iframe_title"
+            }
+        },
+        {
+            "type": "group",
+            "heading": "my_work.heading",
+            "sections": [
+                {
+                    "type": "preview",
+                    "heading": "lightning.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "lightning.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "lightning_example_in_game.mp4",
+                        "label": "media.lightning_example_in_game.label",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        },
+                        "mime_type": "video/mp4"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "win_condition.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "win_condition.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "embed",
+                        "src": "https://www.youtube.com/embed/m2fGsRW5Tg8?autoplay=1&mute=1&loop=1&playlist=m2fGsRW5Tg8",
+                        "label": "lightning.iframe_title",
+                        "allow": "autoplay"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "user_accounts.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "user_accounts.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "login.mp4",
+                        "label": "media.login.label",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        },
+                        "mime_type": "video/mp4"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "level_design.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "level_design.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "my_level.mp4",
+                        "label": "media.my_level.label",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        },
+                        "mime_type": "video/mp4"
+                    }
+                },
+                {
+                    "type": "text",
+                    "heading": "download.heading",
+                    "paragraphs": [
+                        "download.paragraph_1"
+                    ]
+                }
+            ]
+        }
+    ]
 }

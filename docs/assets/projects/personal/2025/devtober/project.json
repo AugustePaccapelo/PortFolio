@@ -1,14 +1,120 @@
 {
-  "title": "Devtober",
-  "job": "Game Programmer",
-  "categories": [
-    "unity",
-    "csharp",
-    "solo",
-    "personal"
-  ],
-  "start_date": "2025-10-01",
-  "end_date": "2025-10-31",
-  "thumbnail": "prompt_list_2025.png",
-  "link": "personal_projects/devtober/"
+    "title": "Devtober",
+    "job": "Game Programmer",
+    "categories": [
+        "unity",
+        "csharp",
+        "solo",
+        "personal"
+    ],
+    "start_date": "2025-10-01",
+    "end_date": "2025-10-31",
+    "thumbnail": "prompt_list_2025.png",
+    "link": "personal_projects/devtober/",
+    "sections": [
+        {
+            "type": "preview",
+            "heading": "overview.heading",
+            "paragraphs": [
+                "overview.paragraph_1"
+            ],
+            "media": {
+                "type": "image",
+                "src": "prompt_list_2025.png",
+                "label": "media.prompt_list_2025.label"
+            },
+            "heading_level": 1,
+            "media_position": "after"
+        },
+        {
+            "type": "text",
+            "heading": "context.heading",
+            "paragraphs": [
+                "context.paragraph_1"
+            ]
+        },
+        {
+            "type": "media",
+            "heading": "selected_days_video.heading",
+            "media": {
+                "type": "video",
+                "src": "devtober_2025_trailer.mp4",
+                "label": "media.devtober_2025_trailer.label",
+                "playback": {
+                    "controls": true,
+                    "autoplay": true,
+                    "loop": true,
+                    "muted": true,
+                    "plays_inline": true
+                },
+                "mime_type": "video/mp4"
+            },
+            "layout": "plain"
+        },
+        {
+            "type": "group",
+            "heading": "favorite_experiments.heading",
+            "sections": [
+                {
+                    "type": "preview",
+                    "heading": "day_1_mustache.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "day_1_mustache.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "j1_mustache.gif",
+                        "label": "media.day_1_mustache.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "day_10_sweep.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "day_10_sweep.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "j10_sweep.gif",
+                        "label": "media.day_10_sweep.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "day_15_ragged.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "day_15_ragged.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "j15_ragged.gif",
+                        "label": "media.day_15_ragged.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "day_26_puzzling.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "day_26_puzzling.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "j26_puzzling.gif",
+                        "label": "media.day_26_puzzling.label"
+                    }
+                },
+                {
+                    "type": "text",
+                    "heading": "download.heading",
+                    "paragraphs": [
+                        "download.paragraph_1"
+                    ]
+                }
+            ]
+        }
+    ]
 }

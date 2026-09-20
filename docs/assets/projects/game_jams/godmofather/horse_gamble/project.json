@@ -1,15 +1,145 @@
 {
-  "title": "Horse Gamble Ultimate Race",
-  "job": "Game Programmer",
-  "categories": [
-    "unity",
-    "csharp",
-    "group",
-    "jam",
-    "pc"
-  ],
-  "start_date": "2026-09-08",
-  "end_date": "2026-09-11",
-  "thumbnail": "icon.png",
-  "link": "game_jams/godmofather/horse_gamble_ultimate_race/"
+    "title": "Horse Gamble Ultimate Race",
+    "job": "Game Programmer",
+    "categories": [
+        "unity",
+        "csharp",
+        "group",
+        "jam",
+        "pc"
+    ],
+    "start_date": "2026-09-08",
+    "end_date": "2026-09-11",
+    "thumbnail": "icon.png",
+    "link": "game_jams/godmofather/horse_gamble_ultimate_race/",
+    "sections": [
+        {
+            "type": "text",
+            "heading": "context.heading",
+            "paragraphs": [
+                "context.paragraph_1"
+            ]
+        },
+        {
+            "type": "text",
+            "heading": "pitch.heading",
+            "paragraphs": [
+                "pitch.paragraph_1"
+            ]
+        },
+        {
+            "type": "media",
+            "heading": "gameplay_video.heading",
+            "media": {
+                "type": "video",
+                "src": "Walkthrough.mp4",
+                "label": "media.walkthrough.label",
+                "playback": {
+                    "controls": true,
+                    "autoplay": false,
+                    "loop": false,
+                    "muted": false,
+                    "plays_inline": true
+                },
+                "mime_type": "video/mp4"
+            }
+        },
+        {
+            "type": "group",
+            "heading": "my_work.heading",
+            "sections": [
+                {
+                    "type": "preview",
+                    "heading": "account_system.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "account_system.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "LeaderBoard.mp4",
+                        "label": "media.leaderboard.label",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        },
+                        "mime_type": "video/mp4"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "betting_system.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "betting_system.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "Bets.mp4",
+                        "label": "media.bets.label",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        },
+                        "mime_type": "video/mp4"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "account_saving.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "account_saving.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "LeaderBoard.mp4",
+                        "label": "media.leaderboard.label",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        },
+                        "mime_type": "video/mp4"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "audio_integration.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "audio_integration.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "Sounds.mp4",
+                        "label": "media.sounds.label",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        },
+                        "mime_type": "video/mp4"
+                    }
+                },
+                {
+                    "type": "text",
+                    "heading": "download.heading",
+                    "paragraphs": [
+                        "download.paragraph_1"
+                    ]
+                }
+            ]
+        }
+    ]
 }

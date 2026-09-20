@@ -3,6 +3,7 @@ window.ROOT = root;
 
 loadScript("js/translations.js");
 loadScript("js/projects.js");
+loadScript("js/project-sections.js");
 loadScript("js/commons.js");
 loadScript("js/main.js");
 

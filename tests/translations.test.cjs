@@ -91,6 +91,34 @@ test('every static page key exists in the shared or project catalogues', async (
         assert.ok([...catalogue.translations.keys()].every(key => !/\.project\.(title|job)$/.test(key)));
         assert.ok(fs.existsSync(path.join(folder, metadata.thumbnail)));
         assert.ok(fs.existsSync(path.join(root, 'docs', metadata.link, 'index.html')));
+        const pageHtml = fs.readFileSync(path.join(root, 'docs', metadata.link, 'index.html'), 'utf8');
+        function checkText(key) {
+            assert.ok(catalogue.translations.has(key), entry.id + ': ' + key);
+        }
+        function checkMedia(media) {
+            assert.ok(['image', 'video', 'embed'].includes(media.type));
+            if (media.label) checkText(media.label);
+            if (media.type === 'embed') assert.equal(new URL(media.src).protocol, 'https:');
+            else assert.ok(fs.existsSync(path.join(folder, media.src)), media.src);
+        }
+        function checkSections(sections) {
+            assert.ok(Array.isArray(sections));
+            for (const section of sections) {
+                assert.ok(['text', 'preview', 'gallery', 'media', 'group', 'custom'].includes(section.type));
+                if (section.heading) checkText(section.heading);
+                for (const key of section.paragraphs || []) checkText(key);
+                if (section.media) checkMedia(section.media);
+                if (section.type === 'gallery') {
+                    for (const item of section.items) {
+                        checkMedia(item.media);
+                        if (item.caption) checkText(item.caption);
+                    }
+                }
+                if (section.type === 'group') checkSections(section.sections);
+                if (section.type === 'custom') assert.ok(pageHtml.includes(`<template id="${section.template}">`));
+            }
+        }
+        checkSections(metadata.sections);
     }
     function visit(directory) {
         for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {

@@ -1,15 +1,99 @@
 {
-  "title": "Musclo Surf",
-  "job": "Game Programmer",
-  "categories": [
-    "unity",
-    "csharp",
-    "group",
-    "jam",
-    "pc"
-  ],
-  "start_date": "2025-09-02",
-  "end_date": "2025-09-05",
-  "thumbnail": "icon.png",
-  "link": "game_jams/godmofather/musclo_surf/"
+    "title": "Musclo Surf",
+    "job": "Game Programmer",
+    "categories": [
+        "unity",
+        "csharp",
+        "group",
+        "jam",
+        "pc"
+    ],
+    "start_date": "2025-09-02",
+    "end_date": "2025-09-05",
+    "thumbnail": "icon.png",
+    "link": "game_jams/godmofather/musclo_surf/",
+    "sections": [
+        {
+            "type": "text",
+            "heading": "context.heading",
+            "paragraphs": [
+                "context.paragraph_1"
+            ]
+        },
+        {
+            "type": "text",
+            "heading": "pitch.heading",
+            "paragraphs": [
+                "pitch.paragraph_1"
+            ]
+        },
+        {
+            "type": "media",
+            "heading": "gameplay_video.heading",
+            "media": {
+                "type": "embed",
+                "src": "https://www.youtube.com/embed/neeGEB_qvAk",
+                "label": "gameplay_video.iframe_title"
+            }
+        },
+        {
+            "type": "group",
+            "heading": "my_work.heading",
+            "sections": [
+                {
+                    "type": "preview",
+                    "heading": "audio_integration.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "audio_integration.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "Sounds.mp4",
+                        "label": "media.sounds.label",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        }
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "multiple_controllers.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "multiple_controllers.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "ControllersConnection.gif",
+                        "label": "media.controller_connection.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "split_screen_camera.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "split_screen_camera.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "Preview.gif",
+                        "label": "media.preview.label"
+                    }
+                },
+                {
+                    "type": "text",
+                    "heading": "download.heading",
+                    "paragraphs": [
+                        "download.paragraph_1"
+                    ]
+                }
+            ]
+        }
+    ]
 }

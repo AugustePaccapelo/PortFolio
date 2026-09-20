@@ -1,16 +1,140 @@
 {
-  "title": "Color Survivor",
-  "job": "Game Programmer",
-  "categories": [
-    "cpp",
-    "group",
-    "school",
-    "iim",
-    "shmup",
-    "pc"
-  ],
-  "start_date": "2025-11-24",
-  "end_date": "2025-12-13",
-  "thumbnail": "preview.gif",
-  "link": "school_projects/iim/color_survivor/"
+    "title": "Color Survivor",
+    "job": "Game Programmer",
+    "categories": [
+        "cpp",
+        "group",
+        "school",
+        "iim",
+        "shmup",
+        "pc"
+    ],
+    "start_date": "2025-11-24",
+    "end_date": "2025-12-13",
+    "thumbnail": "preview.gif",
+    "link": "school_projects/iim/color_survivor/",
+    "sections": [
+        {
+            "type": "text",
+            "heading": "context.heading",
+            "paragraphs": [
+                "context.paragraph_1"
+            ]
+        },
+        {
+            "type": "text",
+            "heading": "pitch.heading",
+            "paragraphs": [
+                "pitch.paragraph_1"
+            ]
+        },
+        {
+            "type": "media",
+            "heading": "walkthrough.heading",
+            "media": {
+                "type": "video",
+                "src": "walkthrough.mp4",
+                "label": "media.walkthrough.label",
+                "playback": {
+                    "controls": true,
+                    "autoplay": true,
+                    "loop": true,
+                    "muted": true,
+                    "plays_inline": true
+                },
+                "mime_type": "video/mp4"
+            }
+        },
+        {
+            "type": "group",
+            "heading": "my_work.heading",
+            "sections": [
+                {
+                    "type": "preview",
+                    "heading": "lightning.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "lightning.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "lightnings.gif",
+                        "label": "media.lightning.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "object_pooling.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "object_pooling.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "default.gif",
+                        "label": "media.default.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "movement.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "movement.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "movements.gif",
+                        "label": "media.movement.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "architecture.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "architecture.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "default.gif",
+                        "label": "media.default.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "enemies.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "enemies.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "behaviors.gif",
+                        "label": "media.behaviors.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "collisions.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "collisions.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "default.gif",
+                        "label": "media.default.label"
+                    }
+                },
+                {
+                    "type": "text",
+                    "heading": "download.heading",
+                    "paragraphs": [
+                        "download.paragraph_1"
+                    ]
+                }
+            ]
+        }
+    ]
 }

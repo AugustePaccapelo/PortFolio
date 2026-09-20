@@ -204,7 +204,9 @@ header nav {
     gap: var(--section-gap);
 }
 
-.media-item img {
+.media-item img,
+.media-item video,
+.media-item iframe {
     width: var(--full-size);
     aspect-ratio: var(--media-item-aspect-ratio);
     object-fit: cover;

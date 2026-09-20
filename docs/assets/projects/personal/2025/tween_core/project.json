@@ -1,16 +1,134 @@
 {
-  "title": "Tween Core",
-  "job": "Tool Programmer",
-  "categories": [
-    "unity",
-    "csharp",
-    "solo",
-    "personal",
-    "tool",
-    "package"
-  ],
-  "start_date": "2025-10-29",
-  "end_date": "2026-01-19",
-  "thumbnail": "preview.gif",
-  "link": "personal_projects/tween_core/"
+    "title": "Tween Core",
+    "job": "Tool Programmer",
+    "categories": [
+        "unity",
+        "csharp",
+        "solo",
+        "personal",
+        "tool",
+        "package"
+    ],
+    "start_date": "2025-10-29",
+    "end_date": "2026-01-19",
+    "thumbnail": "preview.gif",
+    "link": "personal_projects/tween_core/",
+    "sections": [
+        {
+            "type": "text",
+            "heading": "context.heading",
+            "paragraphs": [
+                "context.paragraph_1"
+            ]
+        },
+        {
+            "type": "gallery",
+            "heading": "example.heading",
+            "paragraphs": [
+                "example.paragraph_1"
+            ],
+            "items": [
+                {
+                    "media": {
+                        "type": "image",
+                        "src": "draw_anim.gif",
+                        "label": "media.card_dealing_animation.label"
+                    },
+                    "caption": "example.paragraph_2"
+                },
+                {
+                    "media": {
+                        "type": "image",
+                        "src": "exchange.gif",
+                        "label": "media.exchange.label"
+                    },
+                    "caption": "example.paragraph_3"
+                },
+                {
+                    "media": {
+                        "type": "image",
+                        "src": "play_cards.gif",
+                        "label": "media.play_cards.label"
+                    },
+                    "caption": "example.paragraph_4"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "heading": "usage.heading",
+            "sections": [
+                {
+                    "type": "preview",
+                    "heading": "finite_animation.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "finite_animation.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "simple_drop_anim.mp4",
+                        "label": "media.simple_drop_animation.label",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        },
+                        "mime_type": "video/mp4"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "infinite_and_linked_animations.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "infinite_and_linked_animations.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "infinite_and_link_anim.mp4",
+                        "label": "media.infinite_and_linked_animations.label",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        },
+                        "mime_type": "video/mp4"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "types_and_easing.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "types_and_easing.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "custom_curves.mp4",
+                        "label": "media.custom_curves.label",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        },
+                        "mime_type": "video/mp4"
+                    }
+                },
+                {
+                    "type": "text",
+                    "heading": "download.heading",
+                    "paragraphs": [
+                        "download.paragraph_1"
+                    ]
+                }
+            ]
+        }
+    ]
 }
