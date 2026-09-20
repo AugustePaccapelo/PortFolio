@@ -1,0 +1,17 @@
+{
+  "title": "Blind Gunner",
+  "job": "Game Programmer",
+  "categories": [
+    "godot",
+    "csharp",
+    "solo",
+    "school",
+    "isart",
+    "shmup",
+    "pc"
+  ],
+  "start_date": "2024-12-10",
+  "end_date": "2025-01-14",
+  "thumbnail": "Filters.gif",
+  "link": "school_projects/isart_digital/blind_gunner/"
+}

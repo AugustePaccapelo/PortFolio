@@ -1,0 +1,14 @@
+{
+  "title": "Devtober",
+  "job": "Game Programmer",
+  "categories": [
+    "unity",
+    "csharp",
+    "solo",
+    "personal"
+  ],
+  "start_date": "2025-10-01",
+  "end_date": "2025-10-31",
+  "thumbnail": "prompt_list_2025.png",
+  "link": "personal_projects/devtober/"
+}

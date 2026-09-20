@@ -1,0 +1,14 @@
+{
+    "rhythmic_instrument_animations.paragraph_1": {
+        "tweencore": {
+            "href": "../../../personal_projects/tween_core/"
+        }
+    },
+    "download.paragraph_1": {
+        "google_play": {
+            "href": "https://play.google.com/store/apps/details?id=com.IIMaxeJV.DragonsCadence&hl=fr&pli=1",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+        }
+    }
+}

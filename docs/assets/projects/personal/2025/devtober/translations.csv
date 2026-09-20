@@ -1,0 +1,49 @@
+﻿"key","fr","en"
+"overview.heading","C'est quoi ?","What is it?"
+"overview.paragraph_1","Vous connaissez peut-être le <strong>Inktober</strong> : le but est de faire un <strong>dessin</strong> sur un thème donné <strong>chaque jour</strong> du mois <strong>d'octobre</strong>.
+
+Le <strong>Devtober</strong> c'est la même chose, mais j'ai fait un <strong>script</strong> / une <strong>mécanique</strong> par jour sur les mêmes thèmes.","You may be familiar with <strong>Inktober</strong>: the aim is to make a <strong>drawing</strong> based on a given prompt <strong>every day</strong> in <strong>October</strong>.
+
+<strong>Devtober</strong> follows the same idea, but I made a <strong>script</strong> or a <strong>game mechanic</strong> each day using the same prompts."
+"media.prompt_list_2025.label","Prompt List 2025","Prompt List 2025"
+"context.heading","Contexte","Context"
+"context.paragraph_1","En octobre 2025, je venais tout juste d'arriver en A2 à l'<strong>IIM</strong>, et contrairement à mes nouveaux camarades de classe, <strong>je ne connaissais pas Unity</strong> car j'étais sur <strong>Godot</strong> toute l'année précédente.
+
+Je me suis donc servi de ce défi pour non seulement faire <strong>un script par jour</strong>, mais aussi <strong>apprendre</strong> quelque chose dans <strong>Unity</strong> chaque <strong>jour</strong>. C'était plus <strong>difficile</strong> que ce à quoi je m'attendais, surtout qu'avec les <strong>cours</strong> la journée, je comptais plus ou moins <strong>2 heures</strong> par <strong>jour</strong> pour ce défi.
+
+Je ne vais pas tout montrer, mais vous pouvez voir chacun des 31 jours avec ce <github>lien</github>.","In October 2025, I had just joined the second year at <strong>IIM</strong>. Unlike my new classmates, <strong>I didn't know Unity</strong>, because I had spent the entire previous year working in <strong>Godot</strong>.
+
+I used this challenge not only to write <strong>one script a day</strong>, but also to <strong>learn</strong> something in <strong>Unity</strong> every <strong>day</strong>. It was more <strong>difficult</strong> than I expected, especially with <strong>classes</strong> during the day: I had roughly <strong>2 hours</strong> per <strong>day</strong> for the challenge.
+
+I won't show everything here, but you can explore all 31 days through this <github>link</github>."
+"selected_days_video.heading","Vidéo avec certains jours","Selected days in action"
+"media.devtober_2025_trailer.label","Devtober 2025 Trailer","Devtober 2025 Trailer"
+"favorite_experiments.heading","Ce que j'ai préféré","My favorite experiments"
+"media.day_1_mustache.label","J1 Mustache","Day 1: Mustache"
+"day_1_mustache.heading","Jour 1 : Mustache","Day 1: Mustache"
+"day_1_mustache.paragraph_1","Le premier jour, littéralement la <strong>6ème fois</strong> que j'ouvre le moteur <strong>Unity</strong>. J'ai essayé de faire en sorte que l'on puisse ""<strong>dessiner</strong>"" la <strong>moustache</strong> que l'on souhaite.
+
+J'ai commencé simplement, en découvrant les <strong>inputs souris</strong> et la <strong>création d'objets</strong> dans Unity.","The first day was literally my <strong>sixth time</strong> opening <strong>Unity</strong>. I tried to let players ""<strong>draw</strong>"" any <strong>mustache</strong> they wanted.
+
+I started simply, learning about <strong>mouse input</strong> and <strong>creating objects</strong> in Unity."
+"media.day_10_sweep.label","J10 Sweep","Day 10: Sweep"
+"day_10_sweep.heading","Jour 10 : Sweep","Day 10: Sweep"
+"day_10_sweep.paragraph_1","En bas à droite nous avons un <strong>radar</strong>, qui affiche <strong>où</strong> sont les <strong>cibles</strong> dans le monde.
+À l'aide du radar, on peut <strong>deviner</strong> où sont les <strong>cibles</strong> dans le monde et <strong>cliquer dessus</strong>.
+
+J'ai commencé à apprendre l'<strong>UI</strong> d'Unity et à faire une <strong>mini-map</strong> simple avec.","At the bottom right is a <strong>radar</strong> showing <strong>where</strong> the <strong>targets</strong> are in the world.
+Using the radar, you can <strong>work out</strong> where the <strong>targets</strong> are and <strong>click on them</strong>.
+
+I started learning Unity's <strong>UI</strong> system and used it to build a simple <strong>minimap</strong>."
+"media.day_15_ragged.label","J15 Ragged","Day 15: Ragged"
+"day_15_ragged.heading","Jour 15 : Ragged","Day 15: Ragged"
+"day_15_ragged.paragraph_1","Pour ce jour, j'ai voulu voir comment fonctionnaient les <strong>Shaders</strong> dans <strong>Unity</strong>, je connaissais certaines <strong>bases</strong> dans <strong>Godot</strong>. Ce n'est que visuel.","For this day, I wanted to explore how <strong>shaders</strong> work in <strong>Unity</strong>, having learned some <strong>basics</strong> in <strong>Godot</strong>. This experiment is purely visual."
+"media.day_26_puzzling.label","J26 Puzzling","Day 26: Puzzling"
+"day_26_puzzling.heading","Jour 26 : Puzzling","Day 26: Puzzling"
+"day_26_puzzling.paragraph_1","Ici il n'y a <strong>pas d'objectif</strong>, le trait violet est comme un <strong>laser</strong> et les rectangles blancs des <strong>miroirs</strong>.
+
+J'ai utilisé les <strong>LineRenderers</strong> et les <strong>Raycasts</strong>.","There is <strong>no objective</strong> here: the purple line acts as a <strong>laser</strong>, and the white rectangles are <strong>mirrors</strong>.
+
+I used <strong>LineRenderers</strong> and <strong>Raycasts</strong>."
+"download.heading","Lien pour le télécharger","Download"
+"download.paragraph_1","Vous pouvez télécharger une build via mon <github>Git</github>.","You can download a build from my <github>GitHub releases</github>."

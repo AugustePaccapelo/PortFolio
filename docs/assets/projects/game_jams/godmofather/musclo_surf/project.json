@@ -1,0 +1,15 @@
+{
+  "title": "Musclo Surf",
+  "job": "Game Programmer",
+  "categories": [
+    "unity",
+    "csharp",
+    "group",
+    "jam",
+    "pc"
+  ],
+  "start_date": "2025-09-02",
+  "end_date": "2025-09-05",
+  "thumbnail": "icon.png",
+  "link": "game_jams/godmofather/musclo_surf/"
+}

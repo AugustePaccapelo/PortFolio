@@ -1,0 +1,43 @@
+﻿"key","fr","en"
+"context.heading","Contexte","Context"
+"context.paragraph_1","<strong>Morse Learner</strong> est un projet réalisé en solo durant ma <strong>première année à ISART Digital</strong>.
+Le sujet était de créer un jeu qui soit à la fois un <strong>One Button Game</strong> et un <strong>Serious Game</strong>.
+
+J'ai choisi de créer un jeu mobile autour de l'<strong>apprentissage du morse</strong>, en utilisant uniquement la durée d'appui du joueur pour différencier les entrées.","<strong>Morse Learner</strong> is a solo project from my <strong>first year at ISART Digital</strong>.
+The brief was to create a game that was both a <strong>one-button game</strong> and a <strong>serious game</strong>.
+
+I chose to make a mobile game about <strong>learning Morse code</strong>, using only how long the player holds the button to distinguish between inputs."
+"pitch.heading","Pitch","Pitch"
+"pitch.paragraph_1","Le joueur doit reproduire des lettres en <strong>code morse</strong>.
+Un <strong>appui court</strong> crée un point, tandis qu'un <strong>appui long</strong> crée un tiret.
+
+L'objectif est de mémoriser progressivement l'alphabet morse grâce à un système de <strong>feedback visuel</strong>, d'<strong>animations</strong> et de <strong>progression par lettres</strong>.","The player must reproduce letters in <strong>Morse code</strong>.
+A <strong>short press</strong> creates a dot, while a <strong>long press</strong> creates a dash.
+
+The goal is to gradually memorize the Morse alphabet through <strong>visual feedback</strong>, <strong>animations</strong>, and <strong>letter-by-letter progression</strong>."
+"walkthrough.heading","Walkthrough","Walkthrough"
+"media.walkthrough.label","Walkthrough","Walkthrough"
+"my_work.heading","Mon travail","My work"
+"media.input_sequence.label","InputSequence","Input sequence"
+"morse_validation.heading","La vérification du morse","Checking Morse code"
+"morse_validation.paragraph_1","J'ai créé un système qui convertit les lettres en <strong>code morse</strong>, puis compare les entrées du joueur avec la lettre demandée.
+
+À chaque point ou tiret ajouté, le jeu vérifie si la séquence est encore correcte. Si le joueur se trompe, la combinaison est réinitialisée et un <strong>feedback d'erreur</strong> est lancé.","I created a system that converts letters into <strong>Morse code</strong> and compares the player's input with the requested letter.
+
+Whenever a dot or dash is added, the game checks whether the sequence is still correct. If the player makes a mistake, the sequence resets and <strong>error feedback</strong> plays."
+"media.new_letter.label","NewLetter","New letter"
+"learning_progression.heading","La progression d'apprentissage","Learning progression"
+"learning_progression.paragraph_1","J'ai mis en place un mode d'apprentissage qui <strong>introduit</strong> les lettres <strong>progressivement</strong>.
+Le joueur commence avec peu de lettres, puis en débloque de nouvelles après plusieurs bonnes réponses d'affilée.","I implemented a learning mode that <strong>introduces</strong> letters <strong>gradually</strong>.
+The player starts with a small set of letters and unlocks new ones after several correct answers in a row."
+"media.input_sequence.label_2","InputSequence","Input sequence"
+"visual_feedback.heading","Le feedback visuel","Visual feedback"
+"visual_feedback.paragraph_1","J'ai travaillé sur les <strong>animations</strong> et les retours visuels des symboles.
+Les points et les tirets apparaissent avec une animation, changent d'état lorsqu'ils sont corrects, et se cassent lorsque le joueur fait une erreur.
+
+Ces feedbacks permettent au joueur de comprendre rapidement s'il est sur la bonne séquence ou non.","I worked on the symbols' <strong>animations</strong> and visual feedback.
+Dots and dashes appear with an animation, change state when they are correct, and break apart when the player makes a mistake.
+
+This feedback helps the player quickly understand whether their sequence is correct."
+"download.heading","Lien pour le télécharger","Download"
+"download.paragraph_1","Vous pouvez télécharger une build via mon <github>GitHub</github>.","You can download a build from my <github>GitHub releases</github>."

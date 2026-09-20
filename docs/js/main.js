@@ -8,6 +8,7 @@ else {
 async function onHtmlInitialize() {
     try {
         await window.translationReady;
+        await getProjectData();
     }
     catch (error) {
         const message = document.createElement("p");

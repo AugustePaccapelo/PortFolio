@@ -1,0 +1,16 @@
+{
+  "title": "Color Survivor",
+  "job": "Game Programmer",
+  "categories": [
+    "cpp",
+    "group",
+    "school",
+    "iim",
+    "shmup",
+    "pc"
+  ],
+  "start_date": "2025-11-24",
+  "end_date": "2025-12-13",
+  "thumbnail": "preview.gif",
+  "link": "school_projects/iim/color_survivor/"
+}

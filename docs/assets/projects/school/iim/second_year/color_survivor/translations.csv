@@ -1,0 +1,62 @@
+﻿"key","fr","en"
+"context.heading","Contexte","Context"
+"context.paragraph_1","Dans le cadre d'un cours à l'<strong>IIM Digital School</strong>, nous devions faire un jeu de type <strong>Arena Shoot 'em Up</strong>.
+Ce jeu devait être réalisé en <strong>C++</strong> uniquement à l'aide de la bibliothèque <strong>SFML</strong> et uniquement avec des formes simples.
+
+Nous étions en groupe de 3 Game Programmers.","For a class at <strong>IIM Digital School</strong>, we had to create an <strong>arena shoot 'em up</strong>.
+The game had to be made in <strong>C++</strong> using only the <strong>SFML</strong> library and simple shapes.
+
+We worked as a team of 3 Game Programmers."
+"pitch.heading","Pitch","Pitch"
+"pitch.paragraph_1","Le but est de <strong>survivre</strong> le plus longtemps possible. Pour détruire les <strong>ennemis</strong>, il faut être de la <strong>même couleur qu'eux</strong>.","The goal is to <strong>survive</strong> for as long as possible. To destroy <strong>enemies</strong>, you must be the <strong>same color as them</strong>."
+"walkthrough.heading","Walkthrough","Walkthrough"
+"media.walkthrough.label","Walkthrough","Walkthrough"
+"my_work.heading","Mon travail","My work"
+"media.lightning.label","Lightnings","Lightning"
+"lightning.heading","Éclairs","Lightning"
+"lightning.paragraph_1","J'ai fait un effet <strong>d'éclairs</strong>, que j'avais initialement réalisé sous <strong>Godot</strong> en <strong>C#</strong> pour mon jeu <sokovolt>SokoVolt</sokovolt>. J'ai donc dû <strong>traduire</strong> le code et faire l'<strong>affichage</strong> à la main.
+
+Pour optimiser le jeu, la boîte de <strong>collision</strong> des éclairs est un seul <strong>grand rectangle</strong>.","I created a <strong>lightning</strong> effect that I had originally made in <strong>Godot</strong> with <strong>C#</strong> for my game <sokovolt>SokoVolt</sokovolt>. I had to <strong>port</strong> the code and implement the <strong>rendering</strong> manually.
+
+To optimize the game, each lightning bolt's <strong>collision</strong> box is a single <strong>large rectangle</strong>."
+"media.default.label","Default","Default"
+"object_pooling.heading","Pool System","Object pooling"
+"object_pooling.paragraph_1","Afin de gagner des <strong>performances</strong> et éviter <strong>d'instancier</strong> et de <strong>supprimer</strong> énormément de balles et d'ennemis très <strong>régulièrement</strong>, j'ai intégré un <strong>système de pooling</strong>.
+
+Les éléments qui l'utilisent sont les <strong>éclairs</strong>, les <strong>ennemis</strong> et surtout les <strong>balles</strong>.","To improve <strong>performance</strong> and avoid <strong>instantiating</strong> and <strong>destroying</strong> large numbers of bullets and enemies so <strong>frequently</strong>, I implemented an <strong>object pooling system</strong>.
+
+It is used by <strong>lightning bolts</strong>, <strong>enemies</strong>, and especially <strong>bullets</strong>."
+"media.movement.label","Movements","Movement"
+"movement.heading","Movements","Movement"
+"movement.paragraph_1","Je me suis occupé de faire les <strong>mouvements</strong> du <strong>joueur</strong> et des <strong>ennemis</strong>. Pour avoir un <strong>meilleur ressenti</strong>, j'ai fait des <strong>calculs de friction</strong>. Si on change <strong>légèrement</strong> de <strong>direction</strong>, on ne sent <strong>pas beaucoup de différence</strong>, alors que si on fait <strong>demi-tour</strong>, on ressent le <strong>freinage</strong> nécessaire avant de repartir.","I implemented <strong>movement</strong> for the <strong>player</strong> and the <strong>enemies</strong>. To improve the <strong>feel</strong>, I added <strong>friction calculations</strong>. A <strong>slight</strong> change in <strong>direction</strong> makes <strong>little difference</strong>, whereas a <strong>U-turn</strong> produces a noticeable <strong>deceleration</strong> before moving in the other direction."
+"media.default.label_2","Default","Default"
+"architecture.heading","Architecture","Architecture"
+"architecture.paragraph_1","Au début du projet, je me suis occupé de faire <strong>l'architecture</strong> des <strong>classes</strong>, principalement de l'<strong>héritage</strong>, ce qui a permis pour la plupart des <strong>systèmes</strong> d'avoir une <strong>seule liste</strong> du type <strong>GameObject</strong> au lieu d'une liste par classe.","At the start of the project, I designed the <strong>architecture</strong> of the <strong>classes</strong>, focusing mainly on <strong>inheritance</strong>. This allowed most <strong>systems</strong> to use a <strong>single list</strong> of <strong>GameObject</strong> instances instead of a separate list for each class."
+"media.behaviors.label","Behaviors","Behaviors"
+"enemies.heading","Les ennemis","Enemies"
+"enemies.paragraph_1","J'ai fait le comportement de nos 3 types d'ennemis :
+
+Les <strong>corps-à-corps</strong>, qui <strong>suivent</strong> le joueur et essaient de le toucher ;
+
+Les <strong>tireurs</strong>, qui <strong>tournent</strong> autour du joueur et <strong>tirent</strong> des balles ;
+
+Et les <strong>tourelles</strong>, qui ne bougent pas mais tirent de longs <strong>éclairs</strong>.","I implemented the behavior of our 3 enemy types:
+
+<strong>Melee enemies</strong>, which <strong>follow</strong> the player and try to make contact;
+
+<strong>Shooters</strong>, which <strong>circle</strong> the player and <strong>fire</strong> bullets;
+
+And <strong>turrets</strong>, which stay still but fire long <strong>lightning bolts</strong>."
+"media.default.label_3","Default","Default"
+"collisions.heading","Les collisions","Collisions"
+"collisions.paragraph_1","J'ai <strong>participé</strong> aux <strong>calculs</strong> de <strong>collision</strong>, principalement pour les <strong>optimiser</strong>. J'ai utilisé <strong>2 techniques</strong> :
+
+Un système de <strong>layers</strong> : chaque objet a un <strong>layer</strong> pour définir son <strong>type</strong>, et un <strong>masque de collision</strong> pour définir avec <strong>qui il peut collisionner</strong>.
+
+Une <strong>circle broad phase</strong> : chaque objet possède un <strong>cercle</strong> qui <strong>englobe</strong> toute sa <strong>boîte de collision</strong>. Lorsque l'on veut tester 2 objets, on va d'abord <strong>tester</strong> si leurs <strong>2 cercles</strong> se <strong>touchent</strong> ou non.","I <strong>contributed</strong> to the <strong>calculations</strong> for <strong>collision detection</strong>, mainly to <strong>optimize them</strong>. I used <strong>2 techniques</strong>:
+
+A <strong>layer</strong> system: each object has a <strong>layer</strong> defining its <strong>type</strong> and a <strong>collision mask</strong> defining <strong>which objects it can collide with</strong>.
+
+A <strong>circle-based broad phase</strong>: each object has a <strong>circle</strong> that <strong>encloses</strong> its entire <strong>collision box</strong>. Before checking 2 objects, we first <strong>test</strong> whether their <strong>2 circles</strong> <strong>overlap</strong>."
+"download.heading","Lien pour le télécharger","Download"
+"download.paragraph_1","Vous pouvez télécharger une build via ce <github>lien</github>.","You can download a build through this <github>link</github>."

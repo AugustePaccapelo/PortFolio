@@ -1,0 +1,65 @@
+﻿"key","fr","en"
+"context.heading","Contexte","Context"
+"context.paragraph_1","Mon premier projet de deuxième année à l'IIM Digital School, réalisé en groupe :
+
+3 Game Programmers
+3 Game Designers
+2 Game Artists","My first project in my second year at IIM Digital School, made as a team:
+
+3 Game Programmers
+3 Game Designers
+2 Game Artists"
+"pitch.heading","Pitch","Pitch"
+"pitch.paragraph_1","Le joueur doit <strong>apporter</strong> les <strong>notes</strong> de musique dans la gueule du ou des <strong>dragons</strong>. Pour cela, il doit <strong>placer</strong> des <strong>instruments</strong> de musique pour guider les notes.","The player must <strong>guide</strong> musical <strong>notes</strong> into the mouths of the <strong>dragons</strong>. To do this, they must <strong>place</strong> musical <strong>instruments</strong> to direct the notes."
+"walkthrough.heading","Walkthrough","Walkthrough"
+"walkthrough.iframe_title","Dragon's Cadence Walkthrough","Dragon's Cadence Walkthrough"
+"my_work.heading","Mon travail","My work"
+"media.instrument_placement_examples.label","Gif Mobile Puzzle Placements Compil","Instrument placement examples"
+"instrument_placement.heading","Placement des instruments","Instrument placement"
+"instrument_placement.paragraph_1","Le joueur a un <strong>nombre limité</strong> de chaque instrument, il peut les placer <strong>où il le souhaite</strong> tant que ce n'est pas sur un obstacle ou un autre instrument. Chaque instrument peut également être <strong>tourné</strong>, librement ou non.","The player has a <strong>limited number</strong> of each instrument and can place them <strong>wherever they like</strong>, as long as the position is not occupied by an obstacle or another instrument. Each instrument can also be <strong>rotated</strong>, either freely or with restrictions."
+"media.google_play_sign_in.label","Gif Mobile Puzzle Connection Google Play","Google Play sign-in"
+"achievements.heading","Les succès","Achievements"
+"achievements.paragraph_1","Je me suis occupé de la connexion aux services de <strong>Google Play</strong>. On s'en est servi pour mettre des <strong>succès</strong> dans le jeu.","I handled the connection to <strong>Google Play</strong> services. We used it to add <strong>achievements</strong> to the game."
+"media.in_game_locks.label","Gif Mobile Puzzle In Game Locks","In-game locks"
+"padlocks.heading","Les cadenas","Padlocks"
+"padlocks.paragraph_1","Il y a certaines zones du niveau bloquées par une chaîne avec un cadenas. Dès qu'une <strong>note</strong> touche une <strong>clé</strong> de Fa ou de Sol, <strong>le cadenas et sa chaîne</strong> correspondante <strong>disparaissent</strong> pour rendre accessible la zone.","Some areas of a level are blocked by a chain and a padlock. When a <strong>note</strong> touches a bass or treble <strong>clef</strong>, the corresponding <strong>padlock and chain</strong> <strong>disappear</strong>, opening up the area."
+"media.instrument_animations.label","Gif Mobile Puzzle Animations","Instrument animations"
+"rhythmic_instrument_animations.heading","Animations du rythme des instruments","Rhythmic instrument animations"
+"rhythmic_instrument_animations.paragraph_1","Suite à des problèmes durant le développement, le jeu n'a pas autant de juiciness que l'on voulait.
+
+Malgré tout, j'ai pu utiliser mon package <tweencore>TweenCore</tweencore> pour <strong>rapidement</strong> inclure de simples <strong>animations synchronisées</strong> sur tous les <strong>instruments</strong>.","Due to issues during development, the game doesn't have as much visual polish and feedback as we had hoped.
+
+Still, I was able to use my <tweencore>TweenCore</tweencore> package to <strong>quickly</strong> add simple <strong>synchronized animations</strong> to all the <strong>instruments</strong>."
+"media.rhythm_drum.label","Gif Mobile Puzzle Tempo Drum","Rhythm drum"
+"rhythm_drum.heading","Le tambour rythmé","The rhythm drum"
+"rhythm_drum.paragraph_1","Le premier instrument que j'ai réalisé est celui ci-contre. La note <strong>rebondit</strong> dessus seulement sur un <strong>certain tempo</strong>. Le joueur peut <strong>choisir</strong> ce tempo avec un bouton lorsque l'instrument est sélectionné.","The first instrument I made is shown here. Notes only <strong>bounce</strong> off it at a <strong>specific tempo</strong>. The player can <strong>choose</strong> this tempo using a button when the instrument is selected."
+"media.trumpet.label","Gif Mobile Puzzle Trumpet","Trumpet"
+"trumpet.heading","La trompette","The trumpet"
+"trumpet.paragraph_1","J'ai également réalisé la trompette. Comme le tambour, elle n'est active que pendant un <strong>certain temps</strong>. Son effet est similaire aux <strong>flux de gravité</strong> dans Portal 2.","I also made the trumpet. Like the drum, it is only active for a <strong>set period of time</strong>. Its effect is similar to the <strong>Excursion Funnels</strong> in Portal 2."
+"media.horn.label","Gif Mobile Puzzle Cor","Horn"
+"horn.heading","Le Cor","The horn"
+"horn.paragraph_1","J'ai participé à l'intégration du cor. La mécanique était faite, cependant l'instrument n'était pas utilisable en jeu dans son état.","I helped integrate the horn. Its mechanic was already implemented, but the instrument was not yet usable in the game."
+"media.level_design_variants.label","Gif Mobile Puzzle Ids For Gd","Element variants for level design"
+"level_design_tools.heading","Aides pour le LD","Level design tools"
+"level_design_tools.paragraph_1","Pour <strong>faciliter la création de niveaux</strong>, les éléments qui peuvent avoir des <strong>visuels alternatifs</strong> avaient une simple variable exposée qui changeait <strong>automatiquement</strong> les <strong>visuels</strong> et leurs <strong>comportements</strong>.
+
+Cela permettait aux Game Designers d'utiliser <strong>le même prefab</strong> pour chacun des éléments, et de les modifier au besoin <strong>facilement</strong>.","To <strong>make level creation easier</strong>, elements with <strong>alternative visuals</strong> had a simple exposed variable that <strong>automatically</strong> changed their <strong>appearance</strong> and <strong>behavior</strong>.
+
+This let the Game Designers use <strong>the same prefab</strong> for each element and <strong>easily</strong> adjust it as needed."
+"media.two_dragons.label","Gif Mobile Puzzle Double Dragons","Two different dragons"
+"multiple_note_types.heading","Niveaux avec plusieurs types de notes","Levels with multiple note types"
+"multiple_note_types.paragraph_1","Certains niveaux ont 2 bardes, 2 notes et 2 dragons <strong>différents</strong>. Ici on peut les différencier facilement avec les <strong>couleurs</strong>.
+
+Avec le système permettant aux prefabs de changer automatiquement de visuel, ça a été très simple d'implémenter ce genre de niveaux.","Some levels have 2 <strong>different</strong> bards, notes, and dragons. Here, they are easy to distinguish by their <strong>colors</strong>.
+
+The system for automatically changing prefab visuals made these types of levels very easy to implement."
+"media.damaged_instruments.label","Gif Mobile Puzzle Grey Obstacles","Damaged instruments"
+"damaged_instruments.heading","Les instruments délabrés","Damaged instruments"
+"damaged_instruments.paragraph_1","Chaque instrument a une version <strong>délabrée</strong>, qui peut être utilisée dans le <strong>level design</strong> de n'importe quel niveau.
+
+Ils fonctionnent de la même manière que les instruments classiques, sauf que le joueur <strong>ne peut pas les modifier ou déplacer</strong>.","Each instrument has a <strong>damaged</strong> version that can be used in the <strong>level design</strong> of any level.
+
+They work in the same way as regular instruments, except the player <strong>cannot modify or move them</strong>."
+"download.heading","Lien pour le télécharger","Download"
+"download.paragraph_1","Vous pouvez le chercher sur le Google Play Store, utiliser ce QR code ou alors utiliser ce <google_play>lien</google_play>:","You can search for the game on the Google Play Store, scan this QR code, or use this <google_play>link</google_play>:"
+"media.dragons_cadence_qr_code.label","Dragons Cadence Qr Code","Dragon's Cadence QR code"

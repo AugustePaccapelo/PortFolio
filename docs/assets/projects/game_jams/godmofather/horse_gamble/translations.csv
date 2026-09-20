@@ -1,0 +1,58 @@
+﻿"key","fr","en"
+"context.heading","Contexte","Context"
+"context.paragraph_1","Ce jeu a été développé en <strong>groupe de 6 personnes</strong> lors de la <strong>Game Jam GodMoFather</strong> à l'<strong>IIM</strong> en 2026.
+
+Le thème de la jam tournait autour du <strong>casino</strong>.
+Notre sujet était de créer un <strong>tiercé parodique</strong>.","This game was developed by a <strong>team of 6</strong> during the <strong>GodMoFather Game Jam</strong> at <strong>IIM</strong> in 2026.
+
+The jam's theme revolved around <strong>casinos</strong>.
+Our brief was to create a <strong>parody horse-racing betting game</strong>."
+"pitch.heading","Pitch","Pitch"
+"pitch.paragraph_1","Le principe du jeu est de <strong>parier</strong> sur les <strong>3 chevaux</strong> qui vont terminer sur le podium.
+Il n'y a pas de limite de <strong>joueurs</strong>.
+
+Une fois les paris enregistrés, tout le monde assiste à une <strong>course imprévisible</strong>, avec beaucoup de retournements de situation.
+Quand les 3 premiers chevaux ont fini la course, le jeu affiche les <strong>gagnants</strong>, les <strong>meilleurs parieurs</strong> et les <strong>pires parieurs</strong>.","The idea is to <strong>bet</strong> on the <strong>3 horses</strong> that will finish on the podium.
+There is no limit to the number of <strong>players</strong>.
+
+Once the bets are in, everyone watches an <strong>unpredictable race</strong> full of twists and turns.
+When the first 3 horses finish, the game displays the <strong>winners</strong>, the <strong>best bettors</strong>, and the <strong>worst bettors</strong>."
+"gameplay_video.heading","Vidéo de Gameplay","Gameplay video"
+"media.walkthrough.label","Walkthrough","Walkthrough"
+"my_work.heading","Mon travail","My work"
+"media.leaderboard.label","LeaderBoard","Leaderboard"
+"account_system.heading","Système de comptes","Account system"
+"account_system.paragraph_1","J'ai mis en place un <strong>système de comptes</strong>.
+Lorsqu'un pari est créé, si le nom n'existe pas encore, le jeu crée un <strong>nouveau compte</strong>.
+S'il existe déjà, le jeu récupère le compte avec son <strong>score actuel</strong>.
+
+Quand le pari est confirmé, le montant est retiré du compte. À la fin de la partie, les <strong>gains</strong> sont ajoutés au score du joueur.","I implemented an <strong>account system</strong>.
+When a bet is placed, the game creates a <strong>new account</strong> if the name does not already exist.
+Otherwise, it retrieves the account and its <strong>current score</strong>.
+
+When the bet is confirmed, the amount is deducted from the account. At the end of the round, any <strong>winnings</strong> are added to the player's score."
+"media.bets.label","Bets","Bets"
+"betting_system.heading","Système de paris","Betting system"
+"betting_system.paragraph_1","J'ai fait le <strong>système de paris</strong>.
+Le joueur entre son <strong>nom</strong>, le <strong>montant</strong> qu'il veut parier, puis le <strong>podium</strong> qu'il prédit pour la course.
+
+À la fin, il gagne plus ou moins de <strong>score</strong> en fonction du nombre de chevaux arrivés à la <strong>position prédite</strong>.","I built the <strong>betting system</strong>.
+Players enter their <strong>name</strong>, the <strong>amount</strong> they want to bet, and their predicted <strong>podium</strong> for the race.
+
+At the end, they earn more or fewer <strong>points</strong> depending on how many horses finished in their <strong>predicted position</strong>."
+"media.leaderboard.label_2","LeaderBoard","Leaderboard"
+"account_saving.heading","Sauvegarde des comptes","Saving accounts"
+"account_saving.paragraph_1","J'ai créé une <strong>sauvegarde automatique</strong> de tous les comptes des joueurs avec leurs <strong>scores</strong>.
+Les données sont sauvegardées après chaque partie, puis <strong>chargées automatiquement</strong> au lancement du jeu.","I created an <strong>autosave system</strong> for all player accounts and their <strong>scores</strong>.
+The data is saved after every round and <strong>loaded automatically</strong> when the game starts."
+"media.sounds.label","Sounds","Sounds"
+"audio_integration.heading","Intégration des sons","Audio integration"
+"audio_integration.paragraph_1","J'ai fait l'<strong>intégration des sons</strong> dans le jeu.
+Pour cela, j'ai pu reprendre mon <strong>script audio</strong> de la jam de l'année précédente, <musclo_surf>Musclo Surf</musclo_surf>.
+
+Je n'ai presque pas eu besoin de le modifier : il m'a surtout fallu <strong>remplacer les sons</strong> par ceux du nouveau projet.","I handled the game's <strong>audio integration</strong>.
+I was able to reuse my <strong>audio script</strong> from the previous year's jam, <musclo_surf>Musclo Surf</musclo_surf>.
+
+It needed almost no changes: I mainly had to <strong>replace the sounds</strong> with those from the new project."
+"download.heading","Lien pour le télécharger","Download"
+"download.paragraph_1","Vous pouvez télécharger le jeu via cette page <itch>itch.io</itch>.","You can download the game from this <itch>itch.io page</itch>."

@@ -1,0 +1,79 @@
+﻿"key","fr","en"
+"context.heading","Contexte","Context"
+"context.paragraph_1","<strong>Blind Gunner</strong> est mon premier projet réalisé durant ma <strong>première année à ISART Digital</strong>.
+J'ai travaillé seul sur le <strong>Game Programming</strong>, le <strong>Game Design</strong> et le <strong>Game Art</strong>.
+
+La seule contrainte était de créer un <strong>shoot 'em up</strong>.","<strong>Blind Gunner</strong> was my first project during my <strong>first year at ISART Digital</strong>.
+I worked solo on the <strong>Game Programming</strong>, <strong>Game Design</strong>, and <strong>Game Art</strong>.
+
+The only requirement was to create a <strong>shoot 'em up</strong>."
+"pitch.heading","Pitch","Pitch"
+"pitch.paragraph_1","Le jeu repose sur <strong>3 types d'éléments</strong> :
+les <strong>ennemis</strong>,
+les <strong>collectibles</strong>,
+et les <strong>obstacles</strong>.
+
+Le joueur ne peut voir clairement qu'<strong>une seule catégorie</strong> à la fois.
+Pour tirer sur les ennemis, il doit activer le <strong>filtre des ennemis</strong>. Pour récupérer les collectibles, il doit passer sur le <strong>filtre des collectibles</strong>. Les obstacles, eux, restent toujours dangereux, mais certains peuvent être <strong>détruits</strong> avec le bon filtre.","The game revolves around <strong>3 types of elements</strong>:
+<strong>enemies</strong>,
+<strong>collectibles</strong>,
+and <strong>obstacles</strong>.
+
+The player can clearly see only <strong>one category</strong> at a time.
+To shoot enemies, they must activate the <strong>enemy filter</strong>. To pick up collectibles, they must switch to the <strong>collectible filter</strong>. Obstacles are always dangerous, but some can be <strong>destroyed</strong> with the right filter."
+"walkthrough.heading","Walkthrough","Walkthrough"
+"media.walkthrough.label","SHMUP BlindGunner WalkTrough","Blind Gunner walkthrough"
+"my_work.heading","Mon travail","My work"
+"media.filters.label","Filters","Filters"
+"filter_system.heading","Le système de filtres","Filter system"
+"filter_system.paragraph_1","L'idée originale était que le joueur ne puisse voir qu'<strong>un seul type d'élément</strong> à la fois, les autres devenant complètement invisibles.
+
+Même si cette mécanique avait été validée au début du projet, il m'a été demandé durant la dernière semaine de la modifier. Avec le temps restant, j'ai ajusté le système pour rendre les éléments non filtrés <strong>légèrement visibles</strong>.
+
+Le joueur peut alterner entre <strong>3 filtres</strong> :
+un filtre pour voir les <strong>ennemis</strong>,
+un filtre pour voir les <strong>collectibles</strong>,
+et un filtre pour voir les <strong>obstacles</strong>.
+
+Ne pas voir un élément ne signifie pas qu'il disparaît : avec le filtre des collectibles, les ennemis et les obstacles peuvent toujours infliger des <strong>dégâts</strong>, mais le joueur ne peut pas les toucher avec ses tirs.","The original idea was that the player could see only <strong>one type of element</strong> at a time, with the others becoming completely invisible.
+
+Although this mechanic was approved at the start of the project, I was asked to change it during the final week. With the time remaining, I adjusted the system to make elements outside the active filter <strong>slightly visible</strong>.
+
+The player can switch between <strong>3 filters</strong>:
+one for <strong>enemies</strong>,
+one for <strong>collectibles</strong>,
+and one for <strong>obstacles</strong>.
+
+Not seeing an element does not mean it disappears: with the collectible filter active, enemies and obstacles can still deal <strong>damage</strong>, but the player's shots cannot hit them."
+"media.melee_enemies.label","Ennemies CAC","Melee enemies"
+"melee_enemies.heading","Les ennemis au corps à corps","Melee enemies"
+"melee_enemies.paragraph_1","Le premier type d'ennemi attaque au <strong>corps à corps</strong>.
+Il se déplace vers le joueur en <strong>oscillant</strong>, puis est détruit lorsqu'il touche le joueur.","The first enemy type attacks at <strong>close range</strong>.
+It moves toward the player in an <strong>oscillating pattern</strong> and is destroyed when it touches them."
+"media.ranged_enemies.label","Ennemies Distance","Ranged enemies"
+"ranged_enemies.heading","Les ennemis à distance","Ranged enemies"
+"ranged_enemies.paragraph_1","Il existe aussi <strong>2 types d'ennemis à distance</strong>.
+Le premier reste sur place et <strong>tire droit devant lui</strong>.
+Le second reste à droite de l'écran et continue d'attaquer jusqu'à ce que le joueur le <strong>détruise</strong>.","There are also <strong>2 types of ranged enemies</strong>.
+The first stays in place and <strong>shoots straight ahead</strong>.
+The second stays on the right side of the screen and keeps attacking until the player <strong>destroys it</strong>."
+"media.collectibles.label","Collectibles","Collectibles"
+"collectibles.heading","Les collectibles","Collectibles"
+"collectibles.paragraph_1","Il existe <strong>3 collectibles</strong> différents :
+un collectible qui redonne de la <strong>vie</strong>,
+un collectible qui <strong>améliore</strong> le personnage,
+et un collectible qui donne une <strong>bombe</strong> au joueur.","There are <strong>3 different collectibles</strong>:
+one that restores <strong>health</strong>,
+one that <strong>upgrades</strong> the character,
+and one that gives the player a <strong>bomb</strong>."
+"media.boss.label","Boss","Boss"
+"boss.heading","Le boss","The boss"
+"boss.paragraph_1","À la fin du niveau, le joueur affronte un <strong>boss</strong>.
+La contrainte était qu'il ne possède pas de véritables <strong>points de vie</strong>.
+Le combat devait durer entre <strong>30 secondes</strong> et <strong>1 minute</strong>, tout en donnant l'illusion que les tirs du joueur avaient un impact.
+Ses attaques devaient aussi être <strong>synchronisées avec la musique</strong>.","At the end of the level, the player faces a <strong>boss</strong>.
+The requirement was that it must not have actual <strong>health points</strong>.
+The fight had to last between <strong>30 seconds</strong> and <strong>1 minute</strong>, while giving the impression that the player's shots had an impact.
+Its attacks also had to be <strong>synchronized with the music</strong>."
+"download.heading","Lien pour le télécharger","Download"
+"download.paragraph_1","Vous pouvez télécharger une build via mon <github>GitHub</github>.","You can download a build from my <github>GitHub releases</github>."

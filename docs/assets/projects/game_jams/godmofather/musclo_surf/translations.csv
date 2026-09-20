@@ -1,0 +1,45 @@
+﻿"key","fr","en"
+"context.heading","Contexte","Context"
+"context.paragraph_1","Ce jeu a été développé en <strong>groupe de 7 personnes</strong> lors de la <strong>Game Jam GodMoFather</strong> à l'<strong>IIM</strong> en 2025.
+
+C'est avec ce projet que j'ai utilisé <strong>Unity</strong> pour la première fois.","This game was developed by a <strong>team of 7</strong> during the <strong>GodMoFather Game Jam</strong> at <strong>IIM</strong> in 2025.
+
+This project was my first time using <strong>Unity</strong>."
+"pitch.heading","Pitch","Pitch"
+"pitch.paragraph_1","Ce jeu se joue en <strong>2 contre 2</strong> avec <strong>2 manettes</strong>.
+Chaque joueur utilise <strong>une moitié de manette</strong> et doit reproduire une série de touches demandée pour gagner des <strong>boosts de vitesse</strong>.
+
+Les joueurs peuvent débloquer des <strong>poses</strong> avec les points gagnés durant les manches.
+Les spectateurs peuvent aussi <strong>parier</strong> sur l'<strong>équipe gagnante</strong> avant la partie.","This is a <strong>2-vs-2</strong> game played with <strong>2 controllers</strong>.
+Each player uses <strong>half a controller</strong> and must repeat a sequence of button prompts to earn <strong>speed boosts</strong>.
+
+Players can unlock <strong>poses</strong> with the points they earn during rounds.
+Spectators can also <strong>bet</strong> on the <strong>winning team</strong> before the game starts."
+"gameplay_video.heading","Vidéo de Gameplay","Gameplay video"
+"gameplay_video.iframe_title","Musclo Surf gameplay","Musclo Surf gameplay"
+"my_work.heading","Mon travail","My work"
+"media.sounds.label","Sounds","Sounds"
+"audio_integration.heading","Intégration des sons","Audio integration"
+"audio_integration.paragraph_1","Je me suis occupé d'<strong>intégrer les sons</strong> dans le jeu.
+Il y a énormément d'<strong>effets sonores</strong> différents qui peuvent se lancer en même temps tout au long de la partie.
+
+Pour gérer cela, j'ai essayé de créer pour la première fois un <strong>pool system</strong> audio, qui a étonnamment fonctionné du premier coup.","I handled <strong>integrating the sounds</strong> into the game.
+There are many different <strong>sound effects</strong> that can play at the same time throughout a match.
+
+To manage this, I tried building an audio <strong>pooling system</strong> for the first time, and it surprisingly worked on the first try."
+"media.controller_connection.label","ControllersConnection","Controller connection"
+"multiple_controllers.heading","Multi-manettes","Multiple controllers"
+"multiple_controllers.paragraph_1","J'ai fait le système permettant de connecter <strong>2 manettes</strong> au jeu et de différencier leurs <strong>entrées</strong>.
+
+J'ai découvert en même temps le système d'<strong>Input Maps</strong> d'Unity. C'était un peu difficile au début, mais je m'en suis bien sorti.","I built the system for connecting <strong>2 controllers</strong> to the game and distinguishing their <strong>inputs</strong>.
+
+I also discovered Unity's <strong>Input Maps</strong> system in the process. It was a little difficult at first, but I managed well."
+"media.preview.label","Preview","Preview"
+"split_screen_camera.heading","Split camera","Split-screen camera"
+"split_screen_camera.paragraph_1","Pour finir, j'ai fait le <strong>système de caméra</strong>.
+Lorsque les <strong>2 joueurs</strong> sont proches, le jeu utilise une seule <strong>caméra centrée</strong>.
+S'ils s'éloignent, l'écran se sépare en <strong>2 vues</strong>.","Finally, I built the <strong>camera system</strong>.
+When the <strong>2 players</strong> are close together, the game uses a single <strong>centered camera</strong>.
+When they move apart, the screen splits into <strong>2 views</strong>."
+"download.heading","Lien pour le télécharger","Download"
+"download.paragraph_1","Vous pouvez télécharger le jeu via cette page <itch>itch.io</itch>.","You can download the game from this <itch>itch.io page</itch>."

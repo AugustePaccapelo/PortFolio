@@ -1,0 +1,17 @@
+{
+  "title": "Dragon's Cadence",
+  "job": "Game Programmer",
+  "categories": [
+    "unity",
+    "csharp",
+    "group",
+    "school",
+    "iim",
+    "puzzle",
+    "mobile"
+  ],
+  "start_date": "2026-01-26",
+  "end_date": "2026-02-20",
+  "thumbnail": "icon_mobile.png",
+  "link": "school_projects/iim/dragons_cadence/"
+}

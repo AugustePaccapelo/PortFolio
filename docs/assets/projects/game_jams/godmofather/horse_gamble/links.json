@@ -1,0 +1,14 @@
+{
+    "audio_integration.paragraph_1": {
+        "musclo_surf": {
+            "href": "../musclo_surf/"
+        }
+    },
+    "download.paragraph_1": {
+        "itch": {
+            "href": "https://adrien-mart.itch.io/equipe-28",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+        }
+    }
+}

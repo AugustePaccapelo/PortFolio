@@ -11,7 +11,21 @@ async function loadTranslationSettings() {
     if (!csvResponse.ok || !linksResponse.ok) {
         throw new Error("Unable to load translations.csv or links.json.");
     }
-    const rows = parseTranslationCsv(await csvResponse.text());
+    const catalogue = readTranslationCatalogue(await csvResponse.text());
+    const { availableLanguages, translations } = catalogue;
+    const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
+    const language = availableLanguages.includes(requestedLanguage) ? requestedLanguage : availableLanguages[0];
+    translationSettings = {
+        availableLanguages, language, translations,
+        languageIndex: availableLanguages.indexOf(language),
+        links: await linksResponse.json(),
+        projects: new Map()
+    };
+    return translationSettings;
+}
+
+function readTranslationCatalogue(csv) {
+    const rows = parseTranslationCsv(csv);
     const headers = (rows.shift() || []).map(header => header.trim());
     if (headers[0] !== "key") throw new Error('The first CSV column must be "key".');
     const availableLanguages = headers.slice(1);
@@ -19,8 +33,6 @@ async function loadTranslationSettings() {
         new Set(availableLanguages).size !== availableLanguages.length) {
         throw new Error("The CSV must contain unique, named language columns.");
     }
-    const requestedLanguage = new URLSearchParams(window.location.search).get("lang");
-    const language = availableLanguages.includes(requestedLanguage) ? requestedLanguage : availableLanguages[0];
     const translations = new Map();
     for (const row of rows) {
         if (row.every(value => value === "")) continue;
@@ -29,12 +41,48 @@ async function loadTranslationSettings() {
         }
         translations.set(row[0], row.slice(1));
     }
-    translationSettings = {
-        availableLanguages, language, translations,
-        languageIndex: availableLanguages.indexOf(language),
-        links: await linksResponse.json()
-    };
-    return translationSettings;
+    return { availableLanguages, translations };
+}
+
+async function loadProjectTranslations(project) {
+    const base = new URL(project.assets_path, ROOT);
+    const [csvResponse, linksResponse] = await Promise.all([
+        fetch(new URL("translations.csv", base)),
+        fetch(new URL("links.json", base))
+    ]);
+    if (!csvResponse.ok || !linksResponse.ok) {
+        throw new Error(`Unable to load translations or links for ${project.id}.`);
+    }
+    registerProjectTranslations(
+        project.id,
+        readTranslationCatalogue(await csvResponse.text()),
+        await linksResponse.json(),
+        new URL(project.link, ROOT).href
+    );
+}
+
+function registerProjectTranslations(projectId, catalogue, links, pageUrl) {
+    const settings = translationSettings;
+    const defaultLanguage = settings.availableLanguages[0];
+    if (!catalogue.availableLanguages.includes(defaultLanguage)) {
+        throw new Error(`Project translations must include the default language: ${defaultLanguage}.`);
+    }
+    // Match column names, not positions: project files can omit languages or
+    // arrange their columns differently from the shared catalogue.
+    if (settings.projects.has(projectId)) throw new Error(`Duplicate project catalogue: ${projectId}`);
+    for (const key of Object.keys(links)) {
+        if (!catalogue.translations.has(key)) {
+            throw new Error(`Invalid or duplicate project link key: ${key}`);
+        }
+    }
+    const translations = new Map();
+    for (const [key, values] of catalogue.translations) {
+        translations.set(key, settings.availableLanguages.map(language => {
+            const index = catalogue.availableLanguages.indexOf(language);
+            return index === -1 ? "" : values[index];
+        }));
+    }
+    settings.projects.set(projectId, { translations, links, pageUrl });
 }
 
 // Quoted fields may contain commas, doubled quotes, and multiple lines.
@@ -69,8 +117,13 @@ function parseTranslationCsv(csv) {
     return rows;
 }
 
-function translateText(key, fallback = key) {
-    const values = translationSettings?.translations.get(key);
+function getTranslationCatalogue(key, projectId = globalThis.document?.body?.dataset.projectId) {
+    const project = translationSettings?.projects.get(projectId);
+    return project?.translations.has(key) ? project : translationSettings;
+}
+
+function translateText(key, fallback = key, projectId = globalThis.document?.body?.dataset.projectId) {
+    const values = getTranslationCatalogue(key, projectId)?.translations.get(key);
     if (!values) return fallback;
     // Blank cells fall back to the first language, allowing gradual translation.
     return values[translationSettings.languageIndex] || values[0] || fallback;
@@ -101,7 +154,8 @@ function translatedPageUrl(href) {
 function translationFragment(key) {
     const fragment = document.createDocumentFragment();
     const stack = [{ name: "", node: fragment }];
-    const links = translationSettings.links[key] || {};
+    const catalogue = getTranslationCatalogue(key);
+    const links = catalogue.links[key] || {};
     const parts = translateText(key).replace(/\r\n?/g, "\n").split(/(<\/?[a-z][a-z0-9_]*>|\n)/gi);
     for (const part of parts) {
         if (!part) continue;
@@ -117,7 +171,7 @@ function translationFragment(key) {
             if (["strong", "em", "b", "i", "code"].includes(name)) element = document.createElement(name);
             else if (Object.hasOwn(links, name)) {
                 const definition = links[name];
-                const url = new URL(definition.href, window.location.href);
+                const url = new URL(definition.href, catalogue.pageUrl || window.location.href);
                 if (["http:", "https:", "mailto:", "tel:"].includes(url.protocol)) {
                     element = document.createElement("a");
                     element.href = translatedPageUrl(url.href);

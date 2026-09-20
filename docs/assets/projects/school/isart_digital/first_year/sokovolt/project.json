@@ -1,0 +1,17 @@
+{
+  "title": "Sokovolt",
+  "job": "Game Programmer",
+  "categories": [
+    "godot",
+    "csharp",
+    "group",
+    "school",
+    "isart",
+    "puzzle",
+    "pc"
+  ],
+  "start_date": "2025-02-13",
+  "end_date": "2025-04-15",
+  "thumbnail": "logo_sokovolt.png",
+  "link": "school_projects/isart_digital/sokovolt/"
+}

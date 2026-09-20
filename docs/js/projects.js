@@ -32,43 +32,61 @@ const PROJECT_SEARCH_CONFIG = {
         { value: "date_asc", label: "shared.search.sort.date_asc" }
     ],
     labels: {
-        controlsTitle: "shared.search.controlsTitle",
+        controlsTitle: "shared.search.controls_title",
         limit: "shared.search.limit",
         sort: "shared.search.sort",
         categories: "shared.search.categories",
-        allCategories: "shared.search.allCategories",
-        addFilter: "shared.search.addFilter",
-        noResult: "shared.search.noResult"
+        allCategories: "shared.search.all_categories",
+        addFilter: "shared.search.add_filter",
+        noResult: "shared.search.no_results"
     }
 };
 
 async function fetchJson(path) {
     const response = await fetch(root + path);
+    if (!response.ok) throw new Error(`Unable to load ${path} (${response.status}).`);
     return response.json();
 }
 
 async function getProjectData() {
-    await window.translationReady;
-    if (projectData !== undefined) {
-        return projectData;
+    // Cache the promise immediately so navigation and page rendering share
+    // the same in-flight requests as well as the finished result.
+    if (projectData === undefined) {
+        projectData = loadProjectData();
     }
+    return projectData;
+}
 
-    const [projects, categories, projectOrder] = await Promise.all([
+async function loadProjectData() {
+    await window.translationReady;
+    const [index, categories, projectOrder] = await Promise.all([
         fetchJson("data/projects.json"),
         fetchJson("data/categories.json"),
         fetchJson("data/project_order.json")
     ]);
 
-    for (const project of projects) {
-        const prefix = project.link.replace(/\/$/, "").split("/").pop();
-        project.title = translateText(`${prefix}.project.title`, project.title);
-        project.job = translateText(`${prefix}.project.job`, project.job);
+    const ids = new Set();
+    for (const entry of index) {
+        if (!entry.id || !entry.assets_path || ids.has(entry.id)) {
+            throw new Error(`Invalid or duplicate project ID: ${entry.id}`);
+        }
+        ids.add(entry.id);
     }
+    const projects = await Promise.all(index.map(async entry => {
+        const metadata = await fetchJson(entry.assets_path + "project.json");
+        const project = { ...metadata, id: entry.id, assets_path: entry.assets_path };
+        await loadProjectTranslations(project);
+        for (const field of ["title", "job"]) {
+            if (typeof project[field] !== "string" || !project[field].trim()) {
+                throw new Error(`Missing ${field} for project ${project.id}.`);
+            }
+        }
+        return project;
+    }));
     for (const categoryId of Object.keys(categories)) {
         categories[categoryId] = translateText(`shared.categories.${categoryId}`, categories[categoryId]);
     }
-    projectData = { projects, categories, projectOrder };
-    return projectData;
+    return { projects, categories, projectOrder };
 }
 
 function getProjectOrderIndex(project, projectOrder) {

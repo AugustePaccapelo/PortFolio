@@ -1,0 +1,14 @@
+{
+    "lightning.paragraph_1": {
+        "sokovolt": {
+            "href": "../../isart_digital/sokovolt/"
+        }
+    },
+    "download.paragraph_1": {
+        "github": {
+            "href": "https://github.com/Novaely/SFML-Project/releases",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+        }
+    }
+}

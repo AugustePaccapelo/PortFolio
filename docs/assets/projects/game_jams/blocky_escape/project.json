@@ -1,0 +1,15 @@
+{
+  "title": "Blocky Escape",
+  "job": "Game Programmer",
+  "categories": [
+    "unity",
+    "csharp",
+    "group",
+    "jam",
+    "pc"
+  ],
+  "start_date": "2025-10-13",
+  "end_date": "2025-10-17",
+  "thumbnail": "icon.png",
+  "link": "game_jams/blocky_escape/"
+}

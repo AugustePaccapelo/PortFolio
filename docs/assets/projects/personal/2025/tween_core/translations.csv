@@ -1,0 +1,51 @@
+﻿"key","fr","en"
+"context.heading","Contexte","Context"
+"context.paragraph_1","<strong>TweenCore</strong> est un <strong>package</strong> Unity qui permet de faire des <strong>animations</strong>, principalement en 2D et / ou pour l'UI.
+
+On peut l'utiliser par <strong>code</strong> et via <strong>l'éditeur</strong>, en fonction de la complexité voulue. J'ai essayé de faire une structure similaire aux <strong>Tweens</strong> de <strong>Godot</strong>.","<strong>TweenCore</strong> is a Unity <strong>package</strong> for creating <strong>animations</strong>, mainly in 2D and/or for UI.
+
+It can be used through <strong>code</strong> or in the <strong>editor</strong>, depending on the complexity needed. I aimed for a structure similar to <strong>Tweens</strong> in <strong>Godot</strong>."
+"example.heading","Exemple concret","A practical example"
+"example.paragraph_1","Je l'ai utilisé pour un rendu de cours, on était en groupe de 3 Game Programmers et nous avions fait le jeu ""Président"" en 1 semaine.
+
+Ici les animations ont été créées par script.","I used it for a class assignment in which our team of 3 Game Programmers made the card game ""President"" in one week.
+
+The animations shown here were created through code."
+"media.card_dealing_animation.label","Draw Anim","Card-dealing animation"
+"example.paragraph_2","Animation des boutons et distribution des cartes","Button animations and dealing cards"
+"media.exchange.label","Exchange","Card exchange"
+"example.paragraph_3","Animations d'échange de cartes entre 2 joueurs","Animations for exchanging cards between 2 players"
+"media.play_cards.label","Play Cards","Playing cards"
+"example.paragraph_4","Animation lorsque des joueurs jouent une ou plusieurs cartes, avec un peu d'aléatoire","Animation for playing one or more cards, with a little randomness"
+"usage.heading","Comment l'utiliser","How to use it"
+"media.simple_drop_animation.label","Simple Drop Anim","Simple drop animation"
+"finite_animation.heading","Animation finie","Finite animation"
+"finite_animation.paragraph_1","On peut faire une animation qui se joue <strong>une seule fois</strong> ou <strong>un certain nombre de fois</strong>.
+
+Ici par exemple, le cube va descendre d'une certaine hauteur 7 fois d'affilée, avec un effet de <strong>rebond</strong> à chaque itération.","An animation can play <strong>once</strong> or a <strong>set number of times</strong>.
+
+In this example, the cube drops from a given height 7 times in a row, with a <strong>bounce</strong> effect on each iteration."
+"media.infinite_and_linked_animations.label","Infinite And Link Anim","Infinite and linked animations"
+"infinite_and_linked_animations.heading","Animation infinie & lien entre animations","Infinite and linked animations"
+"infinite_and_linked_animations.paragraph_1","On peut également faire des animations <strong>infinies</strong>, comme par exemple faire tourner un élément en boucle.
+
+De plus, chaque <strong>TweenComponent</strong> et chaque <strong>property</strong> ont des <strong>UnityEvents</strong> et des <strong>C# events</strong> à chaque état, pour faire certaines actions lorsqu'on le souhaite.
+
+Ici le triangle va se mettre à tourner à l'infini une fois que le carré aura fini son animation.","You can also create <strong>infinite</strong> animations, such as making an object spin continuously.
+
+Each <strong>TweenComponent</strong> and <strong>property</strong> also has <strong>UnityEvents</strong> and <strong>C# events</strong> for each state, allowing actions to be triggered when needed.
+
+Here, the triangle starts spinning indefinitely once the square has finished its animation."
+"media.custom_curves.label","Custom Curves","Custom Curves"
+"types_and_easing.heading","Les Types et Eases","Types and easing functions"
+"types_and_easing.paragraph_1","Les tweens ont beaucoup de <strong>types</strong> et d'<strong>eases</strong> possibles, dont une bonne partie est déjà <strong>intégrée</strong>.
+
+Cependant, si besoin, on peut également donner une <strong>CustomCurve</strong> que la property va suivre.
+
+Pour des besoins très spécifiques, on peut donner une <strong>fonction</strong> que la property va utiliser par <strong>script</strong>.","Tweens support many <strong>types</strong> and <strong>easing functions</strong>, with a large selection already <strong>built in</strong>.
+
+If needed, you can also provide a <strong>CustomCurve</strong> for the property to follow.
+
+For very specific needs, you can supply a <strong>function</strong> for the property to use through <strong>code</strong>."
+"download.heading","Lien pour le télécharger","Download"
+"download.paragraph_1","Vous pouvez télécharger le package via mon <github>Git</github>.","You can download the package from my <github>GitHub releases</github>."

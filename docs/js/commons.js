@@ -4,13 +4,13 @@ class SiteHeader extends HTMLElement {
         <header>
             <nav>
                 <ul class="nav-bar">
-                    <h4><a href="${ROOT}" data-i18n="shared.navigation.accueil">shared.navigation.accueil</a></h4>
+                    <h4><a href="${ROOT}" data-i18n="shared.navigation.home">shared.navigation.home</a></h4>
                     <li class="nav-dropdown">
-                        <h4><a href="${ROOT}personal_projects/" data-i18n="shared.navigation.projets_personnels">shared.navigation.projets_personnels</a></h4>
+                        <h4><a href="${ROOT}personal_projects/" data-i18n="shared.navigation.personal_projects">shared.navigation.personal_projects</a></h4>
                         <ul class="nav-dropdown-content" data-nav-category="personal"></ul>
                     </li>
                     <li class="nav-dropdown">
-                        <h4><a href="${ROOT}school_projects/" data-i18n="shared.navigation.projets_d_ecole">shared.navigation.projets_d_ecole</a></h4>
+                        <h4><a href="${ROOT}school_projects/" data-i18n="shared.navigation.school_projects">shared.navigation.school_projects</a></h4>
                         <ul class="nav-dropdown-content" data-nav-category="school"></ul>
                     </li>
                     <li class="nav-dropdown">
@@ -63,7 +63,7 @@ class SiteFooter extends HTMLElement {
         this.innerHTML = `
         <footer>
             <div class="footer-txt">
-                <p data-i18n="shared.footer.auguste_paccapelo">shared.footer.auguste_paccapelo</p>
+                <p data-i18n="shared.footer.author">shared.footer.author</p>
             </div>
 
             <div class="footer-img-container">

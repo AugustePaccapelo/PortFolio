@@ -18,7 +18,7 @@ function load(csv = actualCsv, search = '', status = 200) {
         fetch: async url => ({
             ok: status === 200, status,
             text: async () => csv,
-            json: async () => actualLinks
+            json: async () => JSON.parse(JSON.stringify(actualLinks))
         })
     });
     vm.runInContext(source, context);
@@ -70,20 +70,109 @@ test('language persists in site page links without changing downloads or externa
     assert.equal(context.escapeTranslationText('<img src=x onerror="alert(1)">'), '&lt;img src=x onerror=&quot;alert(1)&quot;&gt;');
 });
 
-test('every static page translation key exists in the real CSV', async () => {
-    const settings = await load().window.translationReady;
+test('every static page key exists in the shared or project catalogues', async () => {
+    const context = load();
+    const settings = await context.window.translationReady;
+    const projects = JSON.parse(fs.readFileSync(path.join(root, 'docs/data/projects.json'), 'utf8'));
+    for (const entry of projects) {
+        assert.deepEqual(Object.keys(entry).sort(), ['assets_path', 'id']);
+        const folder = path.join(root, 'docs', entry.assets_path);
+        const metadata = JSON.parse(fs.readFileSync(path.join(folder, 'project.json'), 'utf8'));
+        const catalogue = context.readTranslationCatalogue(fs.readFileSync(path.join(folder, 'translations.csv'), 'utf8'));
+        for (const key of catalogue.translations.keys()) {
+            assert.match(key, /^[a-z][a-z0-9_]*(?:\.[a-z][a-z0-9_]*)*$/);
+        }
+        const links = JSON.parse(fs.readFileSync(path.join(folder, 'links.json'), 'utf8'));
+        context.registerProjectTranslations(entry.id, catalogue, links, new URL(metadata.link, context.ROOT).href);
+        assert.ok(metadata.title);
+        assert.ok(metadata.job);
+        assert.equal(metadata.title_key, undefined);
+        assert.equal(metadata.job_key, undefined);
+        assert.ok([...catalogue.translations.keys()].every(key => !/\.project\.(title|job)$/.test(key)));
+        assert.ok(fs.existsSync(path.join(folder, metadata.thumbnail)));
+        assert.ok(fs.existsSync(path.join(root, 'docs', metadata.link, 'index.html')));
+    }
     function visit(directory) {
         for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
             const file = path.join(directory, entry.name);
             if (entry.isDirectory()) visit(file);
             else if (entry.name.endsWith('.html')) {
                 const html = fs.readFileSync(file, 'utf8');
+                const projectId = html.match(/data-project-id="([^"]+)"/)?.[1];
                 for (const match of html.matchAll(/data-i18n(?:-(?:alt|title|aria-label|placeholder))?="([^"]+)"/g)) {
-                    assert.ok(settings.translations.has(match[1]), file + ': ' + match[1]);
+                    assert.ok(context.getTranslationCatalogue(match[1], projectId).translations.has(match[1]), file + ': ' + match[1]);
                 }
             }
         }
     }
     visit(path.join(root, 'docs'));
+    for (const key of settings.translations.keys()) {
+        assert.match(key, /^[a-z][a-z0-9_]*(?:\.[a-z][a-z0-9_]*)*$/);
+    }
+    for (const file of fs.readdirSync(path.join(root, 'docs/js'))) {
+        if (!file.endsWith('.js')) continue;
+        const js = fs.readFileSync(path.join(root, 'docs/js', file), 'utf8');
+        for (const match of js.matchAll(/["'](shared\.[a-zA-Z0-9_.]+)["']/g)) {
+            assert.ok(settings.translations.has(match[1]), file + ': ' + match[1]);
+        }
+    }
     for (const key of Object.keys(actualLinks)) assert.ok(settings.translations.has(key), key);
+});
+
+test('project columns are matched by language name and missing languages fall back to French', async () => {
+    const context = load('key,fr,en,es\nshared,Commun,Shared,', '?lang=en');
+    const settings = await context.window.translationReady;
+    context.registerProjectTranslations('first', context.readTranslationCatalogue('key,en,fr\nheading,Title,Titre\nbody,,Texte'), {}, context.ROOT);
+    context.registerProjectTranslations('second', context.readTranslationCatalogue('key,fr\nheading,Autre'), {}, context.ROOT);
+    assert.equal(context.translateText('heading', undefined, 'first'), 'Title');
+    assert.equal(context.translateText('body', undefined, 'first'), 'Texte');
+    assert.equal(context.translateText('heading', undefined, 'second'), 'Autre');
+    context.document = { body: { dataset: { projectId: 'first' } } };
+    assert.equal(context.translateText('heading'), 'Title');
+    context.document.body.dataset.projectId = 'second';
+    assert.equal(context.translateText('heading'), 'Autre');
+    assert.equal(context.translateText('shared'), 'Shared');
+    settings.languageIndex = 2;
+    assert.equal(context.translateText('heading', undefined, 'first'), 'Titre');
+    assert.throws(() => context.registerProjectTranslations('first', context.readTranslationCatalogue('key,fr\nheading,Doublon'), {}, context.ROOT));
+    assert.throws(() => context.registerProjectTranslations('third', context.readTranslationCatalogue('key,en\nx,Text'), {}, context.ROOT));
+});
+
+test('project data loads once and resolves metadata and translations from each indexed folder', async () => {
+    const context = load();
+    await context.window.translationReady;
+    const requests = new Map();
+    context.root = context.ROOT;
+    context.fetch = async input => {
+        const url = new URL(input);
+        const relative = url.pathname.replace('/portfolio/', '');
+        requests.set(relative, (requests.get(relative) || 0) + 1);
+        const file = path.join(root, 'docs', relative);
+        return { ok: fs.existsSync(file), status: fs.existsSync(file) ? 200 : 404,
+            text: async () => fs.readFileSync(file, 'utf8'),
+            json: async () => JSON.parse(fs.readFileSync(file, 'utf8')) };
+    };
+    vm.runInContext(fs.readFileSync(path.join(root, 'docs/js/projects.js'), 'utf8'), context);
+    const [a, b] = await Promise.all([context.getProjectData(), context.getProjectData()]);
+    assert.equal(a, b);
+    assert.equal(a.projects.length, 11);
+    const horse = a.projects.find(p => p.id === 'horse_gamble');
+    assert.equal(horse.title, 'Horse Gamble Ultimate Race');
+    assert.equal(horse.job, 'Game Programmer');
+    assert.equal(horse.title_key, undefined);
+    assert.ok([...requests.values()].every(count => count === 1));
+    const settingsForLanguage = await context.window.translationReady;
+    settingsForLanguage.language = 'en';
+    settingsForLanguage.languageIndex = 1;
+    vm.runInContext('projectData = undefined;', context);
+    // Simulate a fresh page: project translations have already been checked above.
+    context.loadProjectTranslations = async () => {};
+    const english = await context.getProjectData();
+    assert.deepEqual(JSON.parse(JSON.stringify(english.projects.map(p => [p.id, p.title, p.job]))),
+        JSON.parse(JSON.stringify(a.projects.map(p => [p.id, p.title, p.job]))));
+    const settings = await context.window.translationReady;
+    const key = 'lightning.paragraph_1';
+    const catalogue = settings.projects.get('color_survivor');
+    assert.equal(new URL(catalogue.links[key].sokovolt.href, catalogue.pageUrl).href,
+        'https://example.com/portfolio/school_projects/isart_digital/sokovolt/');
 });

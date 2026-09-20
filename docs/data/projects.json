@@ -1,123 +1,46 @@
 [
     {
         "id": "tween_core",
-        "title": "Tween Core",
-        "job": "Tool Programmer",
-        "categories": ["unity", "csharp", "solo", "personal", "tool", "package"],
-        "start_date": "2025-10-29",
-        "end_date": "2026-01-19",
-        "assets_path": "assets/projects/personal/2025/tween_core/",
-        "thumbnail": "preview.gif",
-        "link": "personal_projects/tween_core/"
+        "assets_path": "assets/projects/personal/2025/tween_core/"
     },
     {
         "id": "devtober",
-        "title": "Devtober",
-        "job": "Game Programmer",
-        "categories": ["unity", "csharp", "solo", "personal"],
-        "start_date": "2025-10-01",
-        "end_date": "2025-10-31",
-        "assets_path": "assets/projects/personal/2025/devtober/",
-        "thumbnail": "prompt_list_2025.png",
-        "link": "personal_projects/devtober/"
+        "assets_path": "assets/projects/personal/2025/devtober/"
     },
     {
         "id": "color_survivor",
-        "title": "Color Survivor",
-        "job": "Game Programmer",
-        "categories": ["cpp", "group", "school", "iim", "shmup", "pc"],
-        "start_date": "2025-11-24",
-        "end_date": "2025-12-13",
-        "assets_path": "assets/projects/school/iim/second_year/color_survivor/",
-        "thumbnail": "preview.gif",
-        "link": "school_projects/iim/color_survivor/"
+        "assets_path": "assets/projects/school/iim/second_year/color_survivor/"
     },
     {
         "id": "dragons_cadence",
-        "title": "Dragon's Cadence",
-        "job": "Game Programmer",
-        "categories": ["unity", "csharp", "group", "school", "iim", "puzzle", "mobile"],
-        "start_date": "2026-01-26",
-        "end_date": "2026-02-20",
-        "assets_path": "assets/projects/school/iim/second_year/dragons_cadence/",
-        "thumbnail": "icon_mobile.png",
-        "link": "school_projects/iim/dragons_cadence/"
+        "assets_path": "assets/projects/school/iim/second_year/dragons_cadence/"
     },
     {
         "id": "sokovolt",
-        "title": "Sokovolt",
-        "job": "Game Programmer",
-        "categories": ["godot", "csharp", "group", "school", "isart", "puzzle", "pc"],
-        "start_date": "2025-02-13",
-        "end_date": "2025-04-15",
-        "assets_path": "assets/projects/school/isart_digital/first_year/sokovolt/",
-        "thumbnail": "logo_sokovolt.png",
-        "link": "school_projects/isart_digital/sokovolt/"
+        "assets_path": "assets/projects/school/isart_digital/first_year/sokovolt/"
     },
     {
         "id": "zero_paws",
-        "title": "Zero Paws",
-        "job": "Game Programmer",
-        "categories": ["unreal", "bp", "group", "school", "iim", "fps", "pc"],
-        "start_date": "2026-05-18",
-        "end_date": "2026-06-24",
-        "assets_path": "assets/projects/school/iim/second_year/zero_paws/",
-        "thumbnail": "icon.png",
-        "link": "school_projects/iim/zero_paws/"
+        "assets_path": "assets/projects/school/iim/second_year/zero_paws/"
     },
     {
         "id": "morse_learner",
-        "title": "Morse Learner",
-        "job": "Game Programmer",
-        "categories": ["godot", "csharp", "solo", "school", "isart", "game", "mobile"],
-        "start_date": "2025-04-23",
-        "end_date": "2025-05-19",
-        "assets_path": "assets/projects/school/isart_digital/first_year/morse_learner/",
-        "thumbnail": "InputSequence.gif",
-        "link": "school_projects/isart_digital/morse_learner/"
+        "assets_path": "assets/projects/school/isart_digital/first_year/morse_learner/"
     },
     {
         "id": "blind_gunner",
-        "title": "Blind Gunner",
-        "job": "Game Programmer",
-        "categories": ["godot", "csharp", "solo", "school", "isart", "shmup", "pc"],
-        "start_date": "2024-12-10",
-        "end_date": "2025-01-14",
-        "assets_path": "assets/projects/school/isart_digital/first_year/blind_gunner/",
-        "thumbnail": "Filters.gif",
-        "link": "school_projects/isart_digital/blind_gunner/"
+        "assets_path": "assets/projects/school/isart_digital/first_year/blind_gunner/"
     },
     {
         "id": "musclo_surf",
-        "title": "Musclo Surf",
-        "job": "Game Programmer",
-        "categories": ["unity", "csharp", "group", "jam", "pc"],
-        "start_date": "2025-09-02",
-        "end_date": "2025-09-05",
-        "assets_path": "assets/projects/game_jams/godmofather/musclo_surf/",
-        "thumbnail": "icon.png",
-        "link": "game_jams/godmofather/musclo_surf/"
+        "assets_path": "assets/projects/game_jams/godmofather/musclo_surf/"
     },
     {
         "id": "horse_gamble",
-        "title": "Horse Gamble Ultimate Race",
-        "job": "Game Programmer",
-        "categories": ["unity", "csharp", "group", "jam", "pc"],
-        "start_date": "2026-09-08",
-        "end_date": "2026-09-11",
-        "assets_path": "assets/projects/game_jams/godmofather/horse_gamble/",
-        "thumbnail": "icon.png",
-        "link": "game_jams/godmofather/horse_gamble_ultimate_race/"
+        "assets_path": "assets/projects/game_jams/godmofather/horse_gamble/"
     },
     {
         "id": "blocky_escape",
-        "title": "Blocky Escape",
-        "job": "Game Programmer",
-        "categories": ["unity", "csharp", "group", "jam", "pc"],
-        "start_date": "2025-10-13",
-        "end_date": "2025-10-17",
-        "assets_path": "assets/projects/game_jams/blocky_escape/",
-        "thumbnail": "icon.png",
-        "link": "game_jams/blocky_escape/"
+        "assets_path": "assets/projects/game_jams/blocky_escape/"
     }
 ]

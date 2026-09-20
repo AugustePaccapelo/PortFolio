@@ -1,0 +1,16 @@
+{
+    "context.paragraph_1": {
+        "github": {
+            "href": "https://github.com/AugustePaccapelo/Devtober_2025/releases/tag/Build",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+        }
+    },
+    "download.paragraph_1": {
+        "github": {
+            "href": "https://github.com/AugustePaccapelo/Devtober_2025/releases",
+            "target": "_blank",
+            "rel": "noopener noreferrer"
+        }
+    }
+}

@@ -1,0 +1,52 @@
+﻿"key","fr","en"
+"context.heading","Contexte","Context"
+"context.paragraph_1","Mon second projet durant ma première année à ISART Digital Paris, réalisé en groupe de 5.
+Nous étions tous dans la même classe en Game Design & Programming.","My second project during my first year at ISART Digital Paris, made by a team of 5.
+We were all in the same Game Design & Programming class."
+"pitch.heading","Pitch","Pitch"
+"pitch.paragraph_1","C'est un <strong>puzzle game</strong> du type <strong>Sokoban</strong>. Le but est de <strong>déplacer</strong> les <strong>bobines tesla</strong> pour alimenter les <strong>ampoules</strong>, en les connectant à un <strong>générateur</strong>. Une fois toutes les ampoules alimentées, une <strong>porte s'ouvre</strong>, et le joueur doit la prendre pour <strong>valider</strong> le niveau.","This is a <strong>puzzle game</strong> inspired by <strong>Sokoban</strong>. The goal is to <strong>move</strong> <strong>Tesla coils</strong> to power <strong>light bulbs</strong> by connecting them to a <strong>generator</strong>. Once all the bulbs are powered, a <strong>door opens</strong>, and the player must go through it to <strong>complete</strong> the level."
+"trailer.heading","Trailer","Trailer"
+"trailer.iframe_title","Sokovolt trailer","Sokovolt trailer"
+"my_work.heading","Mon travail","My work"
+"media.lightning_example_in_game.label","Lightning Example In Game","Lightning Example In Game"
+"lightning.heading","Les éclairs","Lightning"
+"lightning.paragraph_1","J'ai fait <strong>l'effet d'électricité</strong> qui relie les <strong>teslas</strong> lorsqu'elles sont <strong>alimentées</strong>.
+
+Ce sont des <strong>Line2D</strong> qui se <strong>dirigent</strong> dans une <strong>direction</strong> en se contraignant à une <strong>largeur donnée</strong>.
+L'effet est entièrement <strong>aléatoire</strong>.
+J'ai <strong>exposé</strong> quasiment toutes les <strong>variables</strong> afin de pouvoir les <strong>modifier</strong> comme on le souhaite, et pouvoir les <strong>utiliser</strong> dans différents cas.","I created the <strong>electricity effect</strong> connecting the <strong>Tesla coils</strong> when they are <strong>powered</strong>.
+
+It uses <strong>Line2D</strong> nodes that <strong>travel</strong> in a <strong>direction</strong> while staying within a <strong>given width</strong>.
+The effect is entirely <strong>random</strong>.
+I <strong>exposed</strong> almost all the <strong>variables</strong> so they could be <strong>adjusted</strong> as needed and <strong>used</strong> in different situations."
+"lightning.iframe_title","Sokovolt blocking path gameplay","Sokovolt blocking path gameplay"
+"win_condition.heading","La condition de victoire","Win condition"
+"win_condition.paragraph_1","J'ai également fait la <strong>condition de victoire</strong>.
+Il y a <strong>2 étapes</strong> pour gagner :
+
+Allumer <strong>toutes</strong> les <strong>ampoules</strong>. Pour cela, il faut qu'une <strong>tesla alimentée</strong> soit présente <strong>autour</strong> de l'ampoule.
+
+Ensuite <strong>sortir</strong> par la porte, qui peut être un défi car <strong>l'électricité</strong> entre les teslas peut <strong>bloquer le chemin</strong>.","I also implemented the <strong>win condition</strong>.
+Winning requires <strong>2 steps</strong>:
+
+Light up <strong>all</strong> the <strong>bulbs</strong>. To do this, a <strong>powered Tesla coil</strong> must be <strong>near</strong> each bulb.
+
+Then <strong>leave</strong> through the door, which can be challenging because the <strong>electricity</strong> between the coils can <strong>block the path</strong>."
+"media.login.label","Login","Login"
+"user_accounts.heading","Comptes utilisateurs","User accounts"
+"user_accounts.paragraph_1","Je me suis occupé de faire l'<strong>écran de connexion</strong> et le <strong>système de connexion</strong>.
+Ce sont des comptes <strong>uniquement locaux</strong>, il n'y a pas de serveurs, mais ça permet d'avoir <strong>plusieurs sauvegardes</strong> différentes et d'avoir un <strong>tableau des scores local</strong>.
+Les mots de passe sont donc stockés dans <strong>l'ordinateur client</strong> sous une forme <strong>hashée</strong>.","I built the <strong>login screen</strong> and <strong>login system</strong>.
+The accounts are <strong>local only</strong>, with no servers, but they allow <strong>multiple save files</strong> and a <strong>local leaderboard</strong>.
+Passwords are stored on the <strong>client's computer</strong> in <strong>hashed</strong> form."
+"media.my_level.label","My Level","My Level"
+"level_design.heading","Level Design","Level Design"
+"level_design.paragraph_1","Chaque personne du groupe devait réaliser au moins <strong>2 niveaux</strong> :
+
+1 normalement, et 1 uniquement avec <strong>ChatGPT</strong>.
+Pour le niveau avec l'IA, nous ne <strong>pouvions pas modifier</strong> le niveau, toute modification devait se faire <strong>via des prompts</strong>, et pour notre jeu l'IA a eu <strong>beaucoup de mal</strong> à produire des niveaux <strong>intéressants</strong> ou <strong>réalisables</strong>.","Each team member had to create at least <strong>2 levels</strong>:
+
+One normally, and one using only <strong>ChatGPT</strong>.
+For the AI-generated level, we <strong>could not edit</strong> it directly: every change had to be made <strong>through prompts</strong>. For our game, the AI <strong>struggled a lot</strong> to produce levels that were <strong>interesting</strong> or <strong>solvable</strong>."
+"download.heading","Lien pour le télécharger","Download"
+"download.paragraph_1","Vous pouvez télécharger une build via mon <github>git</github>","You can download a build from my <github>GitHub releases</github>."

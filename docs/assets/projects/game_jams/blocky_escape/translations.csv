@@ -1,0 +1,39 @@
+﻿"key","fr","en"
+"context.heading","Contexte","Context"
+"context.paragraph_1","Ce jeu a été réalisé en <strong>groupe de 5 personnes</strong>.
+Nous avions <strong>1 semaine</strong> de cours pour reprendre en main <strong>Git</strong> et <strong>Fork</strong>.
+
+Pour mettre ces outils en pratique, nous devions créer un <strong>petit jeu</strong>.","This game was made by a <strong>team of 5</strong>.
+We had <strong>one week</strong> of classes to refresh our knowledge of <strong>Git</strong> and <strong>Fork</strong>.
+
+To put these tools into practice, we had to create a <strong>small game</strong>."
+"pitch.heading","Pitch","Pitch"
+"pitch.paragraph_1","Ce jeu se joue en <strong>coopération à 2 joueurs</strong>.
+Un joueur est <strong>bloqué dans un trou</strong>, et l'objectif est de l'aider à en sortir.
+
+Le second joueur peut placer des <strong>blocs</strong>, comme dans <strong>Tetris</strong>, pour créer un chemin vers la sortie.","This is a <strong>two-player cooperative</strong> game.
+One player is <strong>trapped in a hole</strong>, and the goal is to help them get out.
+
+The second player can place <strong>blocks</strong>, as in <strong>Tetris</strong>, to build a path to the exit."
+"walkthrough.heading","Walkthrough","Walkthrough"
+"media.walkthrough.label","Walkthrough","Walkthrough"
+"my_work.heading","Mon travail","My work"
+"media.controls.label","Controls","Controls"
+"block_controls.heading","Contrôles des blocs","Block controls"
+"block_controls.paragraph_1","Je me suis occupé des <strong>inputs</strong> du second joueur.
+Il peut déplacer les <strong>blocs</strong> à gauche ou à droite, les <strong>tourner</strong> et <strong>accélérer leur descente</strong>.","I handled the second player's <strong>input</strong>.
+They can move the <strong>blocks</strong> left or right, <strong>rotate them</strong>, and <strong>make them fall faster</strong>."
+"media.player_connection.label","PlayerConnection","Player connection"
+"controller_connection.heading","Connexion des contrôleurs","Controller connection"
+"controller_connection.paragraph_1","J'ai également fait le système de <strong>connexion des joueurs</strong>.
+Le jeu peut être joué avec <strong>1 ou 2 joueurs au clavier</strong>, ainsi qu'avec <strong>1 joueur à la manette</strong>.","I also built the <strong>player connection</strong> system.
+The game supports <strong>one or two players on the keyboard</strong>, as well as <strong>one player on a controller</strong>."
+"media.win_conditions.label","WinCond","Win conditions"
+"win_and_lose_conditions.heading","Conditions de victoire et de défaite","Win and lose conditions"
+"win_and_lose_conditions.paragraph_1","Pour finir, j'ai fait la <strong>condition de victoire</strong>, déclenchée lorsque le joueur parvient à sortir.
+
+J'ai aussi ajouté certaines <strong>conditions de défaite</strong> : lorsque le temps est écoulé, ou lorsque les <strong>blocs montent trop haut</strong>.","Finally, I implemented the <strong>win condition</strong>, triggered when the player escapes.
+
+I also added several <strong>lose conditions</strong>: running out of time or letting the <strong>blocks stack too high</strong>."
+"download.heading","Lien pour le télécharger","Download"
+"download.paragraph_1","Vous pouvez télécharger le jeu via cette page <itch>itch.io</itch>.","You can download the game from this <itch>itch.io page</itch>."

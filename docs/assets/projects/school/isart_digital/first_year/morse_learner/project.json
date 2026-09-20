@@ -1,0 +1,17 @@
+{
+  "title": "Morse Learner",
+  "job": "Game Programmer",
+  "categories": [
+    "godot",
+    "csharp",
+    "solo",
+    "school",
+    "isart",
+    "game",
+    "mobile"
+  ],
+  "start_date": "2025-04-23",
+  "end_date": "2025-05-19",
+  "thumbnail": "InputSequence.gif",
+  "link": "school_projects/isart_digital/morse_learner/"
+}

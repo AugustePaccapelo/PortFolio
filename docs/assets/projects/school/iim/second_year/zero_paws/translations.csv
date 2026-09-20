@@ -1,0 +1,112 @@
+﻿"key","fr","en"
+"context.heading","Contexte","Context"
+"context.paragraph_1","<strong>Zero Paws</strong> est mon deuxième et dernier projet de <strong>deuxième année à l'IIM</strong>.
+Il a été réalisé en <strong>groupe de 8 personnes</strong> :
+
+3 Game Programmers,
+2 Game Designers,
+2 Game Artists et
+1 Producer.
+
+Une personne de l'équipe devait se désigner pour prendre le rôle de <strong>Producer</strong>.
+Dans notre équipe, l'un des Game Designers s'est proposé.","<strong>Zero Paws</strong> is my second and final project from my <strong>second year at IIM</strong>.
+It was made by a <strong>team of 8</strong>:
+
+3 Game Programmers,
+2 Game Designers,
+2 Game Artists, and
+1 Producer.
+
+One team member had to volunteer to take on the <strong>Producer</strong> role.
+In our team, one of the Game Designers stepped forward."
+"pitch.heading","Pitch","Pitch"
+"pitch.paragraph_1","Vous incarnez <strong>ZipZap</strong>, un <strong>chat alien</strong> qui infiltre un vaisseau spatial à la recherche d'<strong>herbe à chat</strong>.
+
+Vous vous déplacez en <strong>zéro gravité</strong>, tout en évitant les <strong>pièges</strong> et les <strong>ennemis</strong> pour atteindre votre objectif.","You play as <strong>ZipZap</strong>, an <strong>alien cat</strong> infiltrating a spaceship in search of <strong>catnip</strong>.
+
+You move in <strong>zero gravity</strong>, avoiding <strong>traps</strong> and <strong>enemies</strong> to reach your goal."
+"walkthrough.heading","Walkthrough","Walkthrough"
+"walkthrough.iframe_title","Zero Paws Walkthrough","Zero Paws Walkthrough"
+"my_work.heading","Mon travail","My work"
+"media.ai_behavior_tree.label","AI BT","AI behavior tree"
+"ai.heading","Les IA","AI"
+"ai.paragraph_1","Je me suis occupé de développer les <strong>IA</strong> du jeu.
+Pour cela, j'ai utilisé les <strong>Behavior Trees</strong> d'Unreal Engine.
+
+Leur comportement est séparé en <strong>5 états principaux</strong>.","I developed the game's <strong>AI</strong>.
+I used Unreal Engine's <strong>Behavior Trees</strong> for this.
+
+The AI's behavior is divided into <strong>5 main states</strong>."
+"media.stunned_enemy.label","Gif FPSUnreal AI Stun","Stunned enemy"
+"stunned_state.heading","L'état étourdi","Stunned state"
+"stunned_state.paragraph_1","Les ennemis peuvent être <strong>étourdis</strong> lorsqu'on leur lance un <strong>savon</strong> dessus.
+
+Lorsqu'ils sont étourdis, ils <strong>n'entendent rien</strong>, <strong>ne voient rien</strong> et <strong>ne bougent plus</strong>.","Enemies can be <strong>stunned</strong> by throwing a <strong>bar of soap</strong> at them.
+
+While stunned, they <strong>cannot hear</strong>, <strong>cannot see</strong>, and <strong>cannot move</strong>."
+"media.sleeping_enemy.label","Gif FPSUnreal AI Sleep","Sleeping enemy"
+"sleeping_state.heading","L'état endormi","Sleeping state"
+"sleeping_state.paragraph_1","Les ennemis peuvent commencer la partie en étant <strong>endormis</strong>.
+
+Cet état est similaire à l'état étourdi, mais lorsqu'ils <strong>entendent un bruit</strong>, ils se réveillent et passent à l'état suivant.","Enemies can start the game <strong>asleep</strong>.
+
+This state is similar to being stunned, but when they <strong>hear a noise</strong>, they wake up and transition to the next state."
+"media.enemy_patrol.label","Gif FPSUnreal AI Patrol","Enemy patrol"
+"patrol_state.heading","L'état de patrouille","Patrol state"
+"patrol_state.paragraph_1","Les ennemis suivent un <strong>chemin prédéterminé</strong>.
+
+Dès qu'ils <strong>entendent un bruit</strong>, ils passent à l'état d'alerte.","Enemies follow a <strong>predefined path</strong>.
+
+As soon as they <strong>hear a noise</strong>, they switch to the alert state."
+"media.alerted_enemy.label","Gif FPSUnreal IA Alerted","Alerted enemy"
+"alert_state.heading","L'état d'alerte","Alert state"
+"alert_state.paragraph_1","Lorsque les ennemis sont <strong>alertés</strong>, ils se rendent à la position du bruit entendu pour <strong>inspecter les alentours</strong>.
+
+Ils retournent ensuite à l'<strong>état de patrouille</strong>.","When enemies are <strong>alerted</strong>, they move to the location of the noise to <strong>inspect the area</strong>.
+
+They then return to the <strong>patrol state</strong>."
+"media.enemy_spotting_player.label","Gif FPSUnreal AI SeePlayer","Enemy spotting the player"
+"player_in_sight_state.heading","L'état joueur en vue","Player-in-sight state"
+"player_in_sight_state.paragraph_1","Le dernier état est déclenché lorsqu'un ennemi <strong>voit le joueur</strong>.
+Il s'arrête et regarde dans sa direction.
+
+Si le joueur reste trop longtemps dans son <strong>champ de vision</strong>, la partie est perdue.
+Pour être repéré, une certaine <strong>surface du joueur</strong> doit être visible.","The final state is triggered when an enemy <strong>sees the player</strong>.
+It stops and looks in the player's direction.
+
+If the player stays in its <strong>field of view</strong> for too long, the game is lost.
+A certain <strong>portion of the player's body</strong> must be visible for them to be detected."
+"media.soap.label","Soap","Soap"
+"soap.heading","L'objet savon","The soap"
+"soap.paragraph_1","J'ai développé le fonctionnement du <strong>savon</strong>.
+
+Il permet d'<strong>étourdir les ennemis</strong> pendant un certain temps lorsqu'ils sont touchés.","I implemented the <strong>soap</strong> mechanic.
+
+It can <strong>stun enemies</strong> for a period of time when it hits them."
+"media.raygun.label","Raygun","Raygun"
+"raygun.heading","L'objet raygun","The raygun"
+"raygun.paragraph_1","Le jeu contient également un <strong>raygun</strong>, qui permet d'<strong>éliminer temporairement</strong> un ennemi.
+
+Je me suis occupé de son <strong>comportement</strong> et de son <strong>effet de tir</strong>.","The game also includes a <strong>raygun</strong> that can <strong>temporarily eliminate</strong> an enemy.
+
+I handled its <strong>behavior</strong> and <strong>firing effect</strong>."
+"media.alarm.label","Alarm","Alarm"
+"alarms.heading","Les alarmes","Alarms"
+"alarms.paragraph_1","Les <strong>alarmes</strong> font partie des pièges du jeu.
+Elles sont déclenchées par d'autres pièges, comme les <strong>lasers</strong>.
+
+Lorsqu'elles sont activées, elles produisent un <strong>bruit continu</strong> qui alerte les ennemis.
+Les ennemis vont ensuite désactiver l'alarme une fois qu'ils l'ont atteinte.","<strong>Alarms</strong> are among the game's traps.
+They are triggered by other traps, such as <strong>lasers</strong>.
+
+When activated, they produce a <strong>continuous noise</strong> that alerts enemies.
+The enemies then turn off the alarm once they reach it."
+"media.tool_prototype.label","Tool Prototype","Tool Prototype"
+"prototype_tool.heading","Prototype de tool","Prototype tool"
+"prototype_tool.paragraph_1","Pour finir, j'ai réalisé un <strong>prototype d'outil</strong> pour créer le squelette des niveaux.
+
+Il permet de générer une salle de <strong>n'importe quelle forme</strong> et de <strong>n'importe quelle taille</strong> dans une grille.","Finally, I built a <strong>prototype tool</strong> for creating level layouts.
+
+It can generate rooms of <strong>any shape</strong> and <strong>any size</strong> on a grid."
+"download.heading","Lien pour le télécharger","Download"
+"download.paragraph_1","Vous pouvez télécharger une build via ce <itch>lien itch</itch>.","You can download a build from this <itch>itch.io page</itch>."
