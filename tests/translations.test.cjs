@@ -166,9 +166,10 @@ test('project columns are matched by language name and missing languages fall ba
     assert.throws(() => context.registerProjectTranslations('third', context.readTranslationCatalogue('key,en\nx,Text'), {}, context.ROOT));
 });
 
-test('project data loads once and resolves metadata and translations from each indexed folder', async () => {
+test('project data loads once and only fetches translations for the current project', async () => {
     const context = load();
     await context.window.translationReady;
+    context.document = { body: { dataset: { projectId: 'color_survivor' } } };
     const requests = new Map();
     context.root = context.ROOT;
     context.fetch = async input => {
@@ -189,6 +190,8 @@ test('project data loads once and resolves metadata and translations from each i
     assert.equal(horse.job, 'Game Programmer');
     assert.equal(horse.title_key, undefined);
     assert.ok([...requests.values()].every(count => count === 1));
+    assert.ok(requests.has('assets/projects/school/iim/second_year/color_survivor/translations.csv'));
+    assert.ok(!requests.has('assets/projects/game_jams/godmofather/horse_gamble/translations.csv'));
     const settingsForLanguage = await context.window.translationReady;
     settingsForLanguage.language = 'en';
     settingsForLanguage.languageIndex = 1;

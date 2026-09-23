@@ -75,7 +75,6 @@ async function loadProjectData() {
     const projects = await Promise.all(index.map(async entry => {
         const metadata = await fetchJson(entry.assets_path + "project.json");
         const project = { ...metadata, id: entry.id, assets_path: entry.assets_path };
-        await loadProjectTranslations(project);
         for (const field of ["title", "job"]) {
             if (typeof project[field] !== "string" || !project[field].trim()) {
                 throw new Error(`Missing ${field} for project ${project.id}.`);
@@ -83,6 +82,11 @@ async function loadProjectData() {
         }
         return project;
     }));
+    const currentProjectId = globalThis.document?.body?.dataset.projectId;
+    const currentProject = projects.find(project => project.id === currentProjectId);
+    if (currentProject !== undefined) {
+        await loadProjectTranslations(currentProject);
+    }
     for (const categoryId of Object.keys(categories)) {
         categories[categoryId] = translateText(`shared.categories.${categoryId}`, categories[categoryId]);
     }
