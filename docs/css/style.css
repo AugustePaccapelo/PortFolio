@@ -68,6 +68,24 @@ header nav {
     position: relative;
 }
 
+.nav-dropdown-label {
+    display: flex;
+    align-items: center;
+}
+
+.nav-dropdown-toggle {
+    border: 0;
+    background: transparent;
+    color: var(--color-text-primary);
+    font: inherit;
+    cursor: pointer;
+}
+
+.nav-dropdown-toggle:focus-visible {
+    outline: var(--language-select-focus-width) solid var(--language-select-focus-color);
+    outline-offset: var(--language-select-focus-offset);
+}
+
 .nav-dropdown-content {
     display: none;
 
@@ -86,7 +104,9 @@ header nav {
     white-space: nowrap;
 }
 
-.nav-dropdown:hover .nav-dropdown-content {
+.nav-dropdown:hover .nav-dropdown-content,
+.nav-dropdown:focus-within .nav-dropdown-content,
+.nav-dropdown.open .nav-dropdown-content {
     display: block;
 }
 

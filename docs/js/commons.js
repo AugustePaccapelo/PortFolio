@@ -4,20 +4,29 @@ class SiteHeader extends HTMLElement {
         <header>
             <nav>
                 <ul class="nav-bar">
-                    <h4><a href="${ROOT}" data-i18n="shared.navigation.home">shared.navigation.home</a></h4>
+                    <li><h4><a href="${ROOT}" data-i18n="shared.navigation.home">shared.navigation.home</a></h4></li>
                     <li class="nav-dropdown">
-                        <h4><a href="${ROOT}personal_projects/" data-i18n="shared.navigation.personal_projects">shared.navigation.personal_projects</a></h4>
-                        <ul class="nav-dropdown-content" data-nav-category="personal"></ul>
+                        <div class="nav-dropdown-label">
+                            <h4><a href="${ROOT}personal_projects/" data-i18n="shared.navigation.personal_projects">shared.navigation.personal_projects</a></h4>
+                            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="personal-project-links" data-i18n-aria-label="shared.navigation.toggle_submenu">+</button>
+                        </div>
+                        <ul class="nav-dropdown-content" id="personal-project-links" data-nav-category="personal"></ul>
                     </li>
                     <li class="nav-dropdown">
-                        <h4><a href="${ROOT}school_projects/" data-i18n="shared.navigation.school_projects">shared.navigation.school_projects</a></h4>
-                        <ul class="nav-dropdown-content" data-nav-category="school"></ul>
+                        <div class="nav-dropdown-label">
+                            <h4><a href="${ROOT}school_projects/" data-i18n="shared.navigation.school_projects">shared.navigation.school_projects</a></h4>
+                            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="school-project-links" data-i18n-aria-label="shared.navigation.toggle_submenu">+</button>
+                        </div>
+                        <ul class="nav-dropdown-content" id="school-project-links" data-nav-category="school"></ul>
                     </li>
                     <li class="nav-dropdown">
-                        <h4><a href="${ROOT}game_jams/" data-i18n="shared.navigation.game_jams">shared.navigation.game_jams</a></h4>
-                        <ul class="nav-dropdown-content" data-nav-category="jam"></ul>
+                        <div class="nav-dropdown-label">
+                            <h4><a href="${ROOT}game_jams/" data-i18n="shared.navigation.game_jams">shared.navigation.game_jams</a></h4>
+                            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="game-jam-links" data-i18n-aria-label="shared.navigation.toggle_submenu">+</button>
+                        </div>
+                        <ul class="nav-dropdown-content" id="game-jam-links" data-nav-category="jam"></ul>
                     </li>
-                    <h4><a href="${ROOT}contact/" data-i18n="shared.navigation.contact_cv">shared.navigation.contact_cv</a></h4>
+                    <li><h4><a href="${ROOT}contact/" data-i18n="shared.navigation.contact_cv">shared.navigation.contact_cv</a></h4></li>
                 </ul>
                 <select class="language-select" aria-label="Language" disabled></select>
             </nav>
@@ -25,8 +34,38 @@ class SiteHeader extends HTMLElement {
         `;
 
         loadProjectNavLinks();
+        initializeDropdownNavigation(this);
         initializeLanguageSelector(this.querySelector(".language-select"));
     }
+}
+
+function initializeDropdownNavigation(header) {
+    const dropdowns = [...header.querySelectorAll(".nav-dropdown")];
+
+    const closeDropdown = dropdown => {
+        dropdown.classList.remove("open");
+        dropdown.querySelector(".nav-dropdown-toggle").setAttribute("aria-expanded", "false");
+    };
+
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+        toggle.addEventListener("click", () => {
+            const shouldOpen = !dropdown.classList.contains("open");
+            dropdowns.forEach(closeDropdown);
+            if (shouldOpen) {
+                dropdown.classList.add("open");
+                toggle.setAttribute("aria-expanded", "true");
+            }
+        });
+    });
+
+    header.addEventListener("keydown", event => {
+        if (event.key === "Escape") {
+            const openToggle = header.querySelector(".nav-dropdown-toggle[aria-expanded='true']");
+            dropdowns.forEach(closeDropdown);
+            openToggle?.focus();
+        }
+    });
 }
 
 async function initializeLanguageSelector(select) {
