@@ -127,6 +127,12 @@ test('every static page key exists in the shared or project catalogues', async (
             else if (entry.name.endsWith('.html')) {
                 const html = fs.readFileSync(file, 'utf8');
                 const projectId = html.match(/data-project-id="([^"]+)"/)?.[1];
+                if (/<!DOCTYPE html>/i.test(html)) {
+                    assert.match(html, /<title>[^<]+<\/title>/, file);
+                    assert.match(html, /<meta name="description" content="[^"]+">/, file);
+                    assert.match(html, /<meta property="og:title" content="[^"]+">/, file);
+                    assert.match(html, /<link rel="icon" href="[^"]+"[^>]*>/, file);
+                }
                 for (const match of html.matchAll(/data-i18n(?:-(?:alt|title|aria-label|placeholder))?="([^"]+)"/g)) {
                     assert.ok(context.getTranslationCatalogue(match[1], projectId).translations.has(match[1]), file + ': ' + match[1]);
                 }
