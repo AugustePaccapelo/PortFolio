@@ -9,18 +9,27 @@ async function onHtmlInitialize() {
     try {
         await window.translationReady;
         await getProjectData();
+        applyTranslations();
+        await renderProjectsPage();
+        applyTranslations();
+        applyAlternatingPreviewLayout();
     }
     catch (error) {
-        const message = document.createElement("p");
-        message.setAttribute("role", "alert");
-        message.textContent = "Impossible de charger les textes. Veuillez réessayer.";
-        document.body.prepend(message);
-        return;
+        showInitializationError(error);
     }
-    applyTranslations();
-    await renderProjectsPage();
-    applyTranslations();
-    applyAlternatingPreviewLayout();
+}
+
+function showInitializationError(error) {
+    console.error("Unable to initialize the page.", error);
+    if (document.querySelector("[data-site-error]")) return;
+
+    const message = document.createElement("p");
+    message.dataset.siteError = "";
+    message.setAttribute("role", "alert");
+    message.textContent = typeof translateText === "function"
+        ? translateText("shared.errors.initialization", "Impossible de charger la page. Veuillez réessayer.")
+        : "Impossible de charger la page. Veuillez réessayer.";
+    document.body.prepend(message);
 }
 
 function applyAlternatingPreviewLayout() {
