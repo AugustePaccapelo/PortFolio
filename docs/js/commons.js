@@ -42,27 +42,44 @@ class SiteHeader extends HTMLElement {
 function initializeDropdownNavigation(header) {
     const dropdowns = [...header.querySelectorAll(".nav-dropdown")];
 
-    const closeDropdown = dropdown => {
+    const closeDropdown = (dropdown, forceClosed = false) => {
         dropdown.classList.remove("open");
+        dropdown.classList.toggle("force-closed", forceClosed);
         dropdown.querySelector(".nav-dropdown-toggle").setAttribute("aria-expanded", "false");
     };
 
     dropdowns.forEach(dropdown => {
         const toggle = dropdown.querySelector(".nav-dropdown-toggle");
         toggle.addEventListener("click", () => {
-            const shouldOpen = !dropdown.classList.contains("open");
+            const shouldOpen = toggle.getAttribute("aria-expanded") !== "true";
             dropdowns.forEach(closeDropdown);
             if (shouldOpen) {
+                dropdown.classList.remove("force-closed");
                 dropdown.classList.add("open");
                 toggle.setAttribute("aria-expanded", "true");
             }
+            else {
+                closeDropdown(dropdown, true);
+                toggle.blur();
+            }
         });
+        dropdown.addEventListener("mouseleave", () => {
+            if (!dropdown.classList.contains("open")) {
+                dropdown.classList.remove("force-closed");
+            }
+        });
+    });
+
+    header.ownerDocument.addEventListener("click", event => {
+        if (!header.contains(event.target)) {
+            dropdowns.forEach(closeDropdown);
+        }
     });
 
     header.addEventListener("keydown", event => {
         if (event.key === "Escape") {
             const openToggle = header.querySelector(".nav-dropdown-toggle[aria-expanded='true']");
-            dropdowns.forEach(closeDropdown);
+            dropdowns.forEach(dropdown => closeDropdown(dropdown, dropdown.contains(event.target)));
             openToggle?.focus();
         }
     });

@@ -110,6 +110,10 @@ header nav {
     display: block;
 }
 
+.nav-dropdown.force-closed .nav-dropdown-content {
+    display: none;
+}
+
 .footer-img-container {
     display: flex;
     flex-direction: row;
