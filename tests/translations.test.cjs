@@ -131,6 +131,9 @@ test('every static page key exists in the shared or project catalogues', async (
                     assert.match(html, /<title>[^<]+<\/title>/, file);
                     assert.match(html, /<meta name="description" content="[^"]+">/, file);
                     assert.match(html, /<meta property="og:title" content="[^"]+">/, file);
+                    assert.match(html, /<meta property="og:image" content="https:\/\/augustepaccapelo\.github\.io\/PortFolio\/assets\/misc\/social-preview\.jpg">/, file);
+                    assert.match(html, /<meta property="og:image:width" content="1200">/, file);
+                    assert.match(html, /<meta property="og:image:height" content="627">/, file);
                     assert.match(html, /<link rel="icon" href="[^"]+"[^>]*>/, file);
                 }
                 for (const match of html.matchAll(/data-i18n(?:-(?:alt|title|aria-label|placeholder))?="([^"]+)"/g)) {
@@ -139,6 +142,7 @@ test('every static page key exists in the shared or project catalogues', async (
             }
         }
     }
+    assert.ok(fs.existsSync(path.join(root, 'docs/assets/misc/social-preview.jpg')));
     visit(path.join(root, 'docs'));
     for (const key of settings.translations.keys()) {
         assert.match(key, /^[a-z][a-z0-9_]*(?:\.[a-z][a-z0-9_]*)*$/);
