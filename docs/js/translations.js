@@ -206,7 +206,9 @@ function applyTranslations(scope = document) {
         const languages = section.dataset.cvLanguages.trim().split(/\s+/);
         const language = languages.includes(translationSettings.language)
             ? translationSettings.language : languages[0];
-        const base = new URL(section.dataset.cvBase + language, ROOT).href;
+        const fileLanguage = section.hasAttribute("data-cv-uppercase-language")
+            ? language.toUpperCase() : language;
+        const base = new URL(section.dataset.cvBase + fileLanguage, ROOT).href;
         section.querySelectorAll("[data-cv-pdf]").forEach(link => { link.href = base + ".pdf"; });
         section.querySelectorAll("[data-cv-preview]").forEach(image => { image.src = base + ".png"; });
     });

@@ -70,6 +70,30 @@ test('language persists in site page links without changing downloads or externa
     assert.equal(context.escapeTranslationText('<img src=x onerror="alert(1)">'), '&lt;img src=x onerror=&quot;alert(1)&quot;&gt;');
 });
 
+test('CV assets follow the selected language and uppercase filename convention', async () => {
+    const context = load('key,fr,en\nhello,Bonjour,Hello', '?lang=en');
+    await context.window.translationReady;
+    const pdfLinks = [{ href: '' }, { href: '' }];
+    const previews = [{ src: '' }];
+    const section = {
+        dataset: {
+            cvBase: 'assets/misc/CV_PACCAPELO_Auguste_',
+            cvLanguages: 'fr en'
+        },
+        hasAttribute: name => name === 'data-cv-uppercase-language',
+        querySelectorAll: selector => selector === '[data-cv-pdf]' ? pdfLinks : previews
+    };
+    const scope = {
+        querySelectorAll: selector => selector === '[data-cv-base]' ? [section] : []
+    };
+    context.document = { documentElement: {} };
+
+    context.applyTranslations(scope);
+
+    assert.ok(pdfLinks.every(link => link.href.endsWith('/assets/misc/CV_PACCAPELO_Auguste_EN.pdf')));
+    assert.ok(previews.every(image => image.src.endsWith('/assets/misc/CV_PACCAPELO_Auguste_EN.png')));
+});
+
 test('every static page key exists in the shared or project catalogues', async () => {
     const context = load();
     const settings = await context.window.translationReady;

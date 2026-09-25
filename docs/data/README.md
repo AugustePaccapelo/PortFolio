@@ -79,9 +79,9 @@ Only the plural filenames `translations.csv` and `links.json` are loaded. The pr
 
 ## CV language files
 
-The contact page uses `assets/misc/CV_fr.pdf` and `CV_fr.png` for French, and `CV_en.pdf` and `CV_en.png` for English. The English files currently duplicate the French CV. Replace both English files when the translated CV is ready (the PNG is the page preview; the PDF is opened/downloaded).
+The contact page uses `assets/misc/CV_PACCAPELO_Auguste_FR.pdf` and `.png` for French, and the matching `_EN` files for English. The PNG is the page preview; the PDF is opened by the button or downloaded by clicking the preview.
 
-The contact section's `data-cv-base` controls the path prefix; `data-cv-languages="fr en"` lists available CV versions. A site language without its own CV uses the first listed version. Add another language code and its PDF/PNG pair to support it. The original `CV_Auguste_Paccapelo` files are retained but no longer used by this page.
+The contact section's `data-cv-base` controls the path prefix; `data-cv-languages="fr en"` lists available CV versions, and `data-cv-uppercase-language` converts those codes to the uppercase filename suffixes. A site language without its own CV uses the first listed version. Add another language code and its PDF/PNG pair to support it.
 
 ## Project sections
 
