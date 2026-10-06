@@ -1,3 +1,25 @@
+const SOCIAL_PREVIEW_IMAGE_URL = "https://augustepaccapelo.github.io/PortFolio/assets/misc/social-preview.jpg";
+
+const COMMON_HEAD_ELEMENTS = [
+    { tag: "meta", attributes: { charset: "UTF-8" } },
+    { tag: "meta", attributes: { property: "og:image", content: SOCIAL_PREVIEW_IMAGE_URL } },
+    { tag: "meta", attributes: { property: "og:image:type", content: "image/jpeg" } },
+    { tag: "meta", attributes: { property: "og:image:width", content: "1200" } },
+    { tag: "meta", attributes: { property: "og:image:height", content: "627" } },
+    { tag: "meta", attributes: { property: "og:image:alt", content: "Game programming workspace by Auguste Paccapelo" } },
+    { tag: "link", attributes: { rel: "icon", href: root + "favicon.svg", type: "image/svg+xml" } }
+];
+
+function addCommonHeadElements() {
+    COMMON_HEAD_ELEMENTS.forEach(({ tag, attributes }) => {
+        const element = document.createElement(tag);
+        Object.entries(attributes).forEach(([name, value]) => element.setAttribute(name, value));
+        document.head.append(element);
+    });
+}
+
+addCommonHeadElements();
+
 class SiteHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `

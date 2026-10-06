@@ -153,12 +153,7 @@ test('every static page key exists in the shared or project catalogues', async (
                 const projectId = html.match(/data-project-id="([^"]+)"/)?.[1];
                 if (/<!DOCTYPE html>/i.test(html)) {
                     assert.match(html, /<title>[^<]+<\/title>/, file);
-                    assert.match(html, /<meta name="description" content="[^"]+">/, file);
-                    assert.match(html, /<meta property="og:title" content="[^"]+">/, file);
-                    assert.match(html, /<meta property="og:image" content="https:\/\/augustepaccapelo\.github\.io\/PortFolio\/assets\/misc\/social-preview\.jpg">/, file);
-                    assert.match(html, /<meta property="og:image:width" content="1200">/, file);
-                    assert.match(html, /<meta property="og:image:height" content="627">/, file);
-                    assert.match(html, /<link rel="icon" href="[^"]+"[^>]*>/, file);
+                    assert.doesNotMatch(html, /<(?:meta|link rel="icon")/, file);
                 }
                 for (const match of html.matchAll(/data-i18n(?:-(?:alt|title|aria-label|placeholder))?="([^"]+)"/g)) {
                     assert.ok(context.getTranslationCatalogue(match[1], projectId).translations.has(match[1]), file + ': ' + match[1]);
@@ -178,6 +173,10 @@ test('every static page key exists in the shared or project catalogues', async (
             assert.ok(settings.translations.has(match[1]), file + ': ' + match[1]);
         }
     }
+    const commons = fs.readFileSync(path.join(root, 'docs/js/commons.js'), 'utf8');
+    assert.match(commons, /const COMMON_HEAD_ELEMENTS = \[/);
+    assert.match(commons,
+        /const SOCIAL_PREVIEW_IMAGE_URL = "https:\/\/augustepaccapelo\.github\.io\/PortFolio\/assets\/misc\/social-preview\.jpg"/);
     for (const key of Object.keys(actualLinks)) assert.ok(settings.translations.has(key), key);
 });
 
@@ -218,7 +217,7 @@ test('project data loads once and only fetches translations for the current proj
     vm.runInContext(fs.readFileSync(path.join(root, 'docs/js/projects.js'), 'utf8'), context);
     const [a, b] = await Promise.all([context.getProjectData(), context.getProjectData()]);
     assert.equal(a, b);
-    assert.equal(a.projects.length, 11);
+    assert.equal(a.projects.length, 12);
     const horse = a.projects.find(p => p.id === 'horse_gamble');
     assert.equal(horse.title, 'Horse Gamble Ultimate Race');
     assert.equal(horse.job, 'Game Programmer');
