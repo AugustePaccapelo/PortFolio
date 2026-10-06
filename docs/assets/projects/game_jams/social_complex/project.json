@@ -1,0 +1,160 @@
+{
+    "title": "Social Complex",
+    "job": "Game Programmer",
+    "categories": [
+        "unreal",
+        "bp",
+        "group",
+        "jam",
+        "pc"
+    ],
+    "start_date": "2026-09-28",
+    "end_date": "2026-10-02",
+    "thumbnail": "icon.png",
+    "link": "game_jams/social_complex/",
+    "sections": [
+        {
+            "type": "text",
+            "heading": "context.heading",
+            "paragraphs": [
+                "context.paragraph_1"
+            ]
+        },
+        {
+            "type": "text",
+            "heading": "pitch.heading",
+            "paragraphs": [
+                "pitch.paragraph_1"
+            ]
+        },
+        {
+            "type": "media",
+            "heading": "walkthrough.heading",
+            "media": {
+                "type": "embed",
+                "src": "https://www.youtube.com/embed/5Q1qzO73Y_c",
+                "label": "walkthrough.iframe_title"
+            }
+        },
+        {
+            "type": "group",
+            "heading": "my_work.heading",
+            "sections": [
+                {
+                    "type": "preview",
+                    "heading": "attic_opening.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "attic_opening.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "attic_sequence.gif",
+                        "label": "media.attic_opening.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "environment_change.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "environment_change.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "level_transition.gif",
+                        "label": "media.environment_change.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "card_drawing.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "card_drawing.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "card_drawing.gif",
+                        "label": "media.card_drawing.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "airlock_animation.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "airlock_animation.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "moon_sas_sequence.gif",
+                        "label": "media.airlock_animation.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "classroom.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "classroom.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "school.mp4",
+                        "label": "media.classroom.label",
+                        "mime_type": "video/mp4",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        }
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "moon_puzzle.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "moon_puzzle.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "image",
+                        "src": "moon.gif",
+                        "label": "media.moon_puzzle.label"
+                    }
+                },
+                {
+                    "type": "preview",
+                    "heading": "sound_integration.heading",
+                    "heading_level": 3,
+                    "paragraphs": [
+                        "sound_integration.paragraph_1"
+                    ],
+                    "media": {
+                        "type": "video",
+                        "src": "sounds_integration.mp4",
+                        "label": "media.sound_integration.label",
+                        "mime_type": "video/mp4",
+                        "playback": {
+                            "controls": true,
+                            "autoplay": true,
+                            "loop": true,
+                            "muted": true,
+                            "plays_inline": true
+                        }
+                    }
+                },
+                {
+                    "type": "text",
+                    "heading": "download.heading",
+                    "paragraphs": [
+                        "download.paragraph_1"
+                    ]
+                }
+            ]
+        }
+    ]
+}

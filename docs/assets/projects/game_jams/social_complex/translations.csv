@@ -1,0 +1,55 @@
+"key","fr","en"
+"context.heading","Contexte","Context"
+"context.paragraph_1","Ce jeu a été réalisé en <strong>groupe de 10 personnes</strong>, avec les étudiants de l'axe <strong>Animation 3D</strong> de notre école, dans le cadre d'une Game Jam.
+
+Le thème était <strong>Huis clos</strong>, et chaque équipe disposait d'un <strong>SCP</strong> comme source d'inspiration. Nous avons travaillé à partir du <strong>SCP-388-FR</strong>, une boîte contenant des cartes dont chacune propose un objectif à accomplir.","This game was made by a <strong>team of 10</strong>, alongside students from our school's <strong>3D Animation</strong> track, during a Game Jam.
+
+The theme was <strong>Huis clos</strong>, and each team was given an <strong>SCP</strong> as inspiration. We worked from <strong>SCP-388-FR</strong>, a box containing cards, each with an objective to complete."
+"pitch.heading","Pitch","Pitch"
+"pitch.paragraph_1","Le joueur se trouve dans un vieux grenier, face à un paquet de cartes posé sur une table. Lorsqu'il pioche une carte, le grenier s'ouvre et le joueur se retrouve dans un univers associé au dessin figurant sur la carte.
+
+Le joueur doit comprendre par lui-même ce qu'il doit faire, puis retourner au grenier pour piocher une nouvelle carte.","The player is in an old attic, facing a deck of cards on a table. When they draw a card, the attic opens and they are transported to a world linked to the illustration on it.
+
+The player must work out what to do on their own, then return to the attic to draw another card."
+"walkthrough.heading","Walkthrough","Walkthrough"
+"walkthrough.iframe_title","Walkthrough de Social Complex","Social Complex walkthrough"
+"my_work.heading","Mon travail","My work"
+"attic_opening.heading","Ouverture et fermeture du grenier","Opening and closing the attic"
+"attic_opening.paragraph_1","J'ai réalisé les animations d'ouverture et de fermeture du grenier à l'aide du Sequencer d'Unreal Engine.
+
+C'était une découverte pour moi, et c'est un outil que je compte bien réutiliser.","I created the attic opening and closing animations using Unreal Engine's Sequencer.
+
+It was a new tool for me, and one I plan to use again."
+"media.attic_opening.label","Séquence d'ouverture du grenier","Attic opening sequence"
+"environment_change.heading","Changement d'environnement","Changing environments"
+"environment_change.paragraph_1","Ma partie préférée du projet. Grâce au Level Streaming, le joueur se retrouve dans trois univers complètement différents sans jamais perdre le contrôle ni changer de map.","My favorite part of the project. Using Level Streaming, the player moves through three completely different worlds without ever losing control or changing maps."
+"media.environment_change.label","Transition entre les univers","World transition"
+"card_drawing.heading","Tirage des cartes","Drawing cards"
+"card_drawing.paragraph_1","J'ai réalisé l'animation lorsqu'on pioche une carte et intégré les VFX réalisés par les artistes 3D.","I created the animation for drawing a card and integrated the VFX made by the 3D artists."
+"media.card_drawing.label","Tirage d'une carte","Drawing a card"
+"airlock_animation.heading","Animation du SAS","Airlock animation"
+"airlock_animation.paragraph_1","J'ai utilisé le Sequencer une seconde fois pour animer l'ouverture du sas lorsque l'on termine l'énigme de la lune. Je me suis également occupé d'intégrer les VFX réalisés par les artistes 3D.","I used Sequencer a second time to animate the airlock opening once the moon puzzle is complete. I also integrated the VFX made by the 3D artists."
+"media.airlock_animation.label","Ouverture du sas lunaire","Moon airlock opening"
+"classroom.heading","La salle de classe","The classroom"
+"classroom.paragraph_1","J'ai réalisé le gameplay de la salle de classe.
+
+Lorsque le joueur entre, la porte se referme. Il ne peut pas l'ouvrir tant qu'il ne s'est pas assis sur la chaise.
+
+Le QCM est simplement une distraction et n'a pas de fin.","I created the classroom gameplay.
+
+When the player enters, the door closes behind them. They cannot open it again until they sit down on the chair.
+
+The multiple-choice quiz is simply a distraction and never ends."
+"media.classroom.label","Salle de classe","Classroom"
+"moon_puzzle.heading","La lune","The moon"
+"moon_puzzle.paragraph_1","La deuxième énigme que j'ai réalisée est celle de la lune. Le joueur doit récupérer une boule de lumière et la poser sur un socle dans l'obscurité de la carte.
+
+Pour la trouver, le joueur doit se guider grâce au son d'un petit monstre.","The second puzzle I created is the moon puzzle. The player must retrieve a ball of light and place it on a pedestal in the darkness of the map.
+
+To find it, the player has to follow the sound of a small monster."
+"media.moon_puzzle.label","Énigme de la lune","Moon puzzle"
+"sound_integration.heading","Intégration des sons","Sound integration"
+"sound_integration.paragraph_1","Pour finir, j'ai intégré tous les sons du jeu, notamment celui du monstre sur la lune, qui est spatialisé.","Finally, I integrated all the game's sounds, including the moon monster's spatialized audio."
+"media.sound_integration.label","Intégration des sons","Sound integration"
+"download.heading","Téléchargement","Download"
+"download.paragraph_1","Vous pouvez télécharger le jeu sur cette page <itch>itch.io</itch>.","You can download the game from this <itch>itch.io page</itch>."

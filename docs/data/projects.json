@@ -42,5 +42,9 @@
     {
         "id": "blocky_escape",
         "assets_path": "assets/projects/game_jams/blocky_escape/"
+    },
+    {
+        "id": "social_complex",
+        "assets_path": "assets/projects/game_jams/social_complex/"
     }
 ]
